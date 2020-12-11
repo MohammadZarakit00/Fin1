@@ -51,10 +51,10 @@ public class WrittenExam {
 		sList.add(s);
 	}
 	
-	public Student findStudent(Student studentId) {
-		for (Student tmpId : sList) {
-			if (sList.contains(tmpId)) {
-				return studentId;
+	public Student findStudent(String studentId) {
+		for (Student tmpStudent : sList) {
+			if (tmpStudent.getStudentId().equals(studentId)) {
+				return tmpStudent;
 			}
 		}
 		return null;
