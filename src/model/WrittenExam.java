@@ -13,7 +13,17 @@ public class WrittenExam {
 	private String time;
 	
 	private double maxPoints = 100;
-	
+
+	private Course currentCourse;
+
+	public Course getCurrentCourse() {
+		return currentCourse;
+	}
+
+	public void setCurrentCourse(Course currentCourse) {
+		this.currentCourse = currentCourse;
+	}
+
 	private ArrayList<Student> sList = new ArrayList<>();
 
 	public WrittenExam(String examID){

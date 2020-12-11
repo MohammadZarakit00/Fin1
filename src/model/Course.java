@@ -18,6 +18,11 @@ public class Course {
 		} else {
 			System.out.println("Fel format på coursecode");
 		}
+	}
+
+	public void addExam(WrittenExam writtenExam){
+		courseExamList.add(writtenExam);
+		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
 
 	}
 
