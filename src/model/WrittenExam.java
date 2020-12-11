@@ -14,7 +14,7 @@ public class WrittenExam {
 	
 	private double maxPoints = 100;
 	
-	public ArrayList<Student> sList = new ArrayList<Student>();
+	private ArrayList<Student> sList = new ArrayList<Student>();
 
 	public String getExamID() {
 		return examID;
