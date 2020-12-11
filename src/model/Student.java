@@ -40,7 +40,11 @@ public class Student {
 	}
 
 	public void removeExam(WrittenExam exam){
-		examList.remove(exam);
+		if(examList.contains(exam)) {
+			examList.remove(exam);
+		} else {
+			System.out.println("Provet är ej registrerat hos denna student");
+		}
 	}
 
 }
