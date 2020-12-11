@@ -11,9 +11,13 @@ public class Student {
 	private ArrayList<WrittenExam> examList = new ArrayList<>();
 
 	public Student(String studentId, String name){
-		this.studentId = studentId;
-		this.name = name;
+		if(studentId.startsWith("S") && studentId.length() == 6){
+			this.name = name;
+		} else {
+			System.out.println("Not valid input");
+		}
 	}
+
 	
 	public String getStudentId() {
 		return studentId;
