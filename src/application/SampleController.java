@@ -26,12 +26,8 @@ public class SampleController {
 	
 	@FXML
 	public void btn1(ActionEvent event) {
-		ta.appendText("fuckity" + "\n");
-		System.out.println("yeet");
+		ta.appendText("Hej hopp" + "\n");
 	}
 	
-	
-	
-	
-	
 }
+
