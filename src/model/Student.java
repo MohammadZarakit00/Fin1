@@ -13,6 +13,7 @@ public class Student {
 	public Student(String studentId, String name){
 		if(studentId.startsWith("S") && studentId.length() == 6){ //Kollar kraven för studentId
 			this.studentId = studentId;
+			System.out.println("Det funkar");
 		} else {
 			System.out.println("Not valid input");
 		}

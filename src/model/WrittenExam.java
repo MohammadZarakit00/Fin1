@@ -54,6 +54,7 @@ public class WrittenExam {
 	}
 	
 	public void addStudent(Student s) {
+		s.addExam(this); //Dubbelkopplar
 		sList.add(s);
 	}
 	
@@ -75,6 +76,7 @@ public class WrittenExam {
 		Student tmpStudent = findStudent(studentId);
 		if(sList.contains(tmpStudent)){
 			sList.remove(tmpStudent);
+			tmpStudent.removeExam(this);
 			return tmpStudent;
 		} else {
 			System.out.println("Student finns ej på detta prov");
