@@ -7,6 +7,7 @@ import model.WrittenExam;
 import model.StudentTest;
 
 import java.awt.TextField;
+import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -27,6 +28,8 @@ import javafx.stage.Stage;
 
 public class SampleController {
 	
+	private ArrayList<Student> studentRegister = new ArrayList<Student>();
+	
 	@FXML
 	Button btnAddStudent = new Button();
 	@FXML
@@ -44,10 +47,14 @@ public class SampleController {
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		
+		studentRegister.add(new Student(tmpId, tmpName));
 	}
 	
-	
+	@FXML
+	public void btnFindStudent(ActionEvent event) {
+		String tmpId = tfId.getText();
+		
+	}
 	
 }
 

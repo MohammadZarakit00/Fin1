@@ -2,7 +2,7 @@ package model;
 
 public class Result {
 	
-private String result;
+	private String result;
 	
 	private char letterGrade;
 
