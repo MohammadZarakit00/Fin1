@@ -25,6 +25,9 @@ public class Course {
 		}
 	}
 
+	/*
+	Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
+	 */
 	public Boolean courseCodeCheck(String courseCode){
 		return courseCode.startsWith("C") && courseCode.length() == 6;
 	}

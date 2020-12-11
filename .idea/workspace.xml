@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="changed constructor in Course to minimize logic inside of constructor">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Removed unnecessary code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,7 @@
       <workItem from="1607683965283" duration="401000" />
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
-      <workItem from="1607696359353" duration="2488000" />
+      <workItem from="1607696359353" duration="2954000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -281,7 +280,19 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1607697791023</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result.">
+      <created>1607698910988</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1607698910988</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Removed unnecessary code">
+      <created>1607698977583</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1607698977583</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -346,7 +357,9 @@
     <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
     <MESSAGE value="Changed return-value of credits to int instead of String." />
     <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed constructor in Course to minimize logic inside of constructor" />
+    <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
+    <MESSAGE value="Removed unnecessary code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

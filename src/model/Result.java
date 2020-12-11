@@ -30,10 +30,7 @@ public class Result {
 	}
 
 
-	/*
-	Kan vara så att det första konditionet i varje else-if-sats inte behövs då
-	checken sker redan i första och sedan "följer med".
-	 */
+
 	public String letterGradeFromResult(int result){
 		if(result < 50){
 			return "Fail";
