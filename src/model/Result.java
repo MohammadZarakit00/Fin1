@@ -37,13 +37,13 @@ public class Result {
 	public String letterGradeFromResult(int result){
 		if(result < 50){
 			return "Fail";
-		} else if(result >= 50 && result < 55){
+		} else if(result < 55){
 			return "E";
-		} else if(result >= 55 && result < 65){
+		} else if(result < 65){
 			return "D";
-		} else if(result >= 65 && result < 75){
+		} else if(result < 75){
 			return "C";
-		} else if(result >= 75 && result <85){
+		} else if(result <85){
 			return "B";
 		} else {
 			return "A"; //Behöver inte kollas då det görs i konstruktorn.
