@@ -11,7 +11,7 @@ public class Student {
 	private ArrayList<WrittenExam> examList = new ArrayList<>();
 
 	public Student(String studentId, String name){
-		if(studentId.startsWith("S") && studentId.length() == 6){
+		if(studentId.startsWith("S") && studentId.length() == 6){ //Kollar kraven för studentId
 			this.name = name;
 		} else {
 			System.out.println("Not valid input");
