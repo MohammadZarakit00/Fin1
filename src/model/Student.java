@@ -8,7 +8,7 @@ public class Student {
 	
 	private String name;
 
-	private ArrayList<WrittenExam> examList = new ArrayList<>();
+	private ArrayList<WrittenExam> examList = new ArrayList<>(); 
 
 	public Student(String studentId, String name){
 		if(studentId.startsWith("S") && studentId.length() == 6){ //Kollar kraven för studentId
