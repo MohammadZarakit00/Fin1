@@ -10,7 +10,7 @@ public class Course {
 	
 	private String name;
 	
-	private String credits;
+	private int credits;
 
 	public Course(String courseCode){
 		if(courseCode.startsWith("C") && courseCode.length() == 6){
@@ -42,11 +42,11 @@ public class Course {
 		this.name = name;
 	}
 
-	public String getCredits() {
+	public int getCredits() {
 		return credits;
 	}
 
-	public void setCredits(String credits) {
+	public void setCredits(int credits) {
 		this.credits = credits;
 	}
 
