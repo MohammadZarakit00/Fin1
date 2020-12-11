@@ -8,7 +8,7 @@ public class Student {
 	
 	private String name;
 
-	private ArrayList<WrittenExam> examList = new ArrayList<>();
+	private ArrayList<WrittenExam> examList = new ArrayList<>(); 
 
 	public Student(String studentId, String name){
 		this.studentId = studentId;

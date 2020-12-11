@@ -16,6 +16,12 @@ public class WrittenExam {
 	
 	private ArrayList<Student> sList = new ArrayList<Student>();
 
+	public ArrayList<Student> getsList() {
+		return sList;
+	}
+	public void setsList(ArrayList<Student> sList) {
+		this.sList = sList;
+	}
 	public String getExamID() {
 		return examID;
 	}
@@ -58,6 +64,10 @@ public class WrittenExam {
 			}
 		}
 		return null;
+	}
+	
+	public Student deleteStudent(String studentId) {
+		
 	}
 
 }
