@@ -1,5 +1,11 @@
 package application;
 
+import model.Course;
+import model.Result;
+import model.Student;
+import model.WrittenExam;
+import model.StudentTest;
+
 import java.awt.TextField;
 
 import javafx.application.Application;
@@ -22,16 +28,26 @@ import javafx.stage.Stage;
 public class SampleController {
 	
 	@FXML
-	Button btn1 = new Button();
+	Button btnAddStudent = new Button();
+	@FXML
+	Button btnFindStudent = new Button();
+	@FXML
+	Button btnDeleteStudent = new Button();
 	@FXML
 	TextArea ta = new TextArea();
 	@FXML
-	TextField tf1 = new TextField();
+	TextField tfId = new TextField();
+	@FXML
+	TextField tfName = new TextField();
 	
 	@FXML
-	public void btn1(ActionEvent event) {
-		ta.appendText("Hej hopp" + "\n");
+	public void btnAddStudent(ActionEvent event) {
+		String tmpId = tfId.getText();
+		String tmpName = tfName.getText();
+		
 	}
+	
+	
 	
 }
 
