@@ -30,8 +30,5 @@ public class SampleController {
 		System.out.println("yeet");
 	}
 	
-	
-	
-	
-	
 }
+
