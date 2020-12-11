@@ -1,12 +1,12 @@
 package application;
 
+import javafx.scene.control.TextField;
 import model.Course;
 import model.Result;
 import model.Student;
 import model.WrittenExam;
 import model.StudentTest;
 
-import java.awt.TextField;
 import java.util.ArrayList;
 
 import javafx.application.Application;
@@ -48,6 +48,7 @@ public class SampleController {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 		studentRegister.add(new Student(tmpId, tmpName));
+
 	}
 	
 	@FXML
