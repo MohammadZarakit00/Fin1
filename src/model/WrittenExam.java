@@ -16,6 +16,20 @@ public class WrittenExam {
 	
 	private ArrayList<Student> sList = new ArrayList<>();
 
+	public WrittenExam(String examID){
+		if(checkExamIdInput(examID)){
+			this.examID = examID;
+		} else {
+			System.out.println("Fel format på examId");
+		}
+	}
+
+	public Boolean checkExamIdInput(String examID){
+		String subString = examID.substring(1);
+		int examIdNumber = Integer.parseInt(subString);
+		return examID.startsWith("E") && examID.length() == 6 && (examIdNumber >= 10000 && examIdNumber <= 99999);
+	}
+
 	public ArrayList<Student> getsList() {
 		return sList;
 	}
