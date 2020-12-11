@@ -14,7 +14,7 @@ public class WrittenExam {
 	
 	private double maxPoints = 100;
 	
-	private ArrayList<Student> sList = new ArrayList<Student>();
+	private ArrayList<Student> sList = new ArrayList<>();
 
 	public ArrayList<Student> getsList() {
 		return sList;
@@ -65,9 +65,21 @@ public class WrittenExam {
 		}
 		return null;
 	}
-	
+
+
+	/*
+	Fundera vidare kring deleteStudents returtyp, är det nödvändigt att returnera
+	en student? Bättre med boolean eller void?
+	 */
 	public Student deleteStudent(String studentId) {
-		
+		Student tmpStudent = findStudent(studentId);
+		if(sList.contains(tmpStudent)){
+			sList.remove(tmpStudent);
+			return tmpStudent;
+		} else {
+			System.out.println("Student finns ej på detta prov");
+		}
+		return null;
 	}
 
 }
