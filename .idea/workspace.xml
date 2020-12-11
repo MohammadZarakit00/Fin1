@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added a pretty nice checkExamIdInput-method and an un-finished constructor">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Changed return-value of credits to int instead of String.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,7 @@
       <workItem from="1607683965283" duration="401000" />
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
-      <workItem from="1607696359353" duration="931000" />
+      <workItem from="1607696359353" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -262,7 +262,19 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1607697023723</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this.">
+      <created>1607697351120</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1607697351120</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Changed return-value of credits to int instead of String.">
+      <created>1607697411205</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1607697411205</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -324,7 +336,9 @@
     <MESSAGE value="La till StudentTest" />
     <MESSAGE value="Added constructor, removed wrongly placed methods in Student, added correct ones" />
     <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
+    <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
+    <MESSAGE value="Changed return-value of credits to int instead of String." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed return-value of credits to int instead of String." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

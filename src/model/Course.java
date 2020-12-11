@@ -12,18 +12,27 @@ public class Course {
 	
 	private int credits;
 
-	public Course(String courseCode){
-		if(courseCode.startsWith("C") && courseCode.length() == 6){
+
+	/*
+	Borde kanske ha flera nästlade if-satser i constructorn så att vi kan se i vilket steg
+	det går fel.
+	 */
+	public Course(String courseCode, String name, int credits){
+		if(credits > 0 && credits <= 100 && courseCodeCheck(courseCode)) {
 			this.courseCode = courseCode;
-		} else {
-			System.out.println("Fel format på coursecode");
+			this.name = name;
+			this.credits = credits;
 		}
 	}
+
+	public Boolean courseCodeCheck(String courseCode){
+		return courseCode.startsWith("C") && courseCode.length() == 6;
+	}
+
 
 	public void addExam(WrittenExam writtenExam){
 		courseExamList.add(writtenExam);
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
-
 	}
 
 	public String getCourseCode() {
@@ -46,8 +55,16 @@ public class Course {
 		return credits;
 	}
 
+
+	/*
+	Onödigt pga constructor?
+	 */
 	public void setCredits(int credits) {
-		this.credits = credits;
+		if(credits > 0 && credits <= 100) {
+			this.credits = credits;
+		} else {
+			System.out.println("Antal credits för course är för lågt eller högt");
+		}
 	}
 
 }
