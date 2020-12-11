@@ -1,5 +1,7 @@
 package application;
 
+import java.awt.TextField;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -23,6 +25,8 @@ public class SampleController {
 	Button btn1 = new Button();
 	@FXML
 	TextArea ta = new TextArea();
+	@FXML
+	TextField tf1 = new TextField();
 	
 	@FXML
 	public void btn1(ActionEvent event) {
