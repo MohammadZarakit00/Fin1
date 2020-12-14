@@ -52,8 +52,13 @@ public class SampleController {
 	}
 	
 	@FXML
-	public void btnFindStudent(ActionEvent event) {
+	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
+		if (tfId.getText().equals(tmpId)) {
+			ta.setText(tmpId);
+			
+		}
+		return null;
 		
 	}
 	
