@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="Moved studentValidCheck from constructor to public method to be used in controller.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +316,25 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1607954351713</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="forgot about git">
+      <created>1607960012165</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1607960012165</updated>
+    </task>
+    <task id="LOCAL−00016" summary="added type to ArrayList">
+      <created>1607960089917</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1607960089917</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Moved studentValidCheck from constructor to public method to be used in controller.">
+      <created>1607960615539</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1607960615539</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -385,7 +404,10 @@
     <MESSAGE value="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap." />
     <MESSAGE value="Fixed problem where no input as name was acceptable" />
     <MESSAGE value="Added Notes.txt as a way of keeping notes for the team" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Notes.txt as a way of keeping notes for the team" />
+    <MESSAGE value="forgot about git" />
+    <MESSAGE value="added type to ArrayList" />
+    <MESSAGE value="Moved studentValidCheck from constructor to public method to be used in controller." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved studentValidCheck from constructor to public method to be used in controller." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

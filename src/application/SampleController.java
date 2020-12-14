@@ -27,16 +27,16 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class SampleController {
-	
+
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
-	
+
 	@FXML
 	Button btnAddStudent = new Button();
 	@FXML
 	Button btnFindStudent = new Button();
 	@FXML
-	Button btnRemoveStudent = new Button();
+	Button btnDeleteStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
 	@FXML
@@ -51,22 +51,15 @@ public class SampleController {
 	TextField tfName = new TextField();
 	@FXML
 	TextField tfCredits = new TextField();
-	
+
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 		studentRegister.add(new Student(tmpId, tmpName));
-		ta.setText("Student" + " " + tmpId + " " + tmpName + " " + "was added to the system. "); 
 
 	}
-	
-	public void btnRemoveStudent(ActionEvent event) {
-		String tmpId = tfId.getText();
-		studentRegister.remove(tmpId);
-		ta.setText("Student " + tmpId + " was removed from the system. ");
-	}
-	
+
 	@FXML
 	public void btnAddCourse(ActionEvent event) {
 		String tmpId = tfId.getText();
@@ -74,20 +67,28 @@ public class SampleController {
 		try {
 			int tmpCredits = Integer.parseInt(tfCredits.getText());
 			courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
-			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.") ;
+			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
 		} catch (NumberFormatException e) {
 			ta.setText("Input is not accepted. Try a number. ");
 		}
 	}
-	
+
 	@FXML
 	public void btnRemoveCourse(ActionEvent event) {
 		String tmpId = tfId.getText();
-		courseRegister.remove(tmpId);
-		ta.setText(tmpId + " was removed from the register."); 
+		for (Course c : courseRegister) {
+			if (c.getCourseCode().equals(tmpId)) {
+				courseRegister.remove(c);
+				ta.setText(tmpId + " was removed from the register.");
+			} else {
+				ta.setText(tmpId + " doesnt exist in the register.");
+			}
+		}
 	}
-	
-	
+
+
+
+
 /*@FXML
 	public String btnFindStudent(ActionEvent event) {
 		WrittenExam writtenExam = sList.findStudent(tfId.getText());
@@ -97,8 +98,6 @@ public class SampleController {
 		return null;
 	}
 	*/
-	
-	
-	
+
 }
 
