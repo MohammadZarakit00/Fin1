@@ -36,7 +36,7 @@ public class SampleController {
 	@FXML
 	Button btnFindStudent = new Button();
 	@FXML
-	Button btnDeleteStudent = new Button();
+	Button btnRemoveStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
 	@FXML
@@ -57,7 +57,14 @@ public class SampleController {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 		studentRegister.add(new Student(tmpId, tmpName));
+		ta.setText(tmpId + " " + tmpName + " " + "was added to the system. "); 
 
+	}
+	
+	public void btnRemoveStudent(ActionEvent event) {
+		String tmpId = tfId.getText();
+		studentRegister.remove(tmpId);
+		ta.setText("Student " + tmpId + " was removed from the system. ");
 	}
 	
 	@FXML

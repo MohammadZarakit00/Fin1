@@ -32,7 +32,7 @@
                            <children>
                               <Button layoutX="63.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                               <Button layoutX="63.0" layoutY="65.0" mnemonicParsing="false" text="Find Student" />
-                              <Button layoutX="65.0" layoutY="117.0" mnemonicParsing="false" text="Delete Student" />
+                              <Button layoutX="65.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnRemoveStudent" text="Delete Student" />
                            </children>
                         </AnchorPane>
                   </content>
