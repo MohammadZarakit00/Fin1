@@ -57,7 +57,7 @@ public class SampleController {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 		studentRegister.add(new Student(tmpId, tmpName));
-		ta.setText(tmpId + " " + tmpName + " " + "was added to the system. "); 
+		ta.setText("Student" + " " + tmpId + " " + tmpName + " " + "was added to the system. "); 
 
 	}
 	
