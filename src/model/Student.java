@@ -1,6 +1,6 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student {
 
@@ -8,11 +8,12 @@ public class Student {
 	
 	private String name;
 
-	private ArrayList<WrittenExam> examList = new ArrayList<>(); 
+	private HashMap<WrittenExam, Result> examResultMap = new HashMap<>();
 
 	public Student(String studentId, String name){
 		if(studentId.startsWith("S") && studentId.length() == 6){ //Kollar kraven för studentId
 			this.studentId = studentId;
+			this.name = name;
 			System.out.println("Det funkar");
 		} else {
 			System.out.println("Not valid input");
@@ -36,13 +37,13 @@ public class Student {
 		this.name = name;
 	}
 
-	public void addExam(WrittenExam exam){
-		examList.add(exam);
+	public void addExam(WrittenExam exam, Result result){
+		examResultMap.put(exam, result);
 	}
 
 	public void removeExam(WrittenExam exam){
-		if(examList.contains(exam)) {
-			examList.remove(exam);
+		if(examResultMap.containsKey(exam)) {
+			examResultMap.remove(exam);
 		} else {
 			System.out.println("Provet är ej registrerat hos denna student");
 		}

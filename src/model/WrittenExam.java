@@ -77,9 +77,9 @@ public class WrittenExam {
 		this.maxPoints = maxPoints;
 	}
 	
-	public void addStudent(Student s) {
-		s.addExam(this); //Dubbelkopplar
-		sList.add(s);
+	public void addStudent(Student student, Result result) {
+		student.addExam(this, result); //Dubbelkopplar
+		sList.add(student);
 	}
 	
 	public Student findStudent(String studentId) {
