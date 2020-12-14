@@ -7,17 +7,17 @@ public class Course {
 	private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
 
 	private String courseCode;
-	
+
 	private String name;
-	
-	private int credits;
+
+	private double credits;
 
 
 	/*
 	Borde kanske ha flera nästlade if-satser i constructorn så att vi kan se i vilket steg
 	det går fel.
 	 */
-	public Course(String courseCode, String name, int credits){
+	public Course(String courseCode, String name, double credits){
 		if(credits > 0 && credits <= 100 && courseCodeCheck(courseCode)) {
 			this.courseCode = courseCode;
 			this.name = name;
@@ -62,10 +62,18 @@ public class Course {
 		this.name = name;
 	}
 
-	public int getCredits() {
+	public double getCredits() {
 		return credits;
 	}
 
+	public WrittenExam findExam(String examId){
+		for(WrittenExam exam : courseExamList){
+			if(exam.getExamID().equals(examId)){
+				return exam;
+			}
+		}
+		return null;
+	}
 
 	/*
 	Onödigt pga constructor?

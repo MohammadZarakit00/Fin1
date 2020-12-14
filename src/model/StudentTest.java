@@ -5,9 +5,9 @@ public class StudentTest {
         public static void main(String[] args){
             Student s1 = new Student("S12345","Filip");
             Student s2 = new Student("345667", "John");
-
-            WrittenExam e1 = new WrittenExam("E12345");
-            WrittenExam e2 = new WrittenExam("S123456");
+            Course c1 = new Course("SYSA21", "Informationssystem som ämne", 7.5);
+            WrittenExam e1 = new WrittenExam("E12345", "010120", "Viktoriastadion", "8:00", c1);
+            WrittenExam e2 = new WrittenExam("S123456", "010120", "Viktoriastadion", "8:00", c1);
 
             Result r1 = new Result(0);
             Result r2 = new Result(100);

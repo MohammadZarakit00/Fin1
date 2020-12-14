@@ -11,7 +11,7 @@ public class Student {
 	private HashMap<WrittenExam, Result> examResultMap = new HashMap<>();
 
 	public Student(String studentId, String name){
-		if(studentId.startsWith("S") && studentId.length() == 6){ //Kollar kraven för studentId
+		if(studentId.startsWith("S") && studentId.length() == 6 && !name.isEmpty()){ //Kollar kraven för studentId
 			this.studentId = studentId;
 			this.name = name;
 			System.out.println("Det funkar");
