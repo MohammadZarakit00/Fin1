@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 public class SampleController {
 	
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
+	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 	
 	@FXML
 	Button btnAddStudent = new Button();
@@ -36,6 +37,12 @@ public class SampleController {
 	Button btnFindStudent = new Button();
 	@FXML
 	Button btnDeleteStudent = new Button();
+	@FXML
+	Button btnAddCourse = new Button();
+	@FXML
+	Button btnFindCourse = new Button();
+	@FXML
+	Button btnRemoveCourse = new Button();
 	@FXML
 	TextArea ta = new TextArea();
 	@FXML
@@ -51,16 +58,17 @@ public class SampleController {
 
 	}
 	
-	@FXML
+/*@FXML
 	public String btnFindStudent(ActionEvent event) {
-		String tmpId = tfId.getText();
-		if (tfId.getText().equals(tmpId)) {
-			ta.setText(tmpId);
-			
+		WrittenExam writtenExam = sList.findStudent(tfId.getText());
+		if (studentRegister.contains(student)) {
+			ta.setText(student.getName() + student.getStudentId());
 		}
 		return null;
-		
 	}
+	*/
+	
+	
 	
 }
 
