@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <top>
       <AnchorPane prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="284.0" layoutY="37.0" text="Welcome to Contoso University" />
-            <TextArea fx:id="ta" layoutX="443.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0" />
-            <TextField fx:id="tfId" layoutX="268.0" layoutY="88.0" opacity="0.74" promptText="Student ID" />
-            <TextField fx:id="tfName" layoutX="468.0" layoutY="88.0" opacity="0.74" promptText="Name" />
+            <TextArea fx:id="ta" editable="false" layoutX="262.0" layoutY="323.0" prefHeight="200.0" prefWidth="381.0" />
+            <TextField fx:id="tfId" layoutX="268.0" layoutY="88.0" promptText="ID">
+               <tooltip>
+                  <Tooltip text="Enter the ID of a student, course or exam." />
+               </tooltip></TextField>
+            <TextField fx:id="tfName" layoutX="468.0" layoutY="88.0" promptText="Name">
+               <tooltip>
+                  <Tooltip text="Enter the name of a student, course or exam." />
+               </tooltip></TextField>
             <Accordion layoutX="44.0" layoutY="88.0">
               <panes>
                 <TitledPane animated="false" text="Student management">
@@ -34,9 +34,9 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" text="Add" />
+                              <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnAddCourse" text="Add course" />
                               <Button layoutX="14.0" layoutY="65.0" mnemonicParsing="false" text="Find" />
-                              <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="Remove" />
+                              <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove" />
                               <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" text="Add exam" />
                               <Button layoutX="95.0" layoutY="78.0" mnemonicParsing="false" text="Remove exam" />
                            </children>
@@ -50,6 +50,14 @@
                 </TitledPane>
               </panes>
             </Accordion>
+            <TextField fx:id="tfCredits" layoutX="468.0" layoutY="124.0" promptText="Credits">
+               <tooltip>
+                  <Tooltip text="Enter the amount of credits a course is worth." />
+               </tooltip>
+            </TextField>
+            <TextField layoutX="468.0" layoutY="201.0" promptText="Location" />
+            <TextField layoutX="468.0" layoutY="166.0" promptText="Time" />
+            <TextField layoutX="268.0" layoutY="166.0" promptText="Course-ID" />
          </children>
       </AnchorPane>
    </top>

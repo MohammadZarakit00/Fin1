@@ -29,8 +29,8 @@ public class Result {
 		this.letterGrade = letterGrade;
 	}
 
-	public String letterGradeFromResult(int result){
 
+	public String letterGradeFromResult(int result){
 		if(result < 50){
 			return "Fail";
 		} else if(result < 55){

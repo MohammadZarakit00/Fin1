@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class WrittenExam {
 	
@@ -14,22 +15,18 @@ public class WrittenExam {
 	
 	private double maxPoints = 100;
 
-	private Course currentCourse; 
+	private Course currentCourse;
 
-	public Course getCurrentCourse() {
-		return currentCourse;
-	}
+	private ArrayList acceptedLocations = new ArrayList<>
+			(Arrays.asList("Room A123", "Room A167", "Room B198", "Room B067"));
 
-	public void setCurrentCourse(Course currentCourse) {
-		this.currentCourse = currentCourse;
-	}
-
-	private ArrayList<Student> sList = new ArrayList<>();
-	private ArrayList<Course> courseList = new ArrayList<Course>();
-
-	public WrittenExam(String examID){
-		if(checkExamIdInput(examID)){
+	public WrittenExam(String examID, String date, String location, String time, Course currentCourse){
+		if(checkExamIdInput(examID) && acceptedLocations.contains(location)){
 			this.examID = examID;
+			this.date = date;
+			this.location = location;
+			this.time = time;
+			this.currentCourse = currentCourse;
 		} else {
 			System.out.println("Fel format på examId");
 		}
@@ -40,6 +37,16 @@ public class WrittenExam {
 		int examIdNumber = Integer.parseInt(subString);
 		return examID.startsWith("E") && examID.length() == 6 && (examIdNumber >= 10000 && examIdNumber <= 99999);
 	}
+
+	public Course getCurrentCourse() {
+		return currentCourse;
+	}
+
+	public void setCurrentCourse(Course currentCourse) {
+		this.currentCourse = currentCourse;
+	}
+
+	private ArrayList<Student> sList = new ArrayList<>();
 
 	public ArrayList<Student> getsList() {
 		return sList;
@@ -107,14 +114,6 @@ public class WrittenExam {
 			System.out.println("Student finns ej på detta prov");
 		}
 		return null;
-	}
-	
-	public void addCourse(Course course) {
-		courseList.add(course);
-	}
-	
-	public void removeCourse(Course course) {
-		courseList.remove(course);
 	}
 
 }
