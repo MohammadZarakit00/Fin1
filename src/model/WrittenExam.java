@@ -101,7 +101,6 @@ public class WrittenExam {
 		if(sList.contains(tmpStudent)){
 			sList.remove(tmpStudent);
 			tmpStudent.removeExam(this);
-			findStudent(studentId).removeExam(this);
 			return tmpStudent;
 		} else {
 			System.out.println("Student finns ej på detta prov");

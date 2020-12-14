@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Fixed problem where no input as name was acceptable">
       <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +227,7 @@
       <workItem from="1607683965283" duration="401000" />
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
-      <workItem from="1607696359353" duration="6211000" />
+      <workItem from="1607696359353" duration="6376000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -305,7 +303,13 @@
       <option name="presentableId" value="LOCAL−00012" />
       <updated>1607950324126</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL−00013" summary="Fixed problem where no input as name was acceptable">
+      <created>1607951071497</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1607951071497</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -373,7 +377,8 @@
     <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
     <MESSAGE value="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap." />
+    <MESSAGE value="Fixed problem where no input as name was acceptable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed problem where no input as name was acceptable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
