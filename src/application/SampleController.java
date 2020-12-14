@@ -28,7 +28,9 @@ import javafx.stage.Stage;
 
 public class SampleController {
 	
-	private ArrayList<Student> studentRegister = new ArrayList<Student>();
+	//private ArrayList<Student> studentRegister = new ArrayList<Student>();
+	private ArrayList<Course> courses = new ArrayList<>();
+	WrittenExam testExam = new WrittenExam("E00001");
 	
 	@FXML
 	Button btnAddStudent = new Button();
@@ -47,7 +49,7 @@ public class SampleController {
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		studentRegister.add(new Student(tmpId, tmpName));
+		testExam.addStudent(new Student(tmpId, tmpName));
 
 	}
 	

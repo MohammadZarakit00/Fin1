@@ -30,6 +30,7 @@ public class Result {
 	}
 
 	public String letterGradeFromResult(int result){
+
 		if(result < 50){
 			return "Fail";
 		} else if(result < 55){
