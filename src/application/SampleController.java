@@ -28,9 +28,8 @@ import javafx.stage.Stage;
 
 public class SampleController {
 	
-	//private ArrayList<Student> studentRegister = new ArrayList<Student>();
-	private ArrayList<Course> courses = new ArrayList<>();
-	WrittenExam testExam = new WrittenExam("E00001");
+	private ArrayList<Student> studentRegister = new ArrayList<Student>();
+	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 	
 	@FXML
 	Button btnAddStudent = new Button();
@@ -39,30 +38,60 @@ public class SampleController {
 	@FXML
 	Button btnDeleteStudent = new Button();
 	@FXML
+	Button btnAddCourse = new Button();
+	@FXML
+	Button btnFindCourse = new Button();
+	@FXML
+	Button btnRemoveCourse = new Button();
+	@FXML
 	TextArea ta = new TextArea();
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
 	TextField tfName = new TextField();
+	@FXML
+	TextField tfCredits = new TextField();
 	
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		testExam.addStudent(new Student(tmpId, tmpName));
+		studentRegister.add(new Student(tmpId, tmpName));
 
 	}
 	
 	@FXML
-	public String btnFindStudent(ActionEvent event) {
+	public void btnAddCourse(ActionEvent event) {
 		String tmpId = tfId.getText();
-		if (tfId.getText().equals(tmpId)) {
-			ta.setText(tmpId);
-			
+		String tmpName = tfName.getText();
+		try {
+			int tmpCredits = Integer.parseInt(tfCredits.getText());
+			courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
+			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.") ;
+		} catch (NumberFormatException e) {
+			ta.setText("Input is not accepted. Try a number. ");
+		}
+	}
+	
+	@FXML
+	public void btnRemoveCourse(ActionEvent event) {
+		String tmpId = tfId.getText();
+		courseRegister.remove(tmpId);
+		ta.setText(tmpId + " was removed from the register."); 
+	}
+	
+	
+/*@FXML
+	public String btnFindStudent(ActionEvent event) {
+		WrittenExam writtenExam = sList.findStudent(tfId.getText());
+		if (studentRegister.contains(student)) {
+			ta.setText(student.getName() + student.getStudentId());
 		}
 		return null;
-		
 	}
+	*/
+	
+	
 	
 }
 
