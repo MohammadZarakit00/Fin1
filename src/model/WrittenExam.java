@@ -16,6 +16,8 @@ public class WrittenExam {
 
 	private Course currentCourse;
 
+	private ArrayList<Student> sList = new ArrayList<>();
+
 	public Course getCurrentCourse() {
 		return currentCourse;
 	}
@@ -23,8 +25,6 @@ public class WrittenExam {
 	public void setCurrentCourse(Course currentCourse) {
 		this.currentCourse = currentCourse;
 	}
-
-	private ArrayList<Student> sList = new ArrayList<>();
 
 	public WrittenExam(String examID){
 		if(checkExamIdInput(examID)){
