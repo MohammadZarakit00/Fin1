@@ -73,6 +73,14 @@ public class SampleController {
 		}
 	}
 	
+	@FXML
+	public void btnRemoveCourse(ActionEvent event) {
+		String tmpId = tfId.getText();
+		courseRegister.remove(tmpId);
+		ta.setText(tmpId + " was removed from the register."); 
+	}
+	
+	
 /*@FXML
 	public String btnFindStudent(ActionEvent event) {
 		WrittenExam writtenExam = sList.findStudent(tfId.getText());

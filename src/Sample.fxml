@@ -43,7 +43,7 @@
                            <children>
                               <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
                               <Button layoutX="14.0" layoutY="65.0" mnemonicParsing="false" text="Find" />
-                              <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="Remove" />
+                              <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove" />
                               <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" text="Add exam" />
                               <Button layoutX="95.0" layoutY="78.0" mnemonicParsing="false" text="Remove exam" />
                            </children>
