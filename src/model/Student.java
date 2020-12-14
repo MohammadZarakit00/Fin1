@@ -11,13 +11,17 @@ public class Student {
 	private HashMap<WrittenExam, Result> examResultMap = new HashMap<>();
 
 	public Student(String studentId, String name){
-		if(studentId.startsWith("S") && studentId.length() == 6 && !name.isEmpty()){ //Kollar kraven för studentId
+		if(studentValidCheck(studentId, name)){ //Kollar kraven för studentId
 			this.studentId = studentId;
 			this.name = name;
 			System.out.println("Det funkar");
 		} else {
 			System.out.println("Not valid input");
 		}
+	}
+
+	public Boolean studentValidCheck(String studentId, String name){
+		return studentId.startsWith("S") && studentId.length() == 6 && !name.isEmpty();
 	}
 
 	
