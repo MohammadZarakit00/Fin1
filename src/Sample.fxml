@@ -15,7 +15,7 @@
       <AnchorPane prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="284.0" layoutY="37.0" text="Welcome to Contoso University" />
-            <TextArea fx:id="ta" layoutX="443.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="ta" editable="false" layoutX="262.0" layoutY="323.0" prefHeight="200.0" prefWidth="381.0" />
             <TextField fx:id="tfId" layoutX="268.0" layoutY="88.0" promptText="ID">
                <tooltip>
                   <Tooltip text="Enter the ID of a student, course or exam." />
