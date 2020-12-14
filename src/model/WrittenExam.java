@@ -14,7 +14,7 @@ public class WrittenExam {
 	
 	private double maxPoints = 100;
 
-	private Course currentCourse;
+	private Course currentCourse; 
 
 	public Course getCurrentCourse() {
 		return currentCourse;
@@ -25,6 +25,7 @@ public class WrittenExam {
 	}
 
 	private ArrayList<Student> sList = new ArrayList<>();
+	private ArrayList<Course> courseList = new ArrayList<Course>();
 
 	public WrittenExam(String examID){
 		if(checkExamIdInput(examID)){
@@ -106,6 +107,10 @@ public class WrittenExam {
 			System.out.println("Student finns ej på detta prov");
 		}
 		return null;
+	}
+	
+	public void addCourse(Course course) {
+		courseList.add(course);
 	}
 
 }

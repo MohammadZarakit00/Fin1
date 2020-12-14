@@ -49,6 +49,8 @@ public class SampleController {
 	TextField tfId = new TextField();
 	@FXML
 	TextField tfName = new TextField();
+	@FXML
+	TextField tfCredits = new TextField();
 	
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
@@ -56,6 +58,14 @@ public class SampleController {
 		String tmpName = tfName.getText();
 		studentRegister.add(new Student(tmpId, tmpName));
 
+	}
+	
+	@FXML
+	public void btnAddCourse(ActionEvent event) {
+		String tmpId = tfId.getText();
+		String tmpName = tfName.getText();
+		int tmpCredits = Integer.parseInt(tfCredits.getText());
+		courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
 	}
 	
 /*@FXML

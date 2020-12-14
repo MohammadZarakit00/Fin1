@@ -15,8 +15,8 @@
          <children>
             <Label layoutX="284.0" layoutY="37.0" text="Welcome to Contoso University" />
             <TextArea fx:id="ta" layoutX="443.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0" />
-            <TextField fx:id="tfId" layoutX="268.0" layoutY="88.0" opacity="0.74" promptText="Student ID" />
-            <TextField fx:id="tfName" layoutX="468.0" layoutY="88.0" opacity="0.74" promptText="Name" />
+            <TextField fx:id="tfId" layoutX="268.0" layoutY="88.0" promptText="Student ID" />
+            <TextField fx:id="tfName" layoutX="468.0" layoutY="88.0" promptText="Name" />
             <Accordion layoutX="44.0" layoutY="88.0">
               <panes>
                 <TitledPane animated="false" text="Student management">
@@ -50,6 +50,8 @@
                 </TitledPane>
               </panes>
             </Accordion>
+            <TextField layoutX="268.0" layoutY="124.0" promptText="Course Code" />
+            <TextField layoutX="468.0" layoutY="124.0" promptText="Credits" />
          </children>
       </AnchorPane>
    </top>
