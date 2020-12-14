@@ -35,8 +35,8 @@ public class SampleController {
 	Button btnAddStudent = new Button();
 	@FXML
 	Button btnFindStudent = new Button();
-	@FXML
-	Button btnDeleteStudent = new Button();
+//	@FXML
+	//Button btnDeleteStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
 	@FXML
