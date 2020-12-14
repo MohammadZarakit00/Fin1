@@ -17,7 +17,7 @@ public class WrittenExam {
 
 	private Course currentCourse;
 
-	private ArrayList acceptedLocations = new ArrayList<>
+	private ArrayList<String> acceptedLocations = new ArrayList<>
 			(Arrays.asList("Room A123", "Room A167", "Room B198", "Room B067"));
 
 	public WrittenExam(String examID, String date, String location, String time, Course currentCourse){
