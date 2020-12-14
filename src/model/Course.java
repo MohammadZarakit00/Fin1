@@ -23,6 +23,14 @@ public class Course {
 			this.name = name;
 			this.credits = credits;
 		}
+		if(courseCode.startsWith("C") && courseCode.length() == 6) {
+			this.courseCode = courseCode;
+			this.name = name;
+			System.out.println("working");
+		}
+		else {
+			System.out.println("not working");
+		}
 	}
 
 	/*

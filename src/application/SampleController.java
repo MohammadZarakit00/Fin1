@@ -64,8 +64,13 @@ public class SampleController {
 	public void btnAddCourse(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		int tmpCredits = Integer.parseInt(tfCredits.getText());
-		courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
+		try {
+			int tmpCredits = Integer.parseInt(tfCredits.getText());
+			courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
+			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.") ;
+		} catch (NumberFormatException e) {
+			ta.setText("Input is not accepted. Try a number. ");
+		}
 	}
 	
 /*@FXML
