@@ -12,9 +12,8 @@ public class Student {
 		if(studentValidCheck(studentId, name)){ //Kollar kraven för studentId
 			this.studentId = studentId;
 			this.name = name;
-			System.out.println("Det funkar");
 		} else {
-			System.out.println("Not valid input");
+			System.out.println("Student-id är i ett felaktigt format");
 		}
 	}
 

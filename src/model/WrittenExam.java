@@ -17,7 +17,6 @@ public class WrittenExam {
 	private ArrayList<String> acceptedLocations = new ArrayList<>
 			(Arrays.asList("Room A123", "Room A167", "Room B198", "Room B067"));
 
-
 	public WrittenExam(String examID, String date, String location, String time, Course currentCourse){
 		if(checkExamIdInput(examID) && acceptedLocations.contains(location)){
 			this.examID = examID;
@@ -39,17 +38,18 @@ public class WrittenExam {
 	public Course getCurrentCourse() {
 		return currentCourse;
 	}
-
 	public void setCurrentCourse(Course currentCourse) {
 		this.currentCourse = currentCourse;
 	}
-
 	public ArrayList<Student> getStudentList() {
 		return studentList;
 	}
 	public void setStudentList(ArrayList<Student> studentList) {
 		this.studentList = studentList;
 	}
+	public ArrayList<String> getAcceptedLocations() { return acceptedLocations; }
+	public void setAcceptedLocations(ArrayList<String> acceptedLocations) {
+		this.acceptedLocations = acceptedLocations; }
 	public String getExamID() {
 		return examID;
 	}
@@ -115,7 +115,7 @@ public class WrittenExam {
 		if(findStudent(studentId) != null) {
 			findStudent(studentId).getExamResultMap().put(this, new Result(points));
 		} else {
-			System.out.println("Student finns ej i systemet, resultat kan ej sättas.");
+			System.out.println("Student finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
 		}
 	}
 
@@ -127,7 +127,7 @@ public class WrittenExam {
 				sortedResultList.add(tmpStudent.getPointsFromExam(this));
 			}
 		}
-		Collections.sort(sortedResultList);
+		Collections.sort(sortedResultList); //Sorterar listan i växande ordning
 		middle = sortedResultList.size() / 2;
 		if(sortedResultList.size() % 2 == 1){
 			return sortedResultList.get(middle);

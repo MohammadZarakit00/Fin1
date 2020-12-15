@@ -8,8 +8,8 @@ public class StudentTest {
             Student s3 = new Student("S00001", "Anders");
             Student s4 = new Student("S00002", "Berra");
             Course c1 = new Course("SYSA21", "Informationssystem som ämne", 7.5);
-            WrittenExam e1 = new WrittenExam("E12345", "010120", "Viktoriastadion", "8:00", c1);
-            WrittenExam e2 = new WrittenExam("S123456", "010120", "Viktoriastadion", "8:00", c1);
+            WrittenExam e1 = new WrittenExam("E12345", "010120", "Room A123", "8:00", c1);
+            WrittenExam e2 = new WrittenExam("S123456", "010120", "Room A123", "8:00", c1);
 
             Result r1 = new Result(0);
             Result r2 = new Result(50);
@@ -28,7 +28,7 @@ public class StudentTest {
             e1.addStudent(s1);
             e1.addStudent(s2);
             e1.addStudent(s3);
-            e1.addStudent(s4);
+            //e1.addStudent(s4);
 
             e1.setStudentResult("S12345", 0);
             e1.setStudentResult("S45667", 50);
