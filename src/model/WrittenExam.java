@@ -109,4 +109,12 @@ public class WrittenExam {
 		}
 		return null;
 	}
+
+	public void setStudentResult(String studentId, int points){
+		if(findStudent(studentId) != null) {
+			findStudent(studentId).getExamResultMap().put(this, new Result(points));
+		} else {
+			System.out.println("Student finns ej i systemet, resultat kan ej sättas.");
+		}
+	}
 }
