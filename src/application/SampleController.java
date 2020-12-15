@@ -55,6 +55,18 @@ public class SampleController {
 	TextField tfCredits = new TextField();
 	
 	@FXML
+	Button btnScene2;
+	
+	public void handleBtn1() throws Exception {
+		
+	Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
+	
+	Stage window = (Stage) btnScene2.getScene().getWindow();
+	
+	window.setScene(new Scene(root, 800, 600));
+	}
+	
+	@FXML
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();

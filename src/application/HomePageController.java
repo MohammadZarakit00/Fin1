@@ -31,7 +31,7 @@ import javafx.stage.Stage;
 public class HomePageController {
 
 		@FXML
-		Button btnScene1, btnScene2;
+		Button btnScene1;
 		
 		public void handleBtn1() throws Exception {
 			
@@ -42,7 +42,17 @@ public class HomePageController {
 		window.setScene(new Scene(root, 800, 600));
 		}
 		
+		@FXML
+		Button btnScene2;
 		
+		public void handleBtn2() throws Exception {
+			
+		Parent root = FXMLLoader.load(this.getClass().getResource("/CourseManagement.fxml"));
+		
+		Stage window = (Stage) btnScene1.getScene().getWindow();
+		
+		window.setScene(new Scene(root, 800, 600));
+		}
 
 	}
 
