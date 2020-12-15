@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="Moved studentValidCheck from constructor to public method to be used in controller.">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="fixed removeCourse in controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +214,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="" />
+      <changelist id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="fixed removeCourse in controller" />
       <created>1607518148366</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -229,6 +229,7 @@
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
       <workItem from="1607696359353" duration="6376000" />
+      <workItem from="1608023898276" duration="352000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -334,7 +335,13 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1607960615539</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="fixed removeCourse in controller">
+      <created>1607960954411</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1607960954411</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -407,7 +414,8 @@
     <MESSAGE value="forgot about git" />
     <MESSAGE value="added type to ArrayList" />
     <MESSAGE value="Moved studentValidCheck from constructor to public method to be used in controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved studentValidCheck from constructor to public method to be used in controller." />
+    <MESSAGE value="fixed removeCourse in controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed removeCourse in controller" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

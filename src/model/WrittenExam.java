@@ -6,19 +6,16 @@ import java.util.Arrays;
 public class WrittenExam {
 	
 	private String examID;
-	
 	private String date;
-	
 	private String location;
-	
 	private String time;
-	
 	private double maxPoints = 100;
-
 	private Course currentCourse;
+	private ArrayList<Student> studentList = new ArrayList<>();
 
 	private ArrayList<String> acceptedLocations = new ArrayList<>
 			(Arrays.asList("Room A123", "Room A167", "Room B198", "Room B067"));
+
 
 	public WrittenExam(String examID, String date, String location, String time, Course currentCourse){
 		if(checkExamIdInput(examID) && acceptedLocations.contains(location)){
@@ -46,13 +43,11 @@ public class WrittenExam {
 		this.currentCourse = currentCourse;
 	}
 
-	private ArrayList<Student> sList = new ArrayList<>();
-
-	public ArrayList<Student> getsList() {
-		return sList;
+	public ArrayList<Student> getStudentList() {
+		return studentList;
 	}
-	public void setsList(ArrayList<Student> sList) {
-		this.sList = sList;
+	public void setStudentList(ArrayList<Student> studentList) {
+		this.studentList = studentList;
 	}
 	public String getExamID() {
 		return examID;
@@ -87,11 +82,11 @@ public class WrittenExam {
 	
 	public void addStudent(Student student) {
 		student.addExam(this, null); //Dubbelkopplar och sätter betug till null
-		sList.add(student);
+		studentList.add(student);
 	}
 	
 	public Student findStudent(String studentId) {
-		for (Student tmpStudent : sList) {
+		for (Student tmpStudent : studentList) {
 			if (tmpStudent.getStudentId().equals(studentId)) {
 				return tmpStudent;
 			}
@@ -99,15 +94,14 @@ public class WrittenExam {
 		return null;
 	}
 
-
 	/*
 	Fundera vidare kring deleteStudents returtyp, är det nödvändigt att returnera
 	en student? Bättre med boolean eller void?
 	 */
 	public Student deleteStudent(String studentId) {
 		Student tmpStudent = findStudent(studentId);
-		if(sList.contains(tmpStudent)){
-			sList.remove(tmpStudent);
+		if(studentList.contains(tmpStudent)){
+			studentList.remove(tmpStudent);
 			tmpStudent.removeExam(this);
 			return tmpStudent;
 		} else {
@@ -115,5 +109,4 @@ public class WrittenExam {
 		}
 		return null;
 	}
-
 }
