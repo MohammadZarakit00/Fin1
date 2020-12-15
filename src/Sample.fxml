@@ -11,8 +11,8 @@
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
-   <top>
-      <AnchorPane prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
+   <left>
+      <AnchorPane fx:id="studentStage" prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="284.0" layoutY="37.0" text="Welcome to Contoso University" />
             <TextArea fx:id="ta" editable="false" layoutX="262.0" layoutY="323.0" prefHeight="200.0" prefWidth="381.0" />
@@ -67,5 +67,5 @@
             <TextField layoutX="268.0" layoutY="166.0" promptText="Course-ID" />
          </children>
       </AnchorPane>
-   </top>
+   </left>
 </BorderPane>
