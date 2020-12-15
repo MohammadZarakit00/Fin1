@@ -23,14 +23,6 @@ public class Course {
 			this.name = name;
 			this.credits = credits;
 		}
-		if(courseCode.startsWith("C") && courseCode.length() == 6) {
-			this.courseCode = courseCode;
-			this.name = name;
-			System.out.println("working");
-		}
-		else {
-			System.out.println("not working");
-		}
 	}
 
 	/*
@@ -44,6 +36,25 @@ public class Course {
 	public void addExam(WrittenExam writtenExam){
 		courseExamList.add(writtenExam);
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+	}
+
+	public WrittenExam findExam(String examId){
+		for(WrittenExam exam : courseExamList){
+			if(exam.getExamID().equals(examId)){
+				return exam;
+			}
+		}
+		return null;
+	}
+
+	public WrittenExam removeExam(String examId){
+		WrittenExam tmpExam = findExam(examId);
+		if(courseExamList.contains(tmpExam)){
+			courseExamList.remove(tmpExam);
+			return tmpExam;
+		} else {
+			return null;
+		}
 	}
 
 	public String getCourseCode() {
@@ -64,15 +75,6 @@ public class Course {
 
 	public double getCredits() {
 		return credits;
-	}
-
-	public WrittenExam findExam(String examId){
-		for(WrittenExam exam : courseExamList){
-			if(exam.getExamID().equals(examId)){
-				return exam;
-			}
-		}
-		return null;
 	}
 
 	/*
