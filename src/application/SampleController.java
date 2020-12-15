@@ -7,10 +7,12 @@ import model.Student;
 import model.WrittenExam;
 import model.StudentTest;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -27,17 +29,6 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class SampleController {
-	
-	@FXML
-	Button btnStudentManagement = new Button();
-	
-	public void btnStudentManagement(ActionEvent event) throws Exception {
-		
-	Parent root = FXMLLoader.load(this.getClass().getResource("/Sample.fxml"));
-	Stage window = (Stage) btnStudentManagement.getScene().getWindow();
-	window.setScene(new Scene (root));
-	}
-	
 
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
@@ -62,7 +53,7 @@ public class SampleController {
 	TextField tfName = new TextField();
 	@FXML
 	TextField tfCredits = new TextField();
-
+	
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();

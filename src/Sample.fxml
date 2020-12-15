@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <left>
-      <AnchorPane fx:id="studentStage" prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="284.0" layoutY="37.0" text="Welcome to Contoso University" />
             <TextArea fx:id="ta" editable="false" layoutX="262.0" layoutY="323.0" prefHeight="200.0" prefWidth="381.0" />
@@ -45,7 +45,7 @@
                               <Button layoutX="14.0" layoutY="65.0" mnemonicParsing="false" text="Find" />
                               <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove" />
                               <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" text="Add exam" />
-                              <Button layoutX="95.0" layoutY="78.0" mnemonicParsing="false" text="Remove exam" />
+                              <Button layoutX="95.0" layoutY="78.0" mnemonicParsing="false" text="go back" />
                            </children>
                         </AnchorPane>
                   </content>
