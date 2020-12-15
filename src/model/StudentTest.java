@@ -33,10 +33,11 @@ public class StudentTest {
             e1.setStudentResult("S12345", 0);
             e1.setStudentResult("S45667", 50);
             e1.setStudentResult("S00001", 100);
-            e1.setStudentResult("S00002", 75);
+            e1.setStudentResult("S00002", 49);
 
             System.out.println("Medianen är " + e1.getMedianResult());
             System.out.println("Medelvärdet är " + e1.getMeanResult());
+            System.out.println("Antal studenter som klarade kursen är " + e1.nbrPassedExam());
 
         }
 }

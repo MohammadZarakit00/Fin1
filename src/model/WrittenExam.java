@@ -145,4 +145,18 @@ public class WrittenExam {
 		}
 		return total / (studentList.size());
 	}
+
+	public int nbrPassedExam(){
+		int nbrPassed = 0;
+		for(Student tmpStudent : studentList){
+			if(tmpStudent.getExamResultMap().get(this) != null){
+				if(!tmpStudent.getExamResultMap().get(this).getLetterGrade().equals("Fail")){
+					nbrPassed++;
+				}
+			} else {
+				System.out.println("Studenten har inget resultat på " + this.getExamID());
+			}
+		}
+		return nbrPassed;
+	}
 }
