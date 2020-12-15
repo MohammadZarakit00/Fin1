@@ -119,18 +119,30 @@ public class WrittenExam {
 		}
 	}
 
-	public int getMedianResult(){
+	public double getMedianResult(){
 		ArrayList<Integer> sortedResultList = new ArrayList<>();
 		int middle;
 		for(Student tmpStudent : studentList){
-			sortedResultList.add(tmpStudent.getExamResultMap().get(this).getResult());
+			if(tmpStudent.getExamResultMap().get(this) != null) { //Kollar så att studenten har resultat på kursen
+				sortedResultList.add(tmpStudent.getPointsFromExam(this));
+			}
 		}
 		Collections.sort(sortedResultList);
 		middle = sortedResultList.size() / 2;
 		if(sortedResultList.size() % 2 == 1){
 			return sortedResultList.get(middle);
 		} else {
-			return (sortedResultList.get(middle - 1) + sortedResultList.get(middle)) / 2;
+			return (sortedResultList.get(middle - 1) + sortedResultList.get(middle)) / 2.0;
 		}
+	}
+
+	public double getMeanResult(){
+		double total = 0;
+		for(Student tmpStudent : studentList){
+			if(tmpStudent.getExamResultMap().get(this) != null) {
+				total += tmpStudent.getPointsFromExam(this);
+			}
+		}
+		return total / (studentList.size());
 	}
 }

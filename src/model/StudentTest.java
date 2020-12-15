@@ -36,6 +36,7 @@ public class StudentTest {
             e1.setStudentResult("S00002", 75);
 
             System.out.println("Medianen är " + e1.getMedianResult());
+            System.out.println("Medelvärdet är " + e1.getMeanResult());
 
         }
 }

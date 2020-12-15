@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="removed unnecessary code">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="Added median-method to writtenexam and wrote test cases to check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StudentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
@@ -231,7 +231,7 @@
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
       <workItem from="1607696359353" duration="6376000" />
-      <workItem from="1608023898276" duration="3685000" />
+      <workItem from="1608023898276" duration="5253000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -361,7 +361,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1608025638447</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="Added median-method to writtenexam and wrote test cases to check">
+      <created>1608027798503</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1608027798503</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -438,7 +444,8 @@
     <MESSAGE value="Rename and moved wierdly placed code" />
     <MESSAGE value="Added setStudentResult in WrittenExam" />
     <MESSAGE value="removed unnecessary code" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary code" />
+    <MESSAGE value="Added median-method to writtenexam and wrote test cases to check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added median-method to writtenexam and wrote test cases to check" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
