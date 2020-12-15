@@ -27,26 +27,17 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class SampleController {
-	
-	@FXML
-	Button btnStudentManagement = new Button();
-	
-	public void btnStudentManagement(ActionEvent event) throws Exception {
-		
-	Parent root = FXMLLoader.load(this.getClass().getResource("/Sample.fxml"));
-	Stage window = (Stage) btnStudentManagement.getScene().getWindow();
-	window.setScene(new Scene (root));
-	}
-	
 
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 
+
 	@FXML
 	Button btnAddStudent = new Button();
+
 	@FXML
 	Button btnFindStudent = new Button();
-//	@FXML
+	//	@FXML
 	//Button btnDeleteStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
@@ -55,6 +46,8 @@ public class SampleController {
 	@FXML
 	Button btnRemoveCourse = new Button();
 	@FXML
+	Button btnStudentManagement = new Button();
+	@FXML
 	TextArea ta = new TextArea();
 	@FXML
 	TextField tfId = new TextField();
@@ -62,6 +55,13 @@ public class SampleController {
 	TextField tfName = new TextField();
 	@FXML
 	TextField tfCredits = new TextField();
+
+
+	public void btnStudentManagement(ActionEvent event) throws Exception {
+		Parent root = FXMLLoader.load(this.getClass().getResource("/Sample.fxml"));
+		Stage window = (Stage) btnStudentManagement.getScene().getWindow();
+		window.setScene(new Scene (root));
+	}
 
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
