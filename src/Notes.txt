@@ -1,2 +1,8 @@
 - När man i GUIt klickar på ett TextField så ska det komma upp en inforuta kring vad som är input-krav, ex
 6 tecken långt och måste börja på "E" eller "S".
+
+Todo:
+Koppla exam till kurs
+Register results for student on written exam
+Split controller?
+Testclass för samtliga funktioner

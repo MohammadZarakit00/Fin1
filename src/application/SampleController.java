@@ -27,6 +27,17 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class SampleController {
+	
+	@FXML
+	Button btnStudentManagement = new Button();
+	
+	public void btnStudentManagement(ActionEvent event) throws Exception {
+		
+	Parent root = FXMLLoader.load(this.getClass().getResource("/Sample.fxml"));
+	Stage window = (Stage) btnStudentManagement.getScene().getWindow();
+	window.setScene(new Scene (root));
+	}
+	
 
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
@@ -35,8 +46,8 @@ public class SampleController {
 	Button btnAddStudent = new Button();
 	@FXML
 	Button btnFindStudent = new Button();
-	@FXML
-	Button btnDeleteStudent = new Button();
+//	@FXML
+	//Button btnDeleteStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
 	@FXML
