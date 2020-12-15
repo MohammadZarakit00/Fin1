@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class WrittenExam {
 	
@@ -115,6 +116,21 @@ public class WrittenExam {
 			findStudent(studentId).getExamResultMap().put(this, new Result(points));
 		} else {
 			System.out.println("Student finns ej i systemet, resultat kan ej sättas.");
+		}
+	}
+
+	public int getMedianResult(){
+		ArrayList<Integer> sortedResultList = new ArrayList<>();
+		int middle;
+		for(Student tmpStudent : studentList){
+			sortedResultList.add(tmpStudent.getExamResultMap().get(this).getResult());
+		}
+		Collections.sort(sortedResultList);
+		middle = sortedResultList.size() / 2;
+		if(sortedResultList.size() % 2 == 1){
+			return sortedResultList.get(middle);
+		} else {
+			return (sortedResultList.get(middle - 1) + sortedResultList.get(middle)) / 2;
 		}
 	}
 }

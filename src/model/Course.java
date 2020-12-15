@@ -38,6 +38,25 @@ public class Course {
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
 	}
 
+	public WrittenExam findExam(String examId){
+		for(WrittenExam exam : courseExamList){
+			if(exam.getExamID().equals(examId)){
+				return exam;
+			}
+		}
+		return null;
+	}
+
+	public WrittenExam removeExam(String examId){
+		WrittenExam tmpExam = findExam(examId);
+		if(courseExamList.contains(tmpExam)){
+			courseExamList.remove(tmpExam);
+			return tmpExam;
+		} else {
+			return null;
+		}
+	}
+
 	public String getCourseCode() {
 		return courseCode;
 	}
@@ -56,15 +75,6 @@ public class Course {
 
 	public double getCredits() {
 		return credits;
-	}
-
-	public WrittenExam findExam(String examId){
-		for(WrittenExam exam : courseExamList){
-			if(exam.getExamID().equals(examId)){
-				return exam;
-			}
-		}
-		return null;
 	}
 
 	/*
