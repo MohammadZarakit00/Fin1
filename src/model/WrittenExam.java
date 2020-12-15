@@ -127,8 +127,10 @@ public class WrittenExam {
 				sortedResultList.add(tmpStudent.getPointsFromExam(this));
 			}
 		}
+
 		Collections.sort(sortedResultList); //Sorterar listan i växande ordning
 		middle = sortedResultList.size() / 2;
+
 		if(sortedResultList.size() % 2 == 1){
 			return sortedResultList.get(middle);
 		} else {

@@ -28,6 +28,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 public class HomePageController {
 
 		@FXML
