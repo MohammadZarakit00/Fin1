@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -35,58 +36,37 @@ import javafx.stage.Stage;
 public class HomePageController implements Initializable {
 	
 
-
-		@FXML
-		BorderPane bp = new BorderPane();
-		@FXML
-		AnchorPane ap = new AnchorPane();
-	
-	
-		
-		private void loadPage(String page) {
-			
-		try {				
-				FXMLLoader.load(getClass().getResource(page));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			bp.setCenter(ap);
-		}
-	
 		@FXML
 		Button btnScene1;
+		@FXML
+		BorderPane bp = new BorderPane();
 		
-		public void btnScene1(ActionEvent event) {
+		@FXML
+		private void handleButton1Action(ActionEvent event) {
+			System.out.println("click");
+			Loader object = new Loader();
+			Pane view = object.getPage("/Sample");
+			bp.setCenter(view);
 			
-		String page = "/Sample.fxml";
-			
-		loadPage(page); //something be fucky, gotta declare page somehow
-		
-		System.out.println("something is working at least");
-		
-		bp.setCenter(ap);
 		}
 		
 		@FXML
-		Button btnScene2;
-		
-		public void btnScene2(ActionEvent event) {
+		private void handleButton2Action(ActionEvent event) {
+			System.out.println("click2");
+			Loader object = new Loader();
+			Pane view = object.getPage("/CourseManagement");
+			bp.setCenter(view);
 			
-		String page = "/CourseManagement.fxml";
-			
-		loadPage(page);		
-		bp.setCenter(ap);
 		}
-
+		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
-			// TODO Auto-generated method stub
+	
 			
 		}
-		
+				
 	}
+		
 		
 
 
