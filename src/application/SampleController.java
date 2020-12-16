@@ -46,7 +46,7 @@ public class SampleController {
 	@FXML
 	Button btnRemoveCourse = new Button();
 	@FXML
-	TextArea ta = new TextArea();
+	java.awt.TextArea ta = new TextArea();
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -103,15 +103,16 @@ public class SampleController {
 
 
 
-/*@FXML
-	public String btnFindStudent(ActionEvent event) {
-		WrittenExam writtenExam = sList.findStudent(tfId.getText());
+	@FXML
+	public void btnFindStudent(ActionEvent event) {
+		Student student = studentRegister.findStudent(tfId.getText());
 		if (studentRegister.contains(student)) {
-			ta.setText(student.getName() + student.getStudentId());
+			ta.setText(student.getName()+ ", " + student.getStudentId());
+		} else {
+		ta.setText("Studenten finns ej i systemet, var vänlig försök igen");
 		}
-		return null;
 	}
-	*/
+	
 
 }
 
