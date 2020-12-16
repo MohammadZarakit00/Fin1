@@ -8,17 +8,21 @@ import model.WrittenExam;
 import model.StudentTest;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,32 +32,62 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class HomePageController {
+public class HomePageController implements Initializable {
+	
 
+
+		@FXML
+		BorderPane bp = new BorderPane();
+		@FXML
+		AnchorPane ap = new AnchorPane();
+	
+	
+		
+		private void loadPage(String page) {
+			
+		try {				
+				FXMLLoader.load(getClass().getResource(page));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			bp.setCenter(ap);
+		}
+	
 		@FXML
 		Button btnScene1;
 		
-		public void handleBtn1() throws Exception {
+		public void btnScene1(ActionEvent event) {
 			
-		Parent root = FXMLLoader.load(this.getClass().getResource("/Sample.fxml"));
+		String page = "/Sample.fxml";
+			
+		loadPage(page); //something be fucky, gotta declare page somehow
 		
-		Stage window = (Stage) btnScene1.getScene().getWindow();
+		System.out.println("something is working at least");
 		
-		window.setScene(new Scene(root, 800, 600));
+		bp.setCenter(ap);
 		}
 		
 		@FXML
 		Button btnScene2;
 		
-		public void handleBtn2() throws Exception {
+		public void btnScene2(ActionEvent event) {
 			
-		Parent root = FXMLLoader.load(this.getClass().getResource("/CourseManagement.fxml"));
-		
-		Stage window = (Stage) btnScene1.getScene().getWindow();
-		
-		window.setScene(new Scene(root, 800, 600));
+		String page = "/CourseManagement.fxml";
+			
+		loadPage(page);		
+		bp.setCenter(ap);
 		}
 
+		@Override
+		public void initialize(URL arg0, ResourceBundle arg1) {
+			// TODO Auto-generated method stub
+			
+		}
+		
 	}
+		
+
 
 

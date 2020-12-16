@@ -7,21 +7,20 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
    <left>
       <VBox blendMode="GREEN" prefHeight="238.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </BorderPane.margin>
          <children>
-            <Button fx:id="btnScene1" mnemonicParsing="false" onAction="#handleBtn1" prefHeight="70.0" prefWidth="157.0" text="Student Management" textAlignment="CENTER" textFill="#a8bfff" wrapText="true">
+            <Button fx:id="btnScene1" mnemonicParsing="false" onAction="#btnScene1" prefHeight="70.0" prefWidth="157.0" text="Student Management" textAlignment="CENTER" textFill="#a8bfff" wrapText="true">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnScene2" mnemonicParsing="false" onAction="#handleBtn2" prefHeight="67.0" prefWidth="132.0" text="Course Management" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="btnScene2" mnemonicParsing="false" onAction="#btnScene2" prefHeight="67.0" prefWidth="132.0" text="Course Management" textAlignment="CENTER" wrapText="true">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
@@ -30,21 +29,13 @@
       </VBox>
    </left>
    <top>
-      <Label text="Lorem Ipsum Dolor Sit Amet" BorderPane.alignment="CENTER">
+      <Label text="Welcome to Contoso University" BorderPane.alignment="CENTER">
          <font>
             <Font name="Old English Text MT" size="22.0" />
          </font>
       </Label>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Text layoutX="137.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
