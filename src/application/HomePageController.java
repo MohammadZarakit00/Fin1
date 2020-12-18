@@ -35,9 +35,6 @@ import javafx.stage.Stage;
 
 public class HomePageController implements Initializable {
 	
-
-		@FXML
-		Button btnScene1;
 		@FXML
 		BorderPane bp = new BorderPane();
 		
@@ -57,6 +54,14 @@ public class HomePageController implements Initializable {
 			Pane view = object.getPage("/CourseManagement");
 			bp.setCenter(view);
 			
+		}
+		
+		@FXML
+		private void handleButton3Action(ActionEvent event) {
+			System.out.println("clickety");
+			Loader object = new Loader();
+			Pane view = object.getPage("/Home");
+			bp.setCenter(view);
 		}
 		
 		@Override
