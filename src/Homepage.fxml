@@ -5,23 +5,52 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
-   <bottom>
-      <Label text="yeet" BorderPane.alignment="CENTER" />
-   </bottom>
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
    <left>
-      <VBox blendMode="GREEN" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: ff2184;" BorderPane.alignment="CENTER">
+      <VBox style="-fx-border-color: #2184ff;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </BorderPane.margin>
          <children>
-            <Button fx:id="btnScene1" mnemonicParsing="false" onAction="#handleBtn1" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff; -fx-border-radius: 2; -fx-border-color: #293AA2;" text="Home" textFill="WHITE">
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets left="10.0" right="10.0" top="100.0" />
                </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Button>
          </children>
       </VBox>
    </left>
+   <top>
+      <Label text="Welcome to Contoso University" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Georgia" size="22.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an option from the sidebar menu." BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+   </center>
 </BorderPane>
