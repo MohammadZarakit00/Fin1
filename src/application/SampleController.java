@@ -37,8 +37,8 @@ public class SampleController {
 	Button btnAddStudent = new Button();
 	@FXML
 	Button btnFindStudent = new Button();
-//	@FXML
-	//Button btnDeleteStudent = new Button();
+	@FXML
+	Button btnDeleteStudent = new Button();
 	@FXML
 	Button btnAddCourse = new Button();
 	@FXML
@@ -83,7 +83,19 @@ public class SampleController {
 //			ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
 		}
 
-
+	@FXML
+	public void btnDeleteStudent(ActionEvent event) {
+		String tmpId = tfId.getText();
+		for (Student s : studentRegister) {
+			if (s.getStudentId().equals(tmpId)) {
+				studentRegister.remove(s);
+				ta.setText("Student " + tfId + " was removed from the system. ");
+			}
+			else {
+				ta.setText("No student found with given identification. ");
+			}
+		}
+	}
 
 	@FXML
 	public void btnAddCourse(ActionEvent event) {
