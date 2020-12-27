@@ -82,7 +82,7 @@ public class WrittenExam {
 	}
 	
 	public void addStudent(Student student) {
-		student.addExam(this, null); //Dubbelkopplar och sätter betug till null
+		student.addExam(this, null); //Dubbelkopplar och sätter betyg till null
 		studentList.add(student);
 	}
 	

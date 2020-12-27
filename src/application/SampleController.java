@@ -56,7 +56,7 @@ public class SampleController {
 	
 	@FXML
 	Button btnScene2;
-	
+
 	public void handleBtn1() throws Exception {
 		
 	Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
@@ -68,11 +68,22 @@ public class SampleController {
 	
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
+		Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		studentRegister.add(new Student(tmpId, tmpName));
+		if (tfId.getText().equals(student)) {
+			studentRegister.add(new Student(tmpId, tmpName));
+			ta.setText(tmpName + " was added to the register. ");
+		}
+		else {
+			ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
+		}
 
-	}
+
+//			ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
+		}
+
+
 
 	@FXML
 	public void btnAddCourse(ActionEvent event) {
@@ -83,7 +94,7 @@ public class SampleController {
 			courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
 			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
 		} catch (NumberFormatException e) {
-			ta.setText("Input is not accepted. Try a number. ");
+			ta.setText("Input is not accepted. Course credits input must be a number. ");
 		}
 	}
 
@@ -95,7 +106,7 @@ public class SampleController {
 				courseRegister.remove(c);
 				ta.setText(tmpId + " was removed from the register.");
 			} else {
-				ta.setText(tmpId + " doesnt exist in the register.");
+				ta.setText(tmpId + " does not exist in the register.");
 			}
 		}
 	}

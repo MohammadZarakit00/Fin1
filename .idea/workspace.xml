@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="Added median-method to writtenexam and wrote test cases to check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/application/SampleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +155,7 @@
       <recent name="C:\Users\fille\pgkHT19\ht20-sysa21-isp-ht20-sysa21-spaghetti-boys\src\application" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StudentTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -198,8 +199,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StudentTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StudentTest" />
       </list>
     </recent_temporary>
   </component>
