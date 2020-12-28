@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="attempt at a few functions in the controller, most things turned out wonk as fuck">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExamManagement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
     </list>
@@ -155,6 +154,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -410,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609154361060</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="basic student-functions working but needs error handling, cant figure it out atm. code is fixed so no more errors in the controller at least :)">
+      <created>1609164369285</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609164369286</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -467,9 +474,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added missing output file" />
-    <MESSAGE value="La till StudentTest" />
-    <MESSAGE value="Added constructor, removed wrongly placed methods in Student, added correct ones" />
     <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
     <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
     <MESSAGE value="Changed return-value of credits to int instead of String." />
@@ -492,7 +496,20 @@
     <MESSAGE value="layout fixes, clean up between screens" />
     <MESSAGE value="exam management page + cleanup" />
     <MESSAGE value="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)" />
-    <option name="LAST_COMMIT_MESSAGE" value="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)" />
+    <MESSAGE value="basic student-functions working but needs error handling, cant figure it out atm" />
+    <MESSAGE value="basic student-functions working but needs error handling, cant figure it out atm. code is fixed so no more errors in the controller at least :)" />
+    <MESSAGE value="attempt at a few functions in the controller, most things turned out wonk as fuck" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt at a few functions in the controller, most things turned out wonk as fuck" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

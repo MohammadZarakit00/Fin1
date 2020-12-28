@@ -68,12 +68,17 @@ public class SampleController {
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
-		Student student = null;
+	//	Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
-			studentRegister.add(new Student(tmpId, tmpName));
-			ta.setText(tmpName + " was added to the register. ");
+			if (studentRegister.contains(tmpId)) {  //no fuckin clue why this doesnt work.
+				ta.setText("Student already exists.");
+			}
+			else {
+				//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
+				studentRegister.add(new Student(tmpId, tmpName));
+				ta.setText(tmpName + " was added to the register. ");
+			}
 		//} else {
 		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
 	//	}
@@ -82,6 +87,7 @@ public class SampleController {
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		for (Student s : studentRegister) {
+
 			if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
