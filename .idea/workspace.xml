@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="layout fixes, clean up between screens">
-      <change afterPath="$PROJECT_DIR$/src/ExamManagement.fxml" afterDir="false" />
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="exam management page + cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CourseManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExamManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609151577025</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="exam management page + cleanup">
+      <created>1609152575980</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609152575981</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -479,7 +483,8 @@
     <MESSAGE value="small teeny tiny fixes and a theory of error handling btnAddStudent. not going very well tho" />
     <MESSAGE value="delete student button draft 1" />
     <MESSAGE value="layout fixes, clean up between screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout fixes, clean up between screens" />
+    <MESSAGE value="exam management page + cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="exam management page + cleanup" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

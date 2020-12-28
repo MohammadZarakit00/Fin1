@@ -8,15 +8,15 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="51.0" layoutY="39.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="51.0" layoutY="81.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="51.0" layoutY="125.0" mnemonicParsing="false" text="Button" />
-      <TextField layoutX="164.0" layoutY="38.0" promptText="Exam ID" />
-      <TextField layoutX="164.0" layoutY="80.0" promptText="Date" />
-      <TextField layoutX="164.0" layoutY="124.0" promptText="Location" />
+      <Button layoutX="51.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnAddExam" prefHeight="60.0" prefWidth="78.0" style="-fx-background-color: #2184ff;" text="Add Exam for Course" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+      <Button layoutX="51.0" layoutY="137.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="25.0" layoutY="200.0" mnemonicParsing="false" text="Button" />
+      <TextField fx:id="tfIdExam" layoutX="164.0" layoutY="38.0" promptText="Exam ID" />
+      <TextField fx:id="tfDate" layoutX="164.0" layoutY="80.0" promptText="Date" />
+      <TextField fx:id="tfLocation" layoutX="164.0" layoutY="124.0" promptText="Location" />
       <TextArea layoutX="123.0" layoutY="171.0" prefHeight="200.0" prefWidth="400.0" />
-      <TextField layoutX="374.0" layoutY="38.0" promptText="Time" />
-      <TextField layoutX="374.0" layoutY="80.0" promptText="Course" />
+      <TextField fx:id="tfTime" layoutX="374.0" layoutY="38.0" promptText="Time" />
+      <TextField fx:id="tfId" layoutX="374.0" layoutY="80.0" promptText="Course ID" />
       <TextField layoutX="374.0" layoutY="124.0" />
    </children>
 </Pane>

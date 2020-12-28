@@ -1,5 +1,6 @@
 package application;
 
+import javafx.embed.swing.JFXPanel;
 import javafx.scene.control.TextField;
 import model.Course;
 import model.Result;
@@ -32,6 +33,7 @@ public class SampleController {
 
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
+	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
 
 	@FXML
 	Button btnAddStudent = new Button();
@@ -46,7 +48,8 @@ public class SampleController {
 	@FXML
 	Button btnRemoveCourse = new Button();
 	@FXML
-	Button btnAddExam = new Button ();
+	Button btnAddExam = new Button();
+
 	@FXML
 	TextArea ta = new TextArea();
 	@FXML
@@ -57,78 +60,85 @@ public class SampleController {
 	TextField tfName = new TextField();
 	@FXML
 	TextField tfCredits = new TextField();
+	@FXML
+	TextField tfDate = new TextField();
+	@FXML
+	TextField tfLocation = new TextField();
+	@FXML
+	TextField tfTime = new TextField();
 
+	@FXML
+	Button btnScene2;
 
 	public void handleBtn1() throws Exception {
-		
-	Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
-	
-	Stage window = (Stage) btnScene2.getScene().getWindow();
-	
-	window.setScene(new Scene(root, 800, 600));
+
+		Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
+
+		Stage window = (Stage) btnScene2.getScene().getWindow();
+
+		window.setScene(new Scene(root, 800, 600));
 	}
-	
+
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
 		Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		if (tfId.getText().equals(student)) {
+		if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
 			studentRegister.add(new Student(tmpId, tmpName));
 			ta.setText(tmpName + " was added to the register. ");
-		}
-		else {
+		} else {
 			ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
 		}
-
-
-//			ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
-		}
-
+	}
 	@FXML
-	public void btnDeleteStudent(ActionEvent event) {
-		String tmpId = tfId.getText();
-		for (Student s : studentRegister) {
-			if (s.getStudentId().equals(tmpId)) {
-				studentRegister.remove(s);
-				ta.setText("Student " + tfId + " was removed from the system. ");
-			}
-			else {
-				ta.setText("No student found with given identification. ");
+	public void btnDeleteStudent (ActionEvent event){
+			String tmpId = tfId.getText();
+			for (Student s : studentRegister) {
+				if (s.getStudentId().equals(tmpId)) {
+					studentRegister.remove(s);
+					ta.setText("Student " + tfId + " was removed from the system. ");
+				} else {
+					ta.setText("No student found with given identification. ");
+				}
 			}
 		}
-	}
-
-	@FXML
-	public void btnAddCourse(ActionEvent event) {
-		String tmpId = tfId.getText();
-		String tmpName = tfName.getText();
-		try {
-			int tmpCredits = Integer.parseInt(tfCredits.getText());
-			courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
-			ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-		} catch (NumberFormatException e) {
-			ta.setText("Input is not accepted. Course credits input must be a number. ");
-		}
-	}
-
-	@FXML
-	public void btnRemoveCourse(ActionEvent event) {
-		String tmpId = tfId.getText();
-		for (Course c : courseRegister) {
-			if (c.getCourseCode().equals(tmpId)) {
-				courseRegister.remove(c);
-				ta.setText(tmpId + " was removed from the register.");
-			} else {
-				ta.setText(tmpId + " does not exist in the register.");
+		@FXML
+		public void btnAddCourse (ActionEvent event){
+			String tmpId = tfId.getText();
+			String tmpName = tfName.getText();
+			try {
+				int tmpCredits = Integer.parseInt(tfCredits.getText());
+				courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
+				ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
+			} catch (NumberFormatException e) {
+				ta.setText("Input is not accepted. Course credits input must be a number. ");
 			}
 		}
-	}
 
-	public void btnAddExam(ActionEvent event) {
-		String tmpId = tfId.getText();
-		String tmpIdExam = tfIdExam.getText();
-	}
+		@FXML
+		public void btnRemoveCourse (ActionEvent event){
+			String tmpId = tfId.getText();
+			for (Course c : courseRegister) {
+				if (c.getCourseCode().equals(tmpId)) {
+					courseRegister.remove(c);
+					ta.setText(tmpId + " was removed from the register.");
+				} else {
+					ta.setText(tmpId + " does not exist in the register.");
+				}
+			}
+		}
+
+		public void btnAddExam (ActionEvent event){
+		WrittenExam writtenExam;
+			String tmpId = tfId.getText();
+			String tmpIdExam = tfIdExam.getText();
+			String tmpIdDate = tfDate.getText();
+			String tmpIdLocation = tfLocation.getText();
+			String tmpIdTime = tfTime.getText();
+			Course tmpCourse = tfId.getText(); //filip help
+		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse));
+		}
 
 
 
@@ -143,5 +153,7 @@ public class SampleController {
 	}
 	*/
 
-}
+	}
+
+
 
