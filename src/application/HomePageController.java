@@ -63,6 +63,14 @@ public class HomePageController implements Initializable {
 			Pane view = object.getPage("/Home");
 			bp.setCenter(view);
 		}
+
+		@FXML
+		private void handleButton4Action(ActionEvent event) {
+			System.out.println("Clickeketkrt");
+			Loader object = new Loader();
+			Pane view = object.getPage("/ExamManagement");
+			bp.setCenter(view);
+		}
 		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {

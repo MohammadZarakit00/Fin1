@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="delete student button draft 1">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="layout fixes, clean up between screens">
+      <change afterPath="$PROJECT_DIR$/src/ExamManagement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +51,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/jo5617st-s" />
@@ -381,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609087014817</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="layout fixes, clean up between screens">
+      <created>1609151577025</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609151577025</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -461,7 +478,8 @@
     <MESSAGE value="Added median-method to writtenexam and wrote test cases to check" />
     <MESSAGE value="small teeny tiny fixes and a theory of error handling btnAddStudent. not going very well tho" />
     <MESSAGE value="delete student button draft 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete student button draft 1" />
+    <MESSAGE value="layout fixes, clean up between screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="layout fixes, clean up between screens" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

@@ -52,12 +52,12 @@ public class SampleController {
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
+	TextField tfIdExam = new TextField();
+	@FXML
 	TextField tfName = new TextField();
 	@FXML
 	TextField tfCredits = new TextField();
-	
-	@FXML
-	Button btnScene2;
+
 
 	public void handleBtn1() throws Exception {
 		
@@ -126,7 +126,8 @@ public class SampleController {
 	}
 
 	public void btnAddExam(ActionEvent event) {
-
+		String tmpId = tfId.getText();
+		String tmpIdExam = tfIdExam.getText();
 	}
 
 
