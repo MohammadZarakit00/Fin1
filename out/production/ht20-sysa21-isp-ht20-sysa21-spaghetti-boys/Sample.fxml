@@ -36,11 +36,9 @@
             </TextField>
             <TextField layoutX="477.0" layoutY="275.0" promptText="Location" />
             <TextField layoutX="477.0" layoutY="240.0" promptText="Time" />
-            <TextField layoutX="277.0" layoutY="240.0" promptText="Course-ID" />
             <Button layoutX="77.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
-            <Button layoutX="77.0" layoutY="211.0" mnemonicParsing="false" text="Find Student" />
-            <Button layoutX="77.0" layoutY="262.0" mnemonicParsing="false" text="Delete Student" />
-            <Button layoutX="77.0" layoutY="310.0" mnemonicParsing="false" onAction="#btnAddCourse" text="Add course" />
+            <Button layoutX="77.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
+            <Button layoutX="77.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
             <Button layoutX="77.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove" />
             <Text layoutX="256.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
                <font>

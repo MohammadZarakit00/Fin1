@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="exam management page + cleanup">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExamManagement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
@@ -402,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609152575981</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)">
+      <created>1609154361060</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609154361060</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -459,7 +467,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added empty javafx project from John" />
     <MESSAGE value="Added missing output file" />
     <MESSAGE value="La till StudentTest" />
     <MESSAGE value="Added constructor, removed wrongly placed methods in Student, added correct ones" />
@@ -484,7 +491,8 @@
     <MESSAGE value="delete student button draft 1" />
     <MESSAGE value="layout fixes, clean up between screens" />
     <MESSAGE value="exam management page + cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="exam management page + cleanup" />
+    <MESSAGE value="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)" />
+    <option name="LAST_COMMIT_MESSAGE" value="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
