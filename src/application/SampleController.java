@@ -46,6 +46,8 @@ public class SampleController {
 	@FXML
 	Button btnRemoveCourse = new Button();
 	@FXML
+	Button btnAddExam = new Button ();
+	@FXML
 	TextArea ta = new TextArea();
 	@FXML
 	TextField tfId = new TextField();
@@ -121,6 +123,10 @@ public class SampleController {
 				ta.setText(tmpId + " does not exist in the register.");
 			}
 		}
+	}
+
+	public void btnAddExam(ActionEvent event) {
+
 	}
 
 
