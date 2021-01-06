@@ -6,3 +6,4 @@ Koppla exam till kurs
 Register results for student on written exam
 Split controller?
 Testclass för samtliga funktioner
+Courseregister och Examregister i controllern istället för bara arraylist? Överväg
