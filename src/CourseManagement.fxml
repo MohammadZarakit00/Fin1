@@ -6,64 +6,51 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<Pane prefHeight="536.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <TextArea fx:id="ta" layoutX="72.0" layoutY="161.0" prefHeight="200.0" prefWidth="467.0" />
-      <ToolBar layoutX="2.0" layoutY="64.0" prefHeight="40.0" prefWidth="592.0" style="-fx-background-color: #97B9CF;">
-        <items>
-          <Button mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
-            <Button mnemonicParsing="false" onAction="#btnAddCourse" text="Find" />
-            <Button mnemonicParsing="false" text="Delete" />
-            <MenuButton mnemonicParsing="false" text="Exam Actions">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1">
+      <TextArea fx:id="ta" editable="false" layoutX="88.0" layoutY="333.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
+      <TextField fx:id="tfId" layoutX="189.0" layoutY="197.0" promptText="ID">
+         <tooltip>
+            <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfName" layoutX="189.0" layoutY="233.0" promptText="Name">
+         <tooltip>
+            <Tooltip text="Enter the name of a student, course or exam." />
+         </tooltip>
+      </TextField>
+      <ToolBar layoutX="10.0" layoutY="115.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #2184ff;">
+         <items>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindCourse" text="Find" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteCourse" text="Delete" />
+            <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Exam Actions">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1">
                      <graphic>
-                        <Button mnemonicParsing="false" text="Add Exam" />
+                        <Button mnemonicParsing="false" onAction="#btnAddExam" text="Add Exam" />
                      </graphic>
                   </MenuItem>
-                <MenuItem mnemonicParsing="false" text="Action 2">
+                  <MenuItem mnemonicParsing="false" text="Action 2">
                      <graphic>
-                        <Button mnemonicParsing="false" text="Remove Exam" />
+                        <Button mnemonicParsing="false" onAction="#btnRemoveExam" text="Remove Exam" />
                      </graphic>
                   </MenuItem>
-              </items>
+               </items>
             </MenuButton>
-        </items>
+         </items>
       </ToolBar>
-      <TextField layoutX="103.0" layoutY="177.0" promptText="ID" />
-      <TextField layoutX="90.0" layoutY="208.0" promptText="Name" />
-      <TextField layoutX="90.0" layoutY="253.0" promptText="Credits" />
-      <TextField layoutX="246.0" layoutY="232.0" />
-      <Rectangle height="61.0" layoutX="3.0" layoutY="4.0" stroke="TRANSPARENT" strokeType="INSIDE" width="592.0">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop color="#1130dd" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Rectangle>
-      <Text layoutX="132.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Management">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2e38" height="107.0" layoutX="10.0" layoutY="8.0" stroke="#96818100" strokeType="INSIDE" width="724.0" />
+      <Text fill="WHITE" layoutX="195.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Management">
          <font>
             <Font name="Old English Text MT" size="40.0" />
          </font>
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop color="WHITE" />
-                  <Stop color="WHITE" offset="0.32950191570881227" />
-                  <Stop color="#1d26d0" offset="0.8352490421455938" />
-                  <Stop color="#1d26d0" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </fill></Text>
+      </Text>
    </children>
 </Pane>
