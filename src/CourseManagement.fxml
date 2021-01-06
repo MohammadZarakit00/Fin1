@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="536.0" prefWidth="736.0" style="-fx-background-color: #20445B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <Text layoutX="259.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet" />
+      <TextArea fx:id="ta" editable="false" layoutX="88.0" layoutY="333.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
+      <TextField fx:id="tfId" layoutX="189.0" layoutY="197.0" promptText="ID">
+         <tooltip>
+            <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfName" layoutX="189.0" layoutY="233.0" promptText="Name">
+         <tooltip>
+            <Tooltip text="Enter the name of a student, course or exam." />
+         </tooltip>
+      </TextField>
+      <ToolBar layoutX="10.0" layoutY="115.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #2184ff;">
+         <items>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
+            <Button alignment="CENTER" mnemonicParsing="false" text="Find" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Delete" />
+            <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Exam Actions">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1">
+                     <graphic>
+                        <Button mnemonicParsing="false" text="Add Exam" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Action 2">
+                     <graphic>
+                        <Button mnemonicParsing="false" text="Remove Exam" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+         </items>
+      </ToolBar>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2e38" height="107.0" layoutX="10.0" layoutY="8.0" stroke="#96818100" strokeType="INSIDE" width="724.0" />
+      <Text fill="WHITE" layoutX="195.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Management">
+         <font>
+            <Font name="Old English Text MT" size="40.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

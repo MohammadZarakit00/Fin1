@@ -14,6 +14,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
 public class SampleController {
@@ -53,9 +55,13 @@ public class SampleController {
 	TextField tfLocation = new TextField();
 	@FXML
 	TextField tfTime = new TextField();
+	@FXML
+	MenuButton menuButton = new MenuButton();
 
 	@FXML
 	Button btnScene2;
+	
+	
 
 	public void handleBtn1() throws Exception {
 
@@ -136,7 +142,7 @@ public class SampleController {
 			}
 		}
 
-	/*	@FXML
+		/*	@FXML
 		public void btnAddExam (ActionEvent event) {
 
 		WrittenExam writtenExam;
@@ -144,7 +150,7 @@ public class SampleController {
 			String tmpIdDate = tfDate.getText();
 			String tmpIdLocation = tfLocation.getText();
 			String tmpIdTime = tfTime.getText();
-			Course tmpCourse = tfId.getText().toString(); //w i p
+			Course tmpCourse = tfId.getText().toString(); //w i p, use findCourse method
 		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse)); //this one is wonk supreme. needs to define exam FOR the given course
 		ta.setText("Exam " + tmpIdExam + " was added for the course " + tmpCourse + ". ");
 		}

@@ -3,44 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
-   <left>
-      <VBox style="-fx-border-color: #2184ff;" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </BorderPane.margin>
-         <children>
-            <Button mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff; -fx-border-radius: 2; -fx-border-color: #293AA2;" text="Home" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" top="50.0" />
-               </VBox.margin>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#handleButton4Action" prefHeight="55.0" prefWidth="80.0" style="-fx-background-color: #2184ff;" text="Exam Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" top="50.0" />
-               </VBox.margin>
-            </Button>
-         </children>
-      </VBox>
-   </left>
    <top>
       <Label text="Welcome to Contoso University" BorderPane.alignment="CENTER">
          <font>
@@ -58,4 +29,29 @@
          </font>
       </Text>
    </center>
+   <left>
+      <Pane prefHeight="536.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#465b6f" height="537.0" layoutX="-7.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" width="197.0" />
+            <ToolBar layoutX="37.0" layoutY="168.0" nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" prefWidth="104.0">
+               <items>
+                  <Button mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleButton4Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Exam Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Return to Home" textFill="WHITE" wrapText="true" />
+               </items>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToolBar>
+         </children>
+      </Pane>
+   </left>
 </BorderPane>
