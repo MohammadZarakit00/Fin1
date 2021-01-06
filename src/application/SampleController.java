@@ -100,9 +100,6 @@ public class SampleController {
 		}
 	}
 
-
-
-
 	@FXML
 	public void btnFindStudent(ActionEvent event) {
 		Student student = studentRegister.findStudent(tfId.getText());
