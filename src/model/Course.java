@@ -1,12 +1,61 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Course {
 
+	private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
+
 	private String courseCode;
-	
+
 	private String name;
-	
-	private String credits;
+
+	private double credits;
+
+
+	/*
+	Borde kanske ha flera nästlade if-satser i constructorn så att vi kan se i vilket steg
+	det går fel.
+	 */
+	public Course(String courseCode, String name, double credits){
+		if(credits > 0 && credits <= 100 && courseCodeCheck(courseCode)) {
+			this.courseCode = courseCode;
+			this.name = name;
+			this.credits = credits;
+		}
+	}
+
+	/*
+	Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
+	 */
+	public Boolean courseCodeCheck(String courseCode){
+		return courseCode.startsWith("C") && courseCode.length() == 6;
+	}
+
+
+	public void addExam(WrittenExam writtenExam){
+		courseExamList.add(writtenExam);
+		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+	}
+
+	public WrittenExam findExam(String examId){
+		for(WrittenExam exam : courseExamList){
+			if(exam.getExamID().equals(examId)){
+				return exam;
+			}
+		}
+		return null;
+	}
+
+	public WrittenExam removeExam(String examId){
+		WrittenExam tmpExam = findExam(examId);
+		if(courseExamList.contains(tmpExam)){
+			courseExamList.remove(tmpExam);
+			return tmpExam;
+		} else {
+			return null;
+		}
+	}
 
 	public String getCourseCode() {
 		return courseCode;
@@ -24,12 +73,19 @@ public class Course {
 		this.name = name;
 	}
 
-	public String getCredits() {
+	public double getCredits() {
 		return credits;
 	}
 
-	public void setCredits(String credits) {
-		this.credits = credits;
+	/*
+	Onödigt pga constructor?
+	 */
+	public void setCredits(int credits) {
+		if(credits > 0 && credits <= 100) {
+			this.credits = credits;
+		} else {
+			System.out.println("Antal credits för course är för lågt eller högt");
+		}
 	}
 
 }

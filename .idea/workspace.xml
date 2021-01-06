@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="attempt at a few functions in the controller, most things turned out wonk as fuck">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/application.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/SampleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/jo5617st-s" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
+        <option value="$PROJECT_DIR$/src/application/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectId" id="1lVXBMycj0QjOB4s42OecTjrpnh" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607519332293" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/SceneBuilder/SceneBuilder.exe" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fille\pgkHT19\ht20-sysa21-isp-ht20-sysa21-spaghetti-boys\src\application" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.StudentTest" />
+      <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.StudentTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StudentTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/pgkHT18/workspace/w11_javatext" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="fixed removeCourse in controller" />
+      <created>1607518148366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607518148366</updated>
+      <workItem from="1607518149638" duration="1192000" />
+      <workItem from="1607521701287" duration="354000" />
+      <workItem from="1607681201964" duration="1068000" />
+      <workItem from="1607683099031" duration="585000" />
+      <workItem from="1607683698745" duration="139000" />
+      <workItem from="1607683886601" duration="66000" />
+      <workItem from="1607683965283" duration="401000" />
+      <workItem from="1607684649958" duration="984000" />
+      <workItem from="1607686254004" duration="1338000" />
+      <workItem from="1607696359353" duration="6376000" />
+      <workItem from="1608023898276" duration="5253000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added empty javafx project from John">
+      <created>1607518459778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607518459778</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added missing output file">
+      <created>1607681753656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607681753656</updated>
+    </task>
+    <task id="LOCAL−00003" summary="La till StudentTest">
+      <created>1607686425246</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1607686425246</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Added constructor, removed wrongly placed methods in Student, added correct ones">
+      <created>1607687024279</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1607687024279</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Added a pretty nice checkExamIdInput-method and an un-finished constructor">
+      <created>1607697023723</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1607697023723</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this.">
+      <created>1607697351120</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1607697351120</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Changed return-value of credits to int instead of String.">
+      <created>1607697411205</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1607697411205</updated>
+    </task>
+    <task id="LOCAL−00008" summary="changed constructor in Course to minimize logic inside of constructor">
+      <created>1607697791023</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1607697791023</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result.">
+      <created>1607698910988</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1607698910988</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Removed unnecessary code">
+      <created>1607698977583</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1607698977583</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Removed unnecessary code">
+      <created>1607699484532</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1607699484532</updated>
+    </task>
+    <task id="LOCAL−00012" summary="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap.">
+      <created>1607950324126</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1607950324126</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Fixed problem where no input as name was acceptable">
+      <created>1607951071497</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1607951071497</updated>
+    </task>
+    <task id="LOCAL−00014" summary="Added Notes.txt as a way of keeping notes for the team">
+      <created>1607954351713</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1607954351713</updated>
+    </task>
+    <task id="LOCAL−00015" summary="forgot about git">
+      <created>1607960012165</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1607960012165</updated>
+    </task>
+    <task id="LOCAL−00016" summary="added type to ArrayList">
+      <created>1607960089917</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1607960089917</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Moved studentValidCheck from constructor to public method to be used in controller.">
+      <created>1607960615539</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1607960615539</updated>
+    </task>
+    <task id="LOCAL−00018" summary="fixed removeCourse in controller">
+      <created>1607960954411</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1607960954411</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Rename and moved wierdly placed code">
+      <created>1608024281863</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1608024281864</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Added setStudentResult in WrittenExam">
+      <created>1608025321933</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1608025321933</updated>
+    </task>
+    <task id="LOCAL−00021" summary="removed unnecessary code">
+      <created>1608025638447</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1608025638447</updated>
+    </task>
+    <task id="LOCAL−00022" summary="Added median-method to writtenexam and wrote test cases to check">
+      <created>1608027798503</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1608027798503</updated>
+    </task>
+    <task id="LOCAL-00023" summary="small teeny tiny fixes and a theory of error handling btnAddStudent. not going very well tho">
+      <created>1609086663160</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609086663160</updated>
+    </task>
+    <task id="LOCAL-00024" summary="delete student button draft 1">
+      <created>1609087014817</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609087014817</updated>
+    </task>
+    <task id="LOCAL-00025" summary="layout fixes, clean up between screens">
+      <created>1609151577025</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609151577025</updated>
+    </task>
+    <task id="LOCAL-00026" summary="exam management page + cleanup">
+      <created>1609152575980</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609152575981</updated>
+    </task>
+    <task id="LOCAL-00027" summary="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)">
+      <created>1609154361060</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609154361060</updated>
+    </task>
+    <task id="LOCAL-00028" summary="basic student-functions working but needs error handling, cant figure it out atm. code is fixed so no more errors in the controller at least :)">
+      <created>1609164369285</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609164369286</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2614000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20729166" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32929516" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
+    <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
+    <MESSAGE value="Changed return-value of credits to int instead of String." />
+    <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
+    <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
+    <MESSAGE value="Removed unnecessary code" />
+    <MESSAGE value="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap." />
+    <MESSAGE value="Fixed problem where no input as name was acceptable" />
+    <MESSAGE value="Added Notes.txt as a way of keeping notes for the team" />
+    <MESSAGE value="forgot about git" />
+    <MESSAGE value="added type to ArrayList" />
+    <MESSAGE value="Moved studentValidCheck from constructor to public method to be used in controller." />
+    <MESSAGE value="fixed removeCourse in controller" />
+    <MESSAGE value="Rename and moved wierdly placed code" />
+    <MESSAGE value="Added setStudentResult in WrittenExam" />
+    <MESSAGE value="removed unnecessary code" />
+    <MESSAGE value="Added median-method to writtenexam and wrote test cases to check" />
+    <MESSAGE value="small teeny tiny fixes and a theory of error handling btnAddStudent. not going very well tho" />
+    <MESSAGE value="delete student button draft 1" />
+    <MESSAGE value="layout fixes, clean up between screens" />
+    <MESSAGE value="exam management page + cleanup" />
+    <MESSAGE value="btnAddExam draft 1 (please help, i cant manage to invoke currentCourse)" />
+    <MESSAGE value="basic student-functions working but needs error handling, cant figure it out atm" />
+    <MESSAGE value="basic student-functions working but needs error handling, cant figure it out atm. code is fixed so no more errors in the controller at least :)" />
+    <MESSAGE value="attempt at a few functions in the controller, most things turned out wonk as fuck" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt at a few functions in the controller, most things turned out wonk as fuck" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
+    <entry file="file://$PROJECT_DIR$/src/application/application.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/SampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ht20-sysa21-isp-ht20-sysa21-spaghetti-boys</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

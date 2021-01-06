@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <BorderPane>
+         <center>
+            <AnchorPane prefHeight="602.0" prefWidth="724.0" style="-fx-background-color: #20445B;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="ta" editable="false" layoutX="78.0" layoutY="323.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
+                  <TextField fx:id="tfId" layoutX="179.0" layoutY="187.0" promptText="ID">
+                     <tooltip>
+                        <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tfTime" layoutX="179.0" layoutY="223.0" promptText="Time">
+                     <tooltip>
+                        <Tooltip text="Enter the name of a student, course or exam." />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tfDate" layoutX="386.0" layoutY="203.0" promptText="Date">
+                     <tooltip>
+                        <Tooltip text="Enter the name of a student, course or exam." />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tfLocation" layoutX="361.0" layoutY="231.0" promptText="Location">
+                     <tooltip>
+                        <Tooltip text="Enter the name of a student, course or exam." />
+                     </tooltip>
+                  </TextField>
+                  <ToolBar layoutY="105.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #2184ff;">
+                     <items>
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Add Exam" />
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Find Exam" />
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Delete Exam" />
+                        <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Extra Actions">
+                           <items>
+                              <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <Button mnemonicParsing="false" text="Number of students passed" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <Button mnemonicParsing="false" text="Median Score" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <Button mnemonicParsing="false" text="Average score" />
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                        </MenuButton>
+                     </items>
+                  </ToolBar>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2e38" height="107.0" layoutY="-2.0" stroke="#96818100" strokeType="INSIDE" width="724.0" />
+                  <Text fill="WHITE" layoutX="185.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Management">
+                     <font>
+                        <Font name="Old English Text MT" size="40.0" />
+                     </font>
+                  </Text>
+                  <ComboBox layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Course" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</Pane>
