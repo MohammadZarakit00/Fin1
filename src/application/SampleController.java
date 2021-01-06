@@ -142,7 +142,7 @@ public class SampleController {
 			}
 		}
 
-	/*	@FXML
+		/*	@FXML
 		public void btnAddExam (ActionEvent event) {
 
 		WrittenExam writtenExam;
@@ -150,7 +150,7 @@ public class SampleController {
 			String tmpIdDate = tfDate.getText();
 			String tmpIdLocation = tfLocation.getText();
 			String tmpIdTime = tfTime.getText();
-			Course tmpCourse = tfId.getText().toString(); //w i p
+			Course tmpCourse = tfId.getText().toString(); //w i p, use findCourse method
 		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse)); //this one is wonk supreme. needs to define exam FOR the given course
 		ta.setText("Exam " + tmpIdExam + " was added for the course " + tmpCourse + ". ");
 		}

@@ -49,12 +49,17 @@
                         <Button alignment="CENTER" mnemonicParsing="false" text="Delete Exam" />
                         <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Extra Actions">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Action 1">
+                              <MenuItem mnemonicParsing="false">
                                  <graphic>
-                                    <Button mnemonicParsing="false" text="Median score on exam" />
+                                    <Button mnemonicParsing="false" text="Number of students passed" />
                                  </graphic>
                               </MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Action 2">
+                              <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <Button mnemonicParsing="false" text="Median Score" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false">
                                  <graphic>
                                     <Button mnemonicParsing="false" text="Average score" />
                                  </graphic>
