@@ -14,15 +14,15 @@
       <AnchorPane prefHeight="602.0" prefWidth="724.0" BorderPane.alignment="CENTER">
          <children>
             <TextArea fx:id="ta" editable="false" layoutX="78.0" layoutY="323.0" prefHeight="200.0" prefWidth="565.0" />
-            <TextField fx:id="tfId" layoutX="388.0" layoutY="161.0" promptText="ID">
+            <TextField fx:id="tfId" layoutX="477.0" layoutY="161.0" promptText="ID">
                <tooltip>
                   <Tooltip text="Enter the ID of a student, course or exam." />
                </tooltip></TextField>
-            <TextField fx:id="tfName" layoutX="388.0" layoutY="210.0" promptText="Name">
+            <TextField fx:id="tfName" layoutX="477.0" layoutY="210.0" promptText="Name">
                <tooltip>
                   <Tooltip text="Enter the name of a student, course or exam." />
                </tooltip></TextField>
-            <TextField fx:id="tfCredits" layoutX="388.0" layoutY="261.0" promptText="Credits">
+            <TextField fx:id="tfCredits" layoutX="477.0" layoutY="261.0" promptText="Credits">
                <tooltip>
                   <Tooltip text="Enter the amount of credits a course is worth." />
                </tooltip>
@@ -35,6 +35,8 @@
                   <Font name="Georgia" size="20.0" />
                </font>
             </Text>
+            <Button layoutX="294.0" layoutY="161.0" mnemonicParsing="false" text="Get mean exam points" />
+            <Button layoutX="294.0" layoutY="210.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
    </top>
