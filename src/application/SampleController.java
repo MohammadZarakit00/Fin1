@@ -14,6 +14,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
 public class SampleController {
@@ -53,9 +55,13 @@ public class SampleController {
 	TextField tfLocation = new TextField();
 	@FXML
 	TextField tfTime = new TextField();
+	@FXML
+	MenuButton menuButton = new MenuButton();
 
 	@FXML
 	Button btnScene2;
+	
+	
 
 	public void handleBtn1() throws Exception {
 
