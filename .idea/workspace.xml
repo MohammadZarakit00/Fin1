@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="Added median-method to writtenexam and wrote test cases to check">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StudentTest.java" afterDir="false" />
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Removed unnecessary code">
       <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="fi3126ol-s" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,7 +213,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76fc8dbe-ba43-4d6d-915d-e6b008602880" name="Default Changelist" comment="fixed removeCourse in controller" />
+      <changelist id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="" />
       <created>1607518148366</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -230,8 +227,7 @@
       <workItem from="1607683965283" duration="401000" />
       <workItem from="1607684649958" duration="984000" />
       <workItem from="1607686254004" duration="1338000" />
-      <workItem from="1607696359353" duration="6376000" />
-      <workItem from="1608023898276" duration="5253000" />
+      <workItem from="1607696359353" duration="5306000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -301,73 +297,7 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1607699484532</updated>
     </task>
-    <task id="LOCAL−00012" summary="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap.">
-      <created>1607950324126</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1607950324126</updated>
-    </task>
-    <task id="LOCAL−00013" summary="Fixed problem where no input as name was acceptable">
-      <created>1607951071497</created>
-      <option name="number" value="LOCAL−00013" />
-      <option name="presentableId" value="LOCAL−00013" />
-      <updated>1607951071497</updated>
-    </task>
-    <task id="LOCAL−00014" summary="Added Notes.txt as a way of keeping notes for the team">
-      <created>1607954351713</created>
-      <option name="number" value="LOCAL−00014" />
-      <option name="presentableId" value="LOCAL−00014" />
-      <updated>1607954351713</updated>
-    </task>
-    <task id="LOCAL−00015" summary="forgot about git">
-      <created>1607960012165</created>
-      <option name="number" value="LOCAL−00015" />
-      <option name="presentableId" value="LOCAL−00015" />
-      <updated>1607960012165</updated>
-    </task>
-    <task id="LOCAL−00016" summary="added type to ArrayList">
-      <created>1607960089917</created>
-      <option name="number" value="LOCAL−00016" />
-      <option name="presentableId" value="LOCAL−00016" />
-      <updated>1607960089917</updated>
-    </task>
-    <task id="LOCAL−00017" summary="Moved studentValidCheck from constructor to public method to be used in controller.">
-      <created>1607960615539</created>
-      <option name="number" value="LOCAL−00017" />
-      <option name="presentableId" value="LOCAL−00017" />
-      <updated>1607960615539</updated>
-    </task>
-    <task id="LOCAL−00018" summary="fixed removeCourse in controller">
-      <created>1607960954411</created>
-      <option name="number" value="LOCAL−00018" />
-      <option name="presentableId" value="LOCAL−00018" />
-      <updated>1607960954411</updated>
-    </task>
-    <task id="LOCAL−00019" summary="Rename and moved wierdly placed code">
-      <created>1608024281863</created>
-      <option name="number" value="LOCAL−00019" />
-      <option name="presentableId" value="LOCAL−00019" />
-      <updated>1608024281864</updated>
-    </task>
-    <task id="LOCAL−00020" summary="Added setStudentResult in WrittenExam">
-      <created>1608025321933</created>
-      <option name="number" value="LOCAL−00020" />
-      <option name="presentableId" value="LOCAL−00020" />
-      <updated>1608025321933</updated>
-    </task>
-    <task id="LOCAL−00021" summary="removed unnecessary code">
-      <created>1608025638447</created>
-      <option name="number" value="LOCAL−00021" />
-      <option name="presentableId" value="LOCAL−00021" />
-      <updated>1608025638447</updated>
-    </task>
-    <task id="LOCAL−00022" summary="Added median-method to writtenexam and wrote test cases to check">
-      <created>1608027798503</created>
-      <option name="number" value="LOCAL−00022" />
-      <option name="presentableId" value="LOCAL−00022" />
-      <updated>1608027798503</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -434,18 +364,7 @@
     <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
     <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
-    <MESSAGE value="Added result-parameters in several methods to connect it to a written-exam. Also changed ArrayList in student to HashMap." />
-    <MESSAGE value="Fixed problem where no input as name was acceptable" />
-    <MESSAGE value="Added Notes.txt as a way of keeping notes for the team" />
-    <MESSAGE value="forgot about git" />
-    <MESSAGE value="added type to ArrayList" />
-    <MESSAGE value="Moved studentValidCheck from constructor to public method to be used in controller." />
-    <MESSAGE value="fixed removeCourse in controller" />
-    <MESSAGE value="Rename and moved wierdly placed code" />
-    <MESSAGE value="Added setStudentResult in WrittenExam" />
-    <MESSAGE value="removed unnecessary code" />
-    <MESSAGE value="Added median-method to writtenexam and wrote test cases to check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added median-method to writtenexam and wrote test cases to check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
