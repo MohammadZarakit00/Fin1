@@ -38,7 +38,7 @@
                            <graphic>
                               <Button mnemonicParsing="false" text="Median score on exam" />
                            </graphic>
-                        </MenuItem>
+                        </MenuItem> 
                       <MenuItem mnemonicParsing="false" text="Action 2">
                            <graphic>
                               <Button mnemonicParsing="false" text="Average score" />

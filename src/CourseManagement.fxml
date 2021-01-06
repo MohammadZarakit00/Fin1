@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -29,7 +30,7 @@
          <items>
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindCourse" text="Find" />
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteCourse" text="Delete" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Delete" />
             <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Exam Actions">
                <items>
                   <MenuItem mnemonicParsing="false" text="Action 1">
@@ -52,5 +53,6 @@
             <Font name="Old English Text MT" size="40.0" />
          </font>
       </Text>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" />
    </children>
 </Pane>

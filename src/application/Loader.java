@@ -17,8 +17,8 @@ public class Loader {
 			throw new java.io.FileNotFoundException("File not found.");
 		}
 		
-		else { new FXMLLoader();
-		view = FXMLLoader.load(fileUrl); }
+		new FXMLLoader();
+		view = FXMLLoader.load(fileUrl); 
 		}
 	
 		catch (Exception e) {

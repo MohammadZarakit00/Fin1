@@ -48,7 +48,7 @@ public class HomePageController implements Initializable {
 		}
 		
 		@FXML
-		private void handleButton2Action(ActionEvent event) { //Course and exam management have for some reason disappeared in scenebuilder, but the code is still here in .fxml
+		private void handleButton2Action(ActionEvent event) {
 			System.out.println("click2");
 			Loader object = new Loader();
 			Pane view = object.getPage("/CourseManagement");
