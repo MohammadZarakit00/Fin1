@@ -22,7 +22,7 @@ public class Loader {
 		}
 	
 		catch (Exception e) {
-			System.out.println("no page");
+			System.out.println(e.getMessage());
 		}
 	return view;
 	}
