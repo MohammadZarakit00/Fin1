@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="115.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Remove Course" />
-      <Button layoutX="114.0" layoutY="85.0" mnemonicParsing="false" text="Find Course" />
-      <Button layoutX="115.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnAddCourse" text="Add Course" />
-      <Button layoutX="114.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnAddExam" text="Add Exam" />
-      <TextField fx:id="tfId" layoutX="264.0" layoutY="48.0" promptText="Course ID" />
-      <TextField fx:id="tfName" layoutX="264.0" layoutY="98.0" promptText="Name" />
-      <TextField fx:id="tfCredits" layoutX="264.0" layoutY="150.0" promptText="Credits" />
-      <TextArea fx:id="ta" layoutX="114.0" layoutY="215.0" prefHeight="146.0" prefWidth="436.0" />
-      <TextField fx:id="tfIdExam" layoutX="428.0" layoutY="48.0" promptText="Exam ID" />
+      <Text layoutX="259.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet" />
    </children>
 </Pane>
