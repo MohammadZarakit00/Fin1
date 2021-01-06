@@ -87,7 +87,6 @@ public class SampleController {
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		for (Student s : studentRegister) {
-
 			if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
