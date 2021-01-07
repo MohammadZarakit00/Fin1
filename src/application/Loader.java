@@ -37,7 +37,7 @@ public class Loader {
 
 	public Parent setPage(String filePath) {
 		try {
-			return FXMLLoader.load(this.getClass().getResource("/view/Homepage.fxml"));
+			return FXMLLoader.load(this.getClass().getResource("/view/HomePage.fxml"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
