@@ -57,9 +57,12 @@ public class SampleController {
 	TextField tfTime = new TextField();
 	@FXML
 	MenuButton menuButton = new MenuButton();
+	@FXML
+	TextField errorBox = new TextField();
 
 	@FXML
 	Button btnScene2;
+	
 	
 	
 
@@ -74,6 +77,7 @@ public class SampleController {
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
+			errorBox.setVisible(true); //ezpz to work in
 	//	Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
