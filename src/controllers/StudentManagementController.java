@@ -18,7 +18,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
-public class StudentManagementController {
+public class StudentManagementController extends Controller{
 
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
@@ -116,31 +116,7 @@ public class StudentManagementController {
 				}
 			}
 		}
-		@FXML
-		public void btnAddCourse (ActionEvent event){
-			String tmpId = tfId.getText();
-			String tmpName = tfName.getText();
-			try {
-				int tmpCredits = Integer.parseInt(tfCredits.getText());
-				courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
-				ta.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-			} catch (NumberFormatException e) {
-				ta.setText("Input is not accepted. Course credits input must be a number. ");
-			}
-		}
 
-		@FXML
-		public void btnRemoveCourse (ActionEvent event){
-			String tmpId = tfId.getText();
-			for (Course c : courseRegister) {
-				if (c.getCourseCode().equals(tmpId)) {
-					courseRegister.remove(c);
-					ta.setText(tmpId + " was removed from the register.");
-				} else {
-					ta.setText(tmpId + " does not exist in the register.");
-				}
-			}
-		}
 
 		/*	@FXML
 		public void btnAddExam (ActionEvent event) {

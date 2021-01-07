@@ -1,4 +1,6 @@
 package controllers;
 
-public class ExamManagementController {
+public class ExamManagementController extends Controller{
+
+
 }

@@ -2,12 +2,16 @@ package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import model.Course;
+import model.CourseRegister;
 
-import java.awt.*;
+public class CourseManagementController extends Controller{
 
-public class CourseManagementController {
-
+    private int courseCodeGen = 10000;
+    public CourseRegister courseRegister = super.getCourseRegister();
 
     @FXML
     TextField tfId = new TextField();
@@ -24,7 +28,9 @@ public class CourseManagementController {
     Button btnFindCourse = new Button();
     @FXML
     Button btnRemoveCourse = new Button();
-/*
+    @FXML
+    Button btnGenerateCourseCode = new Button();
+
     @FXML
     public void btnAddCourse (ActionEvent event){
         String tmpId = tfId.getText();
@@ -39,19 +45,34 @@ public class CourseManagementController {
     }
 
     @FXML
+    public void btnGenerateCourseCode(ActionEvent event){
+        tfId.clear();
+        tfId.setText("C" + courseCodeGen);
+        courseCodeGen++;
+    }
+
+    @FXML
     public void btnRemoveCourse (ActionEvent event){
         String tmpId = tfId.getText();
-        for (Course c : courseRegister) {
+        for (Course c : courseRegister.getCourseRegister()) {
             if (c.getCourseCode().equals(tmpId)) {
                 courseRegister.remove(c);
-                ta.setText(tmpId + " was removed from the register.");
+                outPutArea.setText(tmpId + " was removed from the register.");
             } else {
-                ta.setText(tmpId + " does not exist in the register.");
+                outPutArea.setText(tmpId + " does not exist in the register.");
             }
         }
     }
-*/
 
-
-
+    @FXML
+    public void btnFindCourse(ActionEvent event){
+        String tmpId = tfId.getText();
+        for(Course c : courseRegister.getCourseRegister()){
+            if(c.getCourseCode().equals(tmpId)){
+                outPutArea.setText(c.getName());
+            } else {
+                outPutArea.setText("Kursen finns ej");
+            }
+        }
+    }
 }
