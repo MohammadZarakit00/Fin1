@@ -20,5 +20,8 @@ public class CourseRegister {
         }
     }
 
+    public void remove(Course c) {
+        courseRegister.remove(c);
+    }
 }
 

@@ -21,8 +21,6 @@ public class ExamManagementController {
 	@FXML
 	Button btnAddExam = new Button();
 	@FXML
-	Button btnFindExam = new Button();
-	@FXML
 	Button btnRemoveExam = new Button();
 	@FXML
 	Button btnMeanResult = new Button();
@@ -54,6 +52,11 @@ public class ExamManagementController {
 		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse)); //this one is wonk supreme. needs to define exam FOR the given course
 		outPutArea.setText("Exam " + tmpIdExam + " was added for the course " + currentCourse + ". ");
 		
+		
+	}
+	
+	@FXML
+	public void btnRemoveExam(ActionEvent event) {
 		
 	}
 	
