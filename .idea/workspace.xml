@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Removed unnecessary code">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Namechange">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/Sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/application/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StudentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReturnHomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CourseManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CourseManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ExamManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StudentManagement.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +144,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607519332293" />
@@ -174,7 +178,7 @@
       <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="application.*" />
+          <option name="PATTERN" value="controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -236,7 +240,7 @@
       <workItem from="1607696359353" duration="5306000" />
       <workItem from="1609926213806" duration="5661000" />
       <workItem from="1609938811035" duration="2233000" />
-      <workItem from="1610013135859" duration="382000" />
+      <workItem from="1610013135859" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -306,7 +310,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1607699484532</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Namechange">
+      <created>1610013558604</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1610013558604</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -373,7 +383,8 @@
     <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
     <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary code" />
+    <MESSAGE value="Namechange" />
+    <option name="LAST_COMMIT_MESSAGE" value="Namechange" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />

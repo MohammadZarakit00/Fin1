@@ -2,6 +2,7 @@ package application;
 
 import java.net.URL;
 
+import controllers.HomePageController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 

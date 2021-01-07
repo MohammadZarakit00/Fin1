@@ -1,5 +1,6 @@
-package application;
+package controllers;
 
+import application.Loader;
 import javafx.scene.control.TextField;
 import model.Course;
 import model.Result;
