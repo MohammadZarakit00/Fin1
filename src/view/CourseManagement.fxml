@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane prefHeight="536.0" prefWidth="736.0" style="-fx-background-color: #20445B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<Pane prefHeight="536.0" prefWidth="736.0" style="-fx-background-color: #20445B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CourseManagementController">
    <children>
-      <TextArea fx:id="ta" editable="false" layoutX="88.0" layoutY="333.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
+      <TextArea fx:id="outPutArea" editable="false" layoutX="88.0" layoutY="333.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
       <TextField fx:id="tfId" layoutX="189.0" layoutY="197.0" promptText="ID">
          <tooltip>
             <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
@@ -28,7 +21,7 @@
       <ToolBar layoutX="10.0" layoutY="115.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #2184ff;">
          <items>
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="Find" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindCourse" text="Find" />
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Delete" />
             <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Exam Actions">
                <items>
