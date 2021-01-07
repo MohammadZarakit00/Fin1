@@ -8,10 +8,10 @@ import javafx.scene.control.TextField;
 import model.Course;
 import model.CourseRegister;
 
-public class CourseManagementController extends Controller{
+public class CourseManagementController extends Controller {
 
     private int courseCodeGen = 10000;
-    public CourseRegister courseRegister = super.getCourseRegister();
+    public final CourseRegister courseRegister = super.getCourseRegister();
 
     @FXML
     TextField tfId = new TextField();
