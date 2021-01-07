@@ -3,7 +3,6 @@ package model;
 public class Result {
 	
 	private int result;
-	
 	private String letterGrade;
 
 	public Result(int result){

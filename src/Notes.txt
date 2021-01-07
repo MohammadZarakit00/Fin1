@@ -1,8 +1,9 @@
-- När man i GUIt klickar på ett TextField så ska det komma upp en inforuta kring vad som är input-krav, ex
-6 tecken långt och måste börja på "E" eller "S".
+- När man i GUIt klickar på ett TextField så ska det komma upp en inforuta kring vad som är input-krav, ex 
+6 tecken långt och måste börja på "E" eller "S". - john fixar, work in progress. lite pill
 
 Todo:
-Koppla exam till kurs
+
 Register results for student on written exam
-Split controller?
+Split controller? - John Fixar
 Testclass för samtliga funktioner
+Courseregister och Examregister i controllern istället för bara arraylist? Överväg

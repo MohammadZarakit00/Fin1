@@ -11,18 +11,18 @@ public class Loader {
 	
 	public Pane getPage(String fileName) {
 	try {
-		URL fileUrl = HomePageController.class.getResource(fileName +".fxml");
+		URL fileUrl = HomePageController.class.getResource("/view" + fileName +".fxml");
 		
 		if (fileUrl == null) {
 			throw new java.io.FileNotFoundException("File not found.");
 		}
 		
 		new FXMLLoader();
-		view = FXMLLoader.load(fileUrl);	
+		view = FXMLLoader.load(fileUrl); 
 		}
 	
 		catch (Exception e) {
-			System.out.println("no page");
+			System.out.println(e.getMessage());
 		}
 	return view;
 	}
