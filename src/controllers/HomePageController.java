@@ -61,7 +61,7 @@ public class HomePageController implements Initializable {
 		private void handleButton3Action(ActionEvent event) {
 			System.out.println("clickety");
 			Loader object = new Loader();
-			Pane view = object.getPage("/ReturnHomePage");
+			Pane view = object.getPage("/HomePage");
 			bp.setCenter(view);
 		}
 
