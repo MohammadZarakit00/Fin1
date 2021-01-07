@@ -34,7 +34,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class HomePageController implements Initializable {
+public class HomePageController extends Controller implements Initializable {
+
+		Loader loader = new Loader();
 	
 		@FXML
 		BorderPane bp = new BorderPane();
@@ -42,8 +44,7 @@ public class HomePageController implements Initializable {
 		@FXML
 		private void handleButton1Action(ActionEvent event) {
 			System.out.println("click");
-			Loader object = new Loader();
-			Pane view = object.getPage("/StudentManagement");
+			Pane view = loader.getPage("/StudentManagement");
 			bp.setCenter(view);
 			
 		}
@@ -51,8 +52,7 @@ public class HomePageController implements Initializable {
 		@FXML
 		private void handleButton2Action(ActionEvent event) { //Course and exam management have for some reason disappeared in scenebuilder, but the code is still here in .fxml
 			System.out.println("click2");
-			Loader object = new Loader();
-			Pane view = object.getPage("/CourseManagement");
+			Pane view = loader.getPage("/CourseManagement");
 			bp.setCenter(view);
 			
 		}
@@ -75,7 +75,7 @@ public class HomePageController implements Initializable {
 		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
-	
+
 		}
 				
 	}
