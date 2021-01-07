@@ -43,7 +43,7 @@ public class HomePageController implements Initializable {
 		private void handleButton1Action(ActionEvent event) {
 			System.out.println("click");
 			Loader object = new Loader();
-			Pane view = object.getPage("/Sample");
+			Pane view = object.getPage("/StudentManagement");
 			bp.setCenter(view);
 			
 		}
@@ -61,7 +61,7 @@ public class HomePageController implements Initializable {
 		private void handleButton3Action(ActionEvent event) {
 			System.out.println("clickety");
 			Loader object = new Loader();
-			Pane view = object.getPage("/Home");
+			Pane view = object.getPage("/HomePage");
 			bp.setCenter(view);
 		}
 
