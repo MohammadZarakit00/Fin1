@@ -31,7 +31,7 @@ public class StudentTest {
             //e1.addStudent(s4);
 
             e1.setStudentResult("S12345", 0);
-            e1.setStudentResult("S45667", 50);
+            e1.setStudentResult("S45667", 75);
             e1.setStudentResult("S00001", 100);
             e1.setStudentResult("S00002", 49);
 
