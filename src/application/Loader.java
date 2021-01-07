@@ -11,7 +11,7 @@ public class Loader {
 	
 	public Pane getPage(String fileName) {
 	try {
-		URL fileUrl = HomePageController.class.getResource(fileName +".fxml");
+		URL fileUrl = HomePageController.class.getResource("/view" + fileName +".fxml");
 		
 		if (fileUrl == null) {
 			throw new java.io.FileNotFoundException("File not found.");
