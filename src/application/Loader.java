@@ -9,10 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
 
 public class Loader {
-
 	
 	private Pane view;
-
 
 	public Pane getPage(String fileName) {
 	try {
@@ -22,7 +20,6 @@ public class Loader {
 		} else {
 			view = FXMLLoader.load(fileUrl);
 		}
-
 	}
 
 	catch (Exception e) {
