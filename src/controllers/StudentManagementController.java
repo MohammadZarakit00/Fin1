@@ -82,24 +82,28 @@ public class StudentManagementController extends Controller{
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
-	//	Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			if (studentRegister.contains(tmpId)) {  //no fuckin clue why this doesnt work.
-				idError.setVisible(true);
-				idError.setText("Student already exists.");
-			}
-			else {
-				//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
+			for (Student s : studentRegister) {
+			if (!studentRegister.contains(tmpId)) {
 				studentRegister.add(new Student(tmpId, tmpName));
 				ta.setText(tmpName + " was added to the register. ");
 			}
+			else {  //no fuckin clue why this doesnt work.
+				idError.setVisible(true);
+				idError.setText("Student already exists.");
+			}
+		}
+			
 	}
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		for (Student s : studentRegister) {
-			if (s.getStudentId().equals(tmpId)) {
+			if (s.getStudentId().equals(null)) {
+				idError.setText("Please enter a student ID. ");
+			}
+			else if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
 			else {
