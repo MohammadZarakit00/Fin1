@@ -19,7 +19,6 @@ import model.WrittenExam;
 public class ExamManagementController extends Controller implements Initializable {
 
 
-	private CourseRegister courseRegister = super.getCourseRegister();
 	private Main main;
 
 	@FXML
@@ -113,8 +112,7 @@ public class ExamManagementController extends Controller implements Initializabl
 
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){
-		ObservableList<Course> courseObservableList = FXCollections.observableArrayList(courseRegister.getCourseRegister());
-		courseChoiceBox.setItems(courseObservableList);
+		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
 
 	}
 

@@ -56,10 +56,10 @@ public class HomePageController extends Controller implements Initializable {
 	//}
 
 	public HomePageController(){
+
 		courseRegister.add(new Course("C10000", "Programmering", 10));
 		courseRegister.add(new Course("C10001", "IS-Projekt", 5));
 		courseRegister.add(new Course("C10002", "Systemdesign", 7.5));
-
 
 
 	}

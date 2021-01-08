@@ -8,18 +8,15 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import model.Course;
 import model.CourseRegister;
+import model.StudentRegister;
 
 public class CourseManagementController extends Controller {
 
-   /* public CourseManagementController(CourseRegister courseRegister){
-        this.courseRegister = courseRegister;
 
-    }*/
-
-    private HomePageController homePageController;
     private int courseCodeGen = 10000;
-    private CourseRegister courseRegister;
-    private Main main;
+    private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
+    private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
+
 
     @FXML
     TextField tfId = new TextField();
@@ -41,10 +38,6 @@ public class CourseManagementController extends Controller {
     Button btnGenerateCourseCode = new Button();
 
 
-    public void setMain(Main main) {
-        this.main = main;
-    }
-
     @FXML
     public void btnAddCourse (ActionEvent event){
         String tmpId = tfId.getText();
@@ -53,7 +46,6 @@ public class CourseManagementController extends Controller {
             int tmpCredits = Integer.parseInt(tfCredits.getText());
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-            super.setCourseRegister(courseRegister);
         } catch (NumberFormatException e) {
             outPutArea.setText("Input is not accepted. Course credits input must be a number. ");
         }
@@ -64,18 +56,17 @@ public class CourseManagementController extends Controller {
         tfId.clear();
         tfId.setText("C" + courseCodeGen);
         courseCodeGen++;
+        //Gör om så att ++ börjar på största befintliga kurskod
     }
 
     @FXML
     public void btnRemoveCourse (ActionEvent event){
         String tmpId = tfId.getText();
-        for (Course c : courseRegister.getCourseRegister()) {
-            if (c.getCourseCode().equals(tmpId)) {
-                courseRegister.remove(c);
-                outPutArea.setText(tmpId + " was removed from the register.");
-            } else {
-                outPutArea.setText(tmpId + " does not exist in the register.");
-            }
+        if(courseRegister.containsCourse(tmpId)){
+            courseRegister.remove(tmpId);
+            outPutArea.setText("Kursen " + tmpId + " togs bort");
+        } else {
+            outPutArea.setText("Kursen " + tmpId + " finns ej i systemet");
         }
     }
 

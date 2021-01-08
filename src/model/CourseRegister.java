@@ -29,8 +29,21 @@ public class CourseRegister {
         }
     }
 
-    public void remove(Course c) {
-        courseRegister.remove(c);
+    public void remove(String course) {
+        courseRegister.remove(findCourse(course));
+    }
+
+    public Course findCourse(String course){
+        for(Course c : courseRegister){
+            if(c.getCourseCode().equals(course)){
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public Boolean containsCourse(String course){
+        return findCourse(course) != null;
     }
 }
 
