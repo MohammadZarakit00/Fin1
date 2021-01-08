@@ -55,7 +55,8 @@
                </font>
             </Text>
             <ComboBox layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
-            <TextField fx:id="errorBox" disable="true" editable="false" layoutX="448.0" layoutY="189.0" prefHeight="93.0" prefWidth="149.0" text="Fel, f u" visible="false" />
+            <Text fx:id="idError" fill="RED" layoutX="344.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
+            <Text fx:id="nameError" fill="RED" layoutX="360.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
          </children>
       </AnchorPane>
    </center>

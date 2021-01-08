@@ -2,12 +2,15 @@ package controllers;
 
 import java.awt.Button;
 import java.awt.TextField;
+import java.net.URL;
 import java.awt.TextArea;
 
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import model.Course;
 import model.CourseRegister;
 import model.WrittenExam;
@@ -18,6 +21,9 @@ public class ExamManagementController extends Controller {
 	private CourseRegister courseRegister = super.getCourseRegister();
 	
 	//WORK IN PROGRESS, no lists can exist before we fix the main/controller issue
+	
+	@FXML
+	ComboBox<CourseRegister> courseChoiceBox = new ComboBox<CourseRegister>();
 	/*
 	@FXML
 	Button btnAddExam = new Button();
@@ -41,6 +47,7 @@ public class ExamManagementController extends Controller {
 	TextField tfTime = new TextField();
 	@FXML
 	TextArea outPutArea = new TextArea();
+	
 	
 	
 	@FXML
@@ -100,5 +107,10 @@ public class ExamManagementController extends Controller {
 		}
 	}
 		*/
+	@FXML
+	public void courseChoiceBox(ActionEvent event) {
+		courseChoiceBox.getItems().add(getCourseRegister());
+		
+	}
 
 }

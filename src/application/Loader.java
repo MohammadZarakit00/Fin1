@@ -23,10 +23,9 @@ public class Loader {
 	}
 
 	catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.print(e.getMessage());
 		}
 	return view;
 	}
-
 
 }

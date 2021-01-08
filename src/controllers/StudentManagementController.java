@@ -1,10 +1,12 @@
 package controllers;
 
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.Course;
 import model.Student;
 import model.WrittenExam;
 
+import java.awt.Label;
 import java.util.ArrayList;
 
 import javafx.stage.Stage;
@@ -57,6 +59,12 @@ public class StudentManagementController extends Controller{
 	TextField tfTime = new TextField();
 	@FXML
 	MenuButton menuButton = new MenuButton();
+	@FXML
+	TextField errorBox = new TextField();
+	@FXML
+	Text idError = new Text();
+	@FXML
+	Text nameError = new Text();
 
 	@FXML
 	Button btnScene2;
@@ -78,16 +86,14 @@ public class StudentManagementController extends Controller{
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 			if (studentRegister.contains(tmpId)) {  //no fuckin clue why this doesnt work.
-				ta.setText("Student already exists.");
+				idError.setVisible(true);
+				idError.setText("Student already exists.");
 			}
 			else {
 				//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
 				studentRegister.add(new Student(tmpId, tmpName));
 				ta.setText(tmpName + " was added to the register. ");
 			}
-		//} else {
-		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
-	//	}
 	}
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
@@ -97,7 +103,9 @@ public class StudentManagementController extends Controller{
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
 			else {
-				ta.setText("No student found with given identification. ");
+				idError.setVisible(true);
+				idError.setText("No student found with given identification. ");
+				
 			}
 		}
 		return tmpId;
@@ -112,7 +120,9 @@ public class StudentManagementController extends Controller{
 					studentRegister.remove(s);
 					ta.setText("Student " + tmpId + " was removed from the system. ");
 				} else {
-					ta.setText("No student found with given identification. ");
+					idError.setText("No student found with given identification. ");
+					
+					
 				}
 			}
 		}

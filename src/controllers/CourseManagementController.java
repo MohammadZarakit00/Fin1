@@ -1,10 +1,13 @@
 package controllers;
 
+import java.awt.Label;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 
@@ -30,6 +33,11 @@ public class CourseManagementController extends Controller {
     Button btnRemoveCourse = new Button();
     @FXML
     Button btnGenerateCourseCode = new Button();
+    @FXML
+    TextField errorBox = new TextField();
+    @FXML
+    Text courseError = new Text();
+   
 
     @FXML
     public void btnAddCourse (ActionEvent event){
@@ -40,7 +48,8 @@ public class CourseManagementController extends Controller {
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
         } catch (NumberFormatException e) {
-            outPutArea.setText("Input is not accepted. Course credits input must be a number. ");
+            courseError.setVisible(true);
+			courseError.setText("Credits must be a number. ");
         }
     }
 
@@ -59,7 +68,8 @@ public class CourseManagementController extends Controller {
                 courseRegister.remove(c);
                 outPutArea.setText(tmpId + " was removed from the register.");
             } else {
-                outPutArea.setText(tmpId + " does not exist in the register.");
+            	courseError.setVisible(true);
+                courseError.setText(tmpId + " does not exist in the register. Try again. ");                
             }
         }
     }
@@ -71,7 +81,8 @@ public class CourseManagementController extends Controller {
             if(c.getCourseCode().equals(tmpId)){
                 outPutArea.setText(c.getName());
             } else {
-                outPutArea.setText("Kursen finns ej");
+            	courseError.setVisible(true);
+                courseError.setText("Course can not be removed since it does not exist. ");
             }
         }
     }

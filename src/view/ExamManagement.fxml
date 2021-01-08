@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
@@ -44,23 +45,23 @@
                   </TextField>
                   <ToolBar layoutY="105.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #3FB4F7;">
                      <items>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddExam" text="Add Exam" />
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveExam" text="Remove Exam" />
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Add Exam" />
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Remove Exam" />
                         <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Extra Actions">
                            <items>
                               <MenuItem mnemonicParsing="false">
                                  <graphic>
-                                    <Button mnemonicParsing="false" onAction="#btnNbrPassedExam" text="Number of students passed" />
+                                    <Button mnemonicParsing="false" text="Number of students passed" />
                                  </graphic>
                               </MenuItem>
                               <MenuItem mnemonicParsing="false">
                                  <graphic>
-                                    <Button mnemonicParsing="false" onAction="#btnMedianResult" text="Median Score" />
+                                    <Button mnemonicParsing="false" text="Median Score" />
                                  </graphic>
                               </MenuItem>
                               <MenuItem mnemonicParsing="false">
                                  <graphic>
-                                    <Button mnemonicParsing="false" onAction="#btnMeanResult" text="Average score" />
+                                    <Button mnemonicParsing="false" text="Average score" />
                                  </graphic>
                               </MenuItem>
                            </items>
@@ -73,7 +74,8 @@
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
                   </Text>
-                  <ComboBox layoutX="180.0" layoutY="260.0" prefHeight="17.0" prefWidth="134.0" promptText="Course" style="-fx-background-color: #ffffff;" />
+                  <ComboBox fx:id="courseChoiceBox" layoutX="180.0" layoutY="260.0" prefHeight="17.0" prefWidth="134.0" promptText="Course" style="-fx-background-color: #ffffff;" />
+                  <Label layoutX="52.0" layoutY="231.0" text="TEST" />
                </children>
             </AnchorPane>
          </center>
