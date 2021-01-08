@@ -1,20 +1,25 @@
 package controllers;
 
-import java.awt.Label;
-
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 
 public class CourseManagementController extends Controller {
 
+   /* public CourseManagementController(CourseRegister courseRegister){
+        this.courseRegister = courseRegister;
+
+    }*/
+
+    private HomePageController homePageController;
     private int courseCodeGen = 10000;
-    public final CourseRegister courseRegister = super.getCourseRegister();
+    private CourseRegister courseRegister;
+    private Main main;
 
     @FXML
     TextField tfId = new TextField();
@@ -22,41 +27,35 @@ public class CourseManagementController extends Controller {
     TextField tfName = new TextField();
     @FXML
     TextField tfCredits = new TextField();
+
     @FXML
     TextArea outPutArea = new TextArea();
-
     @FXML
     Button btnAddCourse = new Button();
     @FXML
     Button btnFindCourse = new Button();
     @FXML
     Button btnRemoveCourse = new Button();
+
     @FXML
     Button btnGenerateCourseCode = new Button();
-    @FXML
-    TextField errorBox = new TextField();
-    @FXML
-    Text courseError = new Text();
-   
+
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
 
     @FXML
     public void btnAddCourse (ActionEvent event){
-    	boolean courseCodeCheck = false;
         String tmpId = tfId.getText();
         String tmpName = tfName.getText();
-        if (courseCodeCheck == true) {
         try {
             int tmpCredits = Integer.parseInt(tfCredits.getText());
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
+            super.setCourseRegister(courseRegister);
         } catch (NumberFormatException e) {
-            courseError.setVisible(true);
-			courseError.setText("Credits must be a number. ");
-        }
-        }
-        else {
-        	courseError.setVisible(true);
-        	courseError.setText("Course code is not in a valid format. ");
+            outPutArea.setText("Input is not accepted. Course credits input must be a number. ");
         }
     }
 
@@ -75,8 +74,7 @@ public class CourseManagementController extends Controller {
                 courseRegister.remove(c);
                 outPutArea.setText(tmpId + " was removed from the register.");
             } else {
-            	courseError.setVisible(true);
-                courseError.setText(tmpId + " does not exist in the register. Try again. ");                
+                outPutArea.setText(tmpId + " does not exist in the register.");
             }
         }
     }
@@ -88,8 +86,7 @@ public class CourseManagementController extends Controller {
             if(c.getCourseCode().equals(tmpId)){
                 outPutArea.setText(c.getName());
             } else {
-            	courseError.setVisible(true);
-                courseError.setText("Course can not be removed since it does not exist. ");
+                outPutArea.setText("Kursen finns ej");
             }
         }
     }

@@ -1,12 +1,11 @@
 package controllers;
 
+import application.Main;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import model.Course;
 import model.Student;
 import model.WrittenExam;
 
-import java.awt.Label;
 import java.util.ArrayList;
 
 import javafx.stage.Stage;
@@ -25,9 +24,11 @@ public class StudentManagementController extends Controller{
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
+	private Main main;
 
 	@FXML
 	Button btnAddStudent = new Button();
+
 	@FXML
 	Button btnFindStudent = new Button();
 	@FXML
@@ -40,9 +41,9 @@ public class StudentManagementController extends Controller{
 	Button btnRemoveCourse = new Button();
 	@FXML
 	Button btnAddExam = new Button();
-
 	@FXML
 	TextArea ta = new TextArea();
+
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -60,16 +61,9 @@ public class StudentManagementController extends Controller{
 	@FXML
 	MenuButton menuButton = new MenuButton();
 	@FXML
-	TextField errorBox = new TextField();
-	@FXML
-	Text idError = new Text();
-	@FXML
-	Text nameError = new Text();
-
-	@FXML
 	Button btnScene2;
-	
-	
+
+
 
 	public void handleBtn1() throws Exception {
 
@@ -82,37 +76,38 @@ public class StudentManagementController extends Controller{
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
+	//	Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			for (Student s : studentRegister) {
-			if (!studentRegister.contains(tmpId)) {
+			if (studentRegister.contains(tmpId)) {  //no fuckin clue why this doesnt work.
+				ta.setText("Student already exists.");
+			}
+			else {
+				//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
 				studentRegister.add(new Student(tmpId, tmpName));
 				ta.setText(tmpName + " was added to the register. ");
 			}
-			else {  //no fuckin clue why this doesnt work.
-				idError.setVisible(true);
-				idError.setText("Student already exists.");
-			}
-		}
-			
+		//} else {
+		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
+	//	}
 	}
+
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		for (Student s : studentRegister) {
-			if (s.getStudentId().equals(null)) {
-				idError.setText("Please enter a student ID. ");
-			}
-			else if (s.getStudentId().equals(tmpId)) {
+			if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
 			else {
-				idError.setVisible(true);
-				idError.setText("No student found with given identification. ");
-				
+				ta.setText("No student found with given identification. ");
 			}
 		}
 		return tmpId;
+	}
+
+	public void setMain(Main main) {
+		this.main = main;
 	}
 
 
@@ -124,9 +119,7 @@ public class StudentManagementController extends Controller{
 					studentRegister.remove(s);
 					ta.setText("Student " + tmpId + " was removed from the system. ");
 				} else {
-					idError.setText("No student found with given identification. ");
-					
-					
+					ta.setText("No student found with given identification. ");
 				}
 			}
 		}
