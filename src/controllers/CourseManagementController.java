@@ -41,8 +41,10 @@ public class CourseManagementController extends Controller {
 
     @FXML
     public void btnAddCourse (ActionEvent event){
+    	boolean courseCodeCheck = false;
         String tmpId = tfId.getText();
         String tmpName = tfName.getText();
+        if (courseCodeCheck == true) {
         try {
             int tmpCredits = Integer.parseInt(tfCredits.getText());
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
@@ -50,6 +52,11 @@ public class CourseManagementController extends Controller {
         } catch (NumberFormatException e) {
             courseError.setVisible(true);
 			courseError.setText("Credits must be a number. ");
+        }
+        }
+        else {
+        	courseError.setVisible(true);
+        	courseError.setText("Course code is not in a valid format. ");
         }
     }
 
