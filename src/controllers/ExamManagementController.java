@@ -12,9 +12,10 @@ import model.Course;
 import model.CourseRegister;
 import model.WrittenExam;
 
-public class ExamManagementController {
+public class ExamManagementController extends Controller {
 	
 	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
+	private CourseRegister courseRegister = super.getCourseRegister();
 	
 	//WORK IN PROGRESS, no lists can exist before we fix the main/controller issue
 	/*

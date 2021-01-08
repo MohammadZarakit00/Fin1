@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="idk">
-      <change afterPath="$PROJECT_DIR$/src/controllers/Controller.java" afterDir="false" />
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added extend to ExamController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CourseRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CourseRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CourseManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CourseManagement.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +242,8 @@
       <workItem from="1607696359353" duration="5306000" />
       <workItem from="1609926213806" duration="5661000" />
       <workItem from="1609938811035" duration="2233000" />
-      <workItem from="1610013135859" duration="10601000" />
+      <workItem from="1610013135859" duration="12148000" />
+      <workItem from="1610097711066" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -338,7 +331,19 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1610017269185</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Added Controller super class">
+      <created>1610028858921</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1610028858921</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Added extend to ExamController">
+      <created>1610029334498</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1610029334498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -408,7 +413,9 @@
     <MESSAGE value="Namechange" />
     <MESSAGE value="cosmetic changes" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="Added Controller super class" />
+    <MESSAGE value="Added extend to ExamController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added extend to ExamController" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
