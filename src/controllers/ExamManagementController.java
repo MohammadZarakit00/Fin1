@@ -1,21 +1,29 @@
 package controllers;
 
-import java.awt.Button;
-import java.awt.TextField;
-import java.awt.TextArea;
-
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.ResourceBundle;
 
+import application.Main;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import model.Course;
 import model.CourseRegister;
 import model.WrittenExam;
 
-public class ExamManagementController extends Controller {
-	
-	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
+public class ExamManagementController extends Controller implements Initializable {
+
+
 	private CourseRegister courseRegister = super.getCourseRegister();
+	private Main main;
+
+	@FXML
+	ComboBox courseChoiceBox = new ComboBox();
 	
 	//WORK IN PROGRESS, no lists can exist before we fix the main/controller issue
 	/*
@@ -100,5 +108,18 @@ public class ExamManagementController extends Controller {
 		}
 	}
 		*/
+
+
+
+	@FXML
+	public void initialize(URL location, ResourceBundle resources){
+		ObservableList<Course> courseObservableList = FXCollections.observableArrayList(courseRegister.getCourseRegister());
+		courseChoiceBox.setItems(courseObservableList);
+
+	}
+
+	public void setMain(Main main) {
+		this.main = main;
+	}
 
 }

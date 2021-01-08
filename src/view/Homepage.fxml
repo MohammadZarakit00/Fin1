@@ -17,14 +17,14 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#465b6f" height="537.0" layoutX="-3.0" layoutY="2.0" stroke="WHITE" strokeType="INSIDE" width="197.0" />
             <ToolBar layoutX="37.0" layoutY="168.0" nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" prefWidth="104.0">
                <items>
-                  <Button mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
-                  <Button mnemonicParsing="false" onAction="#handleButton2Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button mnemonicParsing="false" onAction="#studentManagementButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#courseManagementButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#handleButton4Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Exam Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleButton3Action" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Return to Home" textFill="WHITE" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#examManagementButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Exam Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#returnHomePageButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Return to Home" textFill="WHITE" wrapText="true" />
                </items>
                <effect>
                   <DropShadow />

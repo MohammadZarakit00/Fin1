@@ -1,5 +1,6 @@
 package controllers;
 
+import application.Main;
 import javafx.scene.control.TextField;
 import model.Course;
 import model.Student;
@@ -23,9 +24,11 @@ public class StudentManagementController extends Controller{
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
+	private Main main;
 
 	@FXML
 	Button btnAddStudent = new Button();
+
 	@FXML
 	Button btnFindStudent = new Button();
 	@FXML
@@ -38,9 +41,9 @@ public class StudentManagementController extends Controller{
 	Button btnRemoveCourse = new Button();
 	@FXML
 	Button btnAddExam = new Button();
-
 	@FXML
 	TextArea ta = new TextArea();
+
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -57,11 +60,10 @@ public class StudentManagementController extends Controller{
 	TextField tfTime = new TextField();
 	@FXML
 	MenuButton menuButton = new MenuButton();
-
 	@FXML
 	Button btnScene2;
-	
-	
+
+
 
 	public void handleBtn1() throws Exception {
 
@@ -89,6 +91,7 @@ public class StudentManagementController extends Controller{
 		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
 	//	}
 	}
+
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
@@ -101,6 +104,10 @@ public class StudentManagementController extends Controller{
 			}
 		}
 		return tmpId;
+	}
+
+	public void setMain(Main main) {
+		this.main = main;
 	}
 
 

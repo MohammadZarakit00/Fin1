@@ -1,5 +1,6 @@
 package controllers;
 
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,8 +11,15 @@ import model.CourseRegister;
 
 public class CourseManagementController extends Controller {
 
+   /* public CourseManagementController(CourseRegister courseRegister){
+        this.courseRegister = courseRegister;
+
+    }*/
+
+    private HomePageController homePageController;
     private int courseCodeGen = 10000;
-    public final CourseRegister courseRegister = super.getCourseRegister();
+    private CourseRegister courseRegister;
+    private Main main;
 
     @FXML
     TextField tfId = new TextField();
@@ -19,17 +27,23 @@ public class CourseManagementController extends Controller {
     TextField tfName = new TextField();
     @FXML
     TextField tfCredits = new TextField();
+
     @FXML
     TextArea outPutArea = new TextArea();
-
     @FXML
     Button btnAddCourse = new Button();
     @FXML
     Button btnFindCourse = new Button();
     @FXML
     Button btnRemoveCourse = new Button();
+
     @FXML
     Button btnGenerateCourseCode = new Button();
+
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
 
     @FXML
     public void btnAddCourse (ActionEvent event){
@@ -39,6 +53,7 @@ public class CourseManagementController extends Controller {
             int tmpCredits = Integer.parseInt(tfCredits.getText());
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
+            super.setCourseRegister(courseRegister);
         } catch (NumberFormatException e) {
             outPutArea.setText("Input is not accepted. Course credits input must be a number. ");
         }

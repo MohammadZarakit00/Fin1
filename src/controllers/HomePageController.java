@@ -1,12 +1,9 @@
 package controllers;
 
 import application.Loader;
+import application.Main;
 import javafx.scene.control.TextField;
-import model.Course;
-import model.Result;
-import model.Student;
-import model.WrittenExam;
-import model.StudentTest;
+import model.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,49 +33,98 @@ import javafx.stage.Stage;
 
 public class HomePageController extends Controller implements Initializable {
 
-		Loader loader = new Loader();
-	
-		@FXML
-		BorderPane bp = new BorderPane();
-		
-		@FXML
-		private void handleButton1Action(ActionEvent event) {
-			System.out.println("click");
-			Pane view = loader.getPage("/StudentManagement");
-			bp.setCenter(view);
-			
-		}
-		
-		@FXML
-		private void handleButton2Action(ActionEvent event) { //Course and exam management have for some reason disappeared in scenebuilder, but the code is still here in .fxml
-			System.out.println("click2");
-			Pane view = loader.getPage("/CourseManagement");
-			bp.setCenter(view);
-			
-		}
-		
-		@FXML
-		private void handleButton3Action(ActionEvent event) {
-			System.out.println("clickety");
-			Loader object = new Loader();
-			Pane view = object.getPage("/ReturnHomePage");
-			bp.setCenter(view);
-		}
 
-		@FXML
-		private void handleButton4Action(ActionEvent event) {
-			System.out.println("Clickeketkrt");
-			Loader object = new Loader();
-			Pane view = object.getPage("/ExamManagement");
-			bp.setCenter(view);
-		}
-		
-		@Override
-		public void initialize(URL arg0, ResourceBundle arg1) {
+	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
+	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 
-		}
-				
+	@FXML
+	BorderPane bp = new BorderPane();
+	@FXML
+	Pane view;
+
+	/*@FXML
+	private CourseManagementController courseController = new CourseManagementController();
+	@FXML
+	private ExamManagementController examController = new ExamManagementController();
+	@FXML
+	private StudentManagementController studentController = new StudentManagementController();
+
+	 */
+
+	//public HomePageController(CourseRegister courseRegister){
+	//	this.courseRegister = courseRegister;
+	//}
+
+	public HomePageController(){
+		courseRegister.add(new Course("C10000", "Programmering", 10));
+		courseRegister.add(new Course("C10001", "IS-Projekt", 5));
+		courseRegister.add(new Course("C10002", "Systemdesign", 7.5));
+
+
+
 	}
+
+
+	public BorderPane getBp(){
+		return bp;
+	}
+
+	public void setBp(BorderPane borderPane){
+		this.bp = borderPane;
+	}
+
+	/*public Pane getPage(String fileName) {
+		try {
+			URL fileUrl = HomePageController.class.getResource("/view" + fileName +".fxml");
+			if (fileUrl == null) {
+				throw new java.io.FileNotFoundException("File not found.");
+			} else {
+				view = FXMLLoader.load(fileUrl);
+			}
+		}
+
+		catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
+		return view;
+	} */
+
+	@FXML
+	public void initialize(URL url, ResourceBundle resourceBundle){
+
+	}
+
+	@FXML
+	private void studentManagementButton(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/StudentManagement.fxml"));
+		StudentManagementController controller = new StudentManagementController();
+		Pane view = loader.load();
+		bp.setCenter(view);
+	}
+
+	@FXML
+	private void courseManagementButton(ActionEvent event) throws IOException { //Course and exam management have for some reason disappeared in scenebuilder, but the code is still here in .fxml
+		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/CourseManagement.fxml"));
+		CourseManagementController controller = new CourseManagementController();
+		Pane view = loader.load();
+		bp.setCenter(view);
+	}
+
+	@FXML
+	private void returnHomePageButton(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/ReturnHomePage.fxml"));
+		Pane view = loader.load();
+		bp.setCenter(view);
+	}
+
+	@FXML
+	private void examManagementButton(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/ExamManagement.fxml"));
+		ExamManagementController controller = new ExamManagementController();
+		Pane view = loader.load();
+		bp.setCenter(view);
+	}
+}
 		
 		
 
