@@ -47,7 +47,7 @@ public class CourseManagementController extends Controller {
 
    
     
-
+    //Adds a course with the necessary information. Refuses if any field is incorrectly entered.
     @FXML
     public void btnAddCourse (ActionEvent event){
         String tmpId = tfId.getText();
@@ -88,9 +88,9 @@ public class CourseManagementController extends Controller {
         String tmpId = tfId.getText();
         if(courseRegister.containsCourse(tmpId)){
             courseRegister.remove(tmpId);
-            outPutArea.setText("Kursen " + tmpId + " togs bort");
+            outPutArea.setText("The course " + tmpId + " was removed from the register. ");
         } else {
-            outPutArea.setText("Kursen " + tmpId + " finns ej i systemet");
+            outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
         }
     }
 
@@ -101,7 +101,7 @@ public class CourseManagementController extends Controller {
             if(c.getCourseCode().equals(tmpId)){
                 outPutArea.setText(c.getName());
             } else {
-                outPutArea.setText("Kursen finns ej");
+                outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
             }
         }
     }

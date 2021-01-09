@@ -4,6 +4,8 @@
 Todo:
 
 Register results for student on written exam
-Split controller? - John Fixar
+
 Testclass för samtliga funktioner
-Courseregister och Examregister i controllern istället för bara arraylist? Överväg
+
+Någon form av "show all courses" hade varit fett, metoden kan sen kallas på i examManagement
+och dyka upp i drop-down grejen.
