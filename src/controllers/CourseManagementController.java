@@ -1,11 +1,16 @@
 package controllers;
 
+import java.util.LinkedHashSet;
+import java.util.Random;
+import java.util.Set;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 import model.StudentRegister;
@@ -33,10 +38,15 @@ public class CourseManagementController extends Controller {
     Button btnFindCourse = new Button();
     @FXML
     Button btnRemoveCourse = new Button();
+    @FXML
+    Text courseError = new Text();
 
     @FXML
     Button btnGenerateCourseCode = new Button();
+    
 
+   
+    
 
     @FXML
     public void btnAddCourse (ActionEvent event){
@@ -47,16 +57,30 @@ public class CourseManagementController extends Controller {
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
         } catch (NumberFormatException e) {
-            outPutArea.setText("Input is not accepted. Course credits input must be a number. ");
+            courseError.setText("Input is not accepted. Course credits input must be a number. ");
         }
     }
 
+    //Generates a random course code 
     @FXML
     public void btnGenerateCourseCode(ActionEvent event){
+        Random courseGen = new Random();
+        int course = courseGen.nextInt(99999 + 1 - 10000)+10000;
         tfId.clear();
-        tfId.setText("C" + courseCodeGen);
-        courseCodeGen++;
-        //Gör om så att ++ börjar på största befintliga kurskod
+        tfId.setText("C" + course);
+    //Checks if the generated course code already exists and rolls again until a unique value is reached.
+    //Might need a LinkedHashSet to check duplicates more elegantly.
+        String tmpId = tfId.getText();
+        for (Course c : courseRegister.getCourseRegister()) {
+        	if (c.getCourseCode().equals(tmpId)) {
+        		tfId.clear();
+        		tfId.setText("C" + course);        		
+        	}
+        }
+        	
+    
+   
+    
     }
 
     @FXML
