@@ -136,6 +136,8 @@ public class ExamManagementController extends Controller implements Initializabl
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
 	}
+	
+	
 
 
 

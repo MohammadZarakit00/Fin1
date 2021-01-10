@@ -91,20 +91,20 @@ public class StudentManagementController extends Controller{
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
+		Student student;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			if (studentRegister.getStudentRegister().contains(tmpId)) { 
-				ta.setText("Student already exists.");
-			}
-			else {
-				//if (tfId.getText().equals(student)) { //this function tries to check the "student" validity, i.e. if the ID is correct etc. still working on it
-				studentRegister.add(new Student(tmpId, tmpName));
-				ta.setText(tmpName + " was added to the register. ");
-			}
-		//} else {
-		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
-	//	}
-	}
+		if (tfId.getText().contains(student.studentValidCheck(tmpId, tmpName)) ^ tfName.getText().contains(tmpName)) {
+			ta.setText("You must enter a valid Student ID and name to add a student. ");
+		}
+		else if (studentRegister.getStudentRegister().contains(tmpId)) { 
+		ta.setText("Student already exists.");
+		}
+		else {
+		studentRegister.add(new Student(tmpId, tmpName));
+		ta.setText(tmpName + " was added to the register. ");
+			} 
+		}
 	
 	//Generates a student ID in accordance to the constructor rules, i.e. capital 's' and 5 numbers.
 	@FXML
