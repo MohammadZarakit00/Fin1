@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class StudentRegister {
 
     private static StudentRegister studentRegisterInstance;
-    private ArrayList<Student> studentList = null;
+    private ArrayList<Student> studentRegister = new ArrayList<>();
 
     public static StudentRegister getStudentRegInstance(){
         if(studentRegisterInstance == null){
@@ -15,19 +15,32 @@ public class StudentRegister {
     }
 
     private StudentRegister(){
-        studentList = new ArrayList<>();
+        studentRegister = new ArrayList<>();
     }
 
     public ArrayList<Student> getStudentList(){
-        return this.studentList;
+        return this.studentRegister;
     }
 
     public void add(Student student){
-        studentList.add(student);
+        studentRegister.add(student);
     }
 
-    public void remove(Student student){
-        studentList.remove(student);
+    public void remove(String student){
+        studentRegister.remove(findStudent(student));
     }
+    
+    public Student findStudent(String student) {
+    	for (Student s : studentRegister) {
+    		if (s.getStudentId().equals(student)) {
+    			return s;
+    		}
+    	}
+    	return null;
+    }
+
+	public boolean containsStudent(String student) {
+		return findStudent(student) != null;
+	}
 
 }

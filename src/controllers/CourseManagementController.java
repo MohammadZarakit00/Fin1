@@ -53,11 +53,16 @@ public class CourseManagementController extends Controller {
         String tmpId = tfId.getText();
         String tmpName = tfName.getText();
         try {
+        	if (courseRegister.getCourseRegister().contains(tmpId)) {
+        		outPutArea.setText(tmpId + " already exists in the database. "); 
+        	}
             int tmpCredits = Integer.parseInt(tfCredits.getText());
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-        } catch (NumberFormatException e) {
+        	
+        	} catch (NumberFormatException e) {
             courseError.setText("Input is not accepted. Course credits input must be a number. ");
+            
         }
     }
 
@@ -78,7 +83,8 @@ public class CourseManagementController extends Controller {
         	}
         }     	  
     }
-
+    
+    //Removes a course if it exists.
     @FXML
     public void btnRemoveCourse (ActionEvent event){
         String tmpId = tfId.getText();
@@ -90,6 +96,7 @@ public class CourseManagementController extends Controller {
         }
     }
 
+    //Finds a course with the given ID.
     @FXML
     public void btnFindCourse(ActionEvent event){
         String tmpId = tfId.getText();

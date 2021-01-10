@@ -3,8 +3,11 @@ package controllers;
 import application.Main;
 import javafx.scene.control.TextField;
 import model.Course;
+import model.CourseRegister;
 import model.Student;
+import model.StudentRegister;
 import model.WrittenExam;
+import model.WrittenExamRegister;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -22,10 +25,19 @@ import javafx.scene.control.TextArea;
 
 public class StudentManagementController extends Controller{
 
+	/*
+	
 	private ArrayList<Student> studentRegister = new ArrayList<Student>();
 	private ArrayList<Course> courseRegister = new ArrayList<Course>();
 	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
 	private Main main;
+	*/
+	
+	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
+	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
+	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
+	
+	
 
 	@FXML
 	Button btnAddStudent = new Button();
@@ -81,7 +93,7 @@ public class StudentManagementController extends Controller{
 		public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			if (studentRegister.contains(tmpId)) { 
+			if (studentRegister.getStudentList().contains(tmpId)) { 
 				ta.setText("Student already exists.");
 			}
 			else {
@@ -116,7 +128,7 @@ public class StudentManagementController extends Controller{
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
-		for (Student s : studentRegister) {
+		for (Student s : studentRegister.getStudentList()) {
 			if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
@@ -127,20 +139,22 @@ public class StudentManagementController extends Controller{
 		return tmpId;
 	}
 
-	public void setMain(Main main) {
-		this.main = main;
-	}
 
 
-	/*	@FXML
+		@FXML
 		public void btnDeleteStudent (ActionEvent event){
-			Student studentRegister;
 			String tmpId = tfId.getText();
-			if (studentRegister.containsStudent(tmpId)) {
-				studentRegister.remove(tmpId));
+			if(studentRegister.containsStudent(tmpId)) {
+				studentRegister.remove(tmpId);
+				ta.setText("Student " + tmpId + " was removed from the system. ");
+			} else {
+				ta.setText("Student " + tmpId + " does not exist in the register. ");
 			}
+
+			
 		}
-*/
+		
+
 
 		/*	@FXML
 		public void btnAddExam (ActionEvent event) {
