@@ -1,6 +1,8 @@
 package controllers;
 
 import java.awt.Button;
+import java.awt.TextArea;
+import java.awt.TextField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Observable;
@@ -17,9 +19,12 @@ import javafx.scene.control.ComboBox;
 import model.Course;
 import model.CourseRegister;
 import model.WrittenExam;
+import model.WrittenExamRegister;
 
 public class ExamManagementController extends Controller implements Initializable {
 
+	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
+	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 
 	private Main main;
 
@@ -29,8 +34,6 @@ public class ExamManagementController extends Controller implements Initializabl
 	Button btnExamId = new Button();
 	
 	
-	//WORK IN PROGRESS, no lists can exist before we fix the main/controller issue
-	/*
 	@FXML
 	Button btnAddExam = new Button();
 	@FXML
@@ -54,29 +57,43 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	TextArea outPutArea = new TextArea();
 	
-	
+	@FXML
+	public void initialize(URL location, ResourceBundle resources){
+		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
+
+	}
+	//Im missing something here, can't figure out how to add the exam TO the course...
 	@FXML
 	public void btnAddExam(ActionEvent event) {
 			String tmpIdExam = tfId.getText();
 			String tmpIdDate = tfDate.getText();
 			String tmpIdLocation = tfLocation.getText();
 			String tmpIdTime = tfTime.getText();
-			Course currentCourse = Course.getCourseRegister();
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse)); //this one is wonk supreme. needs to define exam FOR the given course
+			CourseRegister currentCourse = CourseRegister.getCourseRegInstance();
+		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, course)); //this one is wonk supreme. needs to define exam FOR the given course
 		outPutArea.setText("Exam " + tmpIdExam + " was added for the course " + currentCourse + ". ");
 		
 		
 	}
 	
+	//Same as above. Remove FROM a course.
 	@FXML
 	public void btnRemoveExam(ActionEvent event) {
-		
+		String tmpId = tfId.getText();
+		if(examRegister.containsExam(tmpId)) {
+			examRegister.remove(tmpId);
+			outPutArea.setText("The exam " + tmpId + " was removed from the course. ");
+		}
+		else {
+			outPutArea.setText("The exam " + tmpId + " does not exist in the register. ");
+		}
 	}
+	
 	
 	@FXML
 	public void btnMeanResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		for (WrittenExam e : examRegister) {
+		for (WrittenExam e : examRegister.getExamRegister()) {
 			if (e.getExamID().equals(tmpExamId)) {
 				outPutArea.setText("Mean result for this exam is " + e.getMeanResult());
 			}
@@ -89,7 +106,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnMedianResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		for (WrittenExam e : examRegister) {
+		for (WrittenExam e : examRegister.getExamRegister()) {
 			if (e.getExamID().equals(tmpExamId)) {
 				outPutArea.setText("Median result for this exam is " + e.getMedianResult());
 			}
@@ -102,7 +119,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnNbrPassedExam(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		for (WrittenExam e : examRegister) {
+		for (WrittenExam e : examRegister.getExamRegister()) {
 			if (e.getExamID().equals(tmpExamId)) {
 				outPutArea.setText(e.nbrPassedExam() + " passed the exam.");
 			}
@@ -111,21 +128,16 @@ public class ExamManagementController extends Controller implements Initializabl
 			}
 		}
 	}
-		*/
+		
 
 	@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
-		tfId.clear();
 		tfId.setText("E" + examId);
 	}
 
-	@FXML
-	public void initialize(URL location, ResourceBundle resources){
-		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
 
-	}
 
 	public void setMain(Main main) {
 		this.main = main;

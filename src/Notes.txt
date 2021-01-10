@@ -9,3 +9,5 @@ Testclass för samtliga funktioner
 
 Någon form av "show all courses" hade varit fett, metoden kan sen kallas på i examManagement
 och dyka upp i drop-down grejen.
+
+Behöver testdata att köra SAMTLIGA funktioner på utan att behöva skriva in själva.
