@@ -79,7 +79,7 @@ public class StudentManagementController extends Controller{
 	Button btnGenerateStudentId = new Button();
 
 
-	
+	//i have no idea what this does. 
 	public void handleBtn1() throws Exception {
 
 		Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
@@ -93,7 +93,7 @@ public class StudentManagementController extends Controller{
 		public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			if (studentRegister.getStudentList().contains(tmpId)) { 
+			if (studentRegister.getStudentRegister().contains(tmpId)) { 
 				ta.setText("Student already exists.");
 			}
 			else {
@@ -113,22 +113,21 @@ public class StudentManagementController extends Controller{
 		int studentId = studentGen.nextInt(99999 + 1 - 10000)+10000;
 		tfId.clear();
 		tfId.setText("S" + studentId);
-		//wip/draft of loop to avoid the 1 in 99999 risk of duplicates. need to fix the getstudentreg etc
-		//
-		//String tmpId = tfId.getText();
-		//for (Student s : studentRegister.getStudentRegister()) {
-		//	if (studentRegister.containsStudent(tmpId)) {
-		//		tfId.clear();
-		//		tfId.setText("S" + studentGen.nextInt(studentId));
-				
-		//	}
-		//}			
+		
+		String tmpId = tfId.getText();
+		for (Student s : studentRegister.getStudentRegister()) {
+			if (studentRegister.containsStudent(tmpId)) {
+				tfId.clear();
+				tfId.setText("S" + studentGen.nextInt(studentId));
+			}
+		}
+		
 		}
 
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
-		for (Student s : studentRegister.getStudentList()) {
+		for (Student s : studentRegister.getStudentRegister()) {
 			if (s.getStudentId().equals(tmpId)) {
 				ta.setText("Found student " + s.getName() + " with ID " + s.getStudentId() + ". ");
 			}
@@ -139,8 +138,6 @@ public class StudentManagementController extends Controller{
 		return tmpId;
 	}
 
-
-
 		@FXML
 		public void btnDeleteStudent (ActionEvent event){
 			String tmpId = tfId.getText();
@@ -149,27 +146,8 @@ public class StudentManagementController extends Controller{
 				ta.setText("Student " + tmpId + " was removed from the system. ");
 			} else {
 				ta.setText("Student " + tmpId + " does not exist in the register. ");
-			}
-
-			
+			}			
 		}
-		
-
-
-		/*	@FXML
-		public void btnAddExam (ActionEvent event) {
-
-		WrittenExam writtenExam;
-			String tmpIdExam = tfIdExam.getText();
-			String tmpIdDate = tfDate.getText();
-			String tmpIdLocation = tfLocation.getText();
-			String tmpIdTime = tfTime.getText();
-			Course tmpCourse = tfId.getText().toString(); //w i p, use findCourse method
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse)); //this one is wonk supreme. needs to define exam FOR the given course
-		ta.setText("Exam " + tmpIdExam + " was added for the course " + tmpCourse + ". ");
-		}
-		*/
-
 	}
 
 

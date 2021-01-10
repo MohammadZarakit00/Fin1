@@ -13,12 +13,20 @@ public class StudentRegister {
         }
         return studentRegisterInstance;
     }
+    
+    public ArrayList<Student> getStudentRegister() {
+    	return studentRegister;
+    }
+    
+    public void setStudentRegister(ArrayList<Student> studentRegister) {
+    	this.studentRegister = studentRegister;
+    }
 
     private StudentRegister(){
         studentRegister = new ArrayList<>();
     }
 
-    public ArrayList<Student> getStudentList(){
+    public ArrayList<Student> dentRegister(){
         return this.studentRegister;
     }
 
