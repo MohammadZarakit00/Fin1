@@ -36,8 +36,9 @@ public class Main extends Application {
 		this.pages = pages;
 	}
 
-	//Hashmap för att slippa skriva filepath hela tiden
+	//Hashmap to simplify filepath specification.
 	private HashMap<String, String> pages = new HashMap<>();
+	
 	private Pane view;
 	private Stage primaryStage;
 
