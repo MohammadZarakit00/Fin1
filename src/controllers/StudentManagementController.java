@@ -7,6 +7,7 @@ import model.Student;
 import model.WrittenExam;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -62,9 +63,11 @@ public class StudentManagementController extends Controller{
 	MenuButton menuButton = new MenuButton();
 	@FXML
 	Button btnScene2;
+	@FXML
+	Button btnGenerateStudentId = new Button();
 
 
-
+	
 	public void handleBtn1() throws Exception {
 
 		Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
@@ -76,10 +79,9 @@ public class StudentManagementController extends Controller{
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
-	//	Student student = null;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-			if (studentRegister.contains(tmpId)) {  //no fuckin clue why this doesnt work.
+			if (studentRegister.contains(tmpId)) { 
 				ta.setText("Student already exists.");
 			}
 			else {
@@ -91,6 +93,25 @@ public class StudentManagementController extends Controller{
 		//	ta.setText("Input is not accepted. Please note that student ID must contain 6 characters and start with an 'S.'");
 	//	}
 	}
+	
+	//Generates a student ID in accordance to the constructor rules, i.e. capital 's' and 5 numbers.
+	@FXML
+	public void btnGenerateStudentId(ActionEvent event) {
+		Random studentGen = new Random();
+		int studentId = studentGen.nextInt(99999 + 1 - 10000)+10000;
+		tfId.clear();
+		tfId.setText("S" + studentId);
+		//wip/draft of loop to avoid the 1 in 99999 risk of duplicates. need to fix the getstudentreg etc
+		//
+		//String tmpId = tfId.getText();
+		//for (Student s : studentRegister.getStudentRegister()) {
+		//	if (studentRegister.containsStudent(tmpId)) {
+		//		tfId.clear();
+		//		tfId.setText("S" + studentGen.nextInt(studentId));
+				
+		//	}
+		//}			
+		}
 
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
@@ -111,19 +132,15 @@ public class StudentManagementController extends Controller{
 	}
 
 
-		@FXML
+	/*	@FXML
 		public void btnDeleteStudent (ActionEvent event){
+			Student studentRegister;
 			String tmpId = tfId.getText();
-			for (Student s : studentRegister) { //den här raden exploderar i errormeddelanden men fungerar vid action. oklart varför.
-				if (s.getStudentId().equals(tmpId)) {
-					studentRegister.remove(s);
-					ta.setText("Student " + tmpId + " was removed from the system. ");
-				} else {
-					ta.setText("No student found with given identification. ");
-				}
+			if (studentRegister.containsStudent(tmpId)) {
+				studentRegister.remove(tmpId));
 			}
 		}
-
+*/
 
 		/*	@FXML
 		public void btnAddExam (ActionEvent event) {

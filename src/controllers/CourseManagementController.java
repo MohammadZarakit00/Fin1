@@ -65,22 +65,18 @@ public class CourseManagementController extends Controller {
     @FXML
     public void btnGenerateCourseCode(ActionEvent event){
         Random courseGen = new Random();
-        int course = courseGen.nextInt(99999 + 1 - 10000)+10000;
+        int courseCode = courseGen.nextInt(99999 + 1 - 10000)+10000;
         tfId.clear();
-        tfId.setText("C" + course);
+        tfId.setText("C" + courseCode);
     //Checks if the generated course code already exists and rolls again until a unique value is reached.
     //Might need a LinkedHashSet to check duplicates more elegantly.
         String tmpId = tfId.getText();
         for (Course c : courseRegister.getCourseRegister()) {
-        	if (c.getCourseCode().equals(tmpId)) {
+        	if (courseRegister.containsCourse(tmpId)) {
         		tfId.clear();
-        		tfId.setText("C" + course);        		
+        		tfId.setText("C" + courseGen.nextInt(courseCode));        		
         	}
-        }
-        	
-    
-   
-    
+        }     	  
     }
 
     @FXML

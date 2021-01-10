@@ -1,8 +1,10 @@
 package controllers;
 
+import java.awt.Button;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Observable;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import application.Main;
@@ -23,6 +25,9 @@ public class ExamManagementController extends Controller implements Initializabl
 
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
+	@FXML
+	Button btnExamId = new Button();
+	
 	
 	//WORK IN PROGRESS, no lists can exist before we fix the main/controller issue
 	/*
@@ -108,7 +113,13 @@ public class ExamManagementController extends Controller implements Initializabl
 	}
 		*/
 
-
+	@FXML
+	public void btnGenerateExamId(ActionEvent event) {
+		Random examGen = new Random();
+		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
+		tfId.clear();
+		tfId.setText("E" + examId);
+	}
 
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){

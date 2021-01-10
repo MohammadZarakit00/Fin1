@@ -57,6 +57,7 @@
             <ComboBox layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
             <Text fx:id="idError" fill="RED" layoutX="344.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
             <Text fx:id="nameError" fill="RED" layoutX="360.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
+            <Button fx:id="btnGenerateStudentId" layoutX="344.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" text="Generate" />
          </children>
       </AnchorPane>
    </center>

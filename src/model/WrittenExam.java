@@ -110,6 +110,10 @@ public class WrittenExam {
 		}
 		return null;
 	}
+	
+	public Boolean containsStudent(String student){
+        return findStudent(student) != null;
+    }
 
 	public void setStudentResult(String studentId, int points){
 		if(findStudent(studentId) != null) {
@@ -159,4 +163,6 @@ public class WrittenExam {
 		}
 		return nbrPassed;
 	}
+	
+	
 }
