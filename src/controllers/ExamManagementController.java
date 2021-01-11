@@ -21,7 +21,7 @@ import model.CourseRegister;
 import model.WrittenExam;
 import model.WrittenExamRegister;
 
-public class ExamManagementController extends Controller implements Initializable {
+public class ExamManagementController extends Controller {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
@@ -29,7 +29,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	private Main main;
 
 	@FXML
-	ComboBox courseChoiceBox = new ComboBox();
+	ComboBox courseChoiceBox = new ComboBox(FXCollections.observableArrayList(courseRegister.getCourseRegister()));
 	@FXML
 	Button btnExamId = new Button();
 	
@@ -58,11 +58,12 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	TextArea outPutArea = new TextArea();
 	
-	@FXML
+	/*@FXML
 	public void initialize(URL location, ResourceBundle resources){
 		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
 
-	}
+	}*/
+
 	//Im missing something here, can't figure out how to add the exam TO the course...
 	/*@FXML
 	public void btnAddExam(ActionEvent event) {
