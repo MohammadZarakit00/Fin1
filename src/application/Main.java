@@ -106,8 +106,10 @@ public class Main extends Application {
 			Scene scene = new Scene(root, 1100, 800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.show();
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Contoso University");
+		
 
 		} catch(Exception e) {
 			e.printStackTrace();
