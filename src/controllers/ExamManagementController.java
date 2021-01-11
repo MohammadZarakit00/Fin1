@@ -28,8 +28,8 @@ public class ExamManagementController extends Controller implements Initializabl
 
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
-	//@FXML
-	//Button btnGenerateExamId = new Button();
+	@FXML
+	Button btnGenerateExamId = new Button();
 	
 	
 //	@FXML
@@ -58,7 +58,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	Text errorText = new Text();
 	
-	@FXML
+	
 	public void initialize(URL location, ResourceBundle resources){
 		System.out.println("Kör initialize");
 		ArrayList<String> tmpList = new ArrayList<>();
@@ -135,10 +135,10 @@ public class ExamManagementController extends Controller implements Initializabl
 	}
 		
 
-	/*@FXML
+	@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
-	}*/
+	}
 }

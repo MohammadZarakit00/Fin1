@@ -9,39 +9,35 @@ import model.StudentRegister;
 import model.WrittenExam;
 import model.WrittenExamRegister;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
-public class StudentManagementController extends Controller{
+import static javafx.collections.FXCollections.observableArrayList;
 
-	/*
-	
-	private ArrayList<Student> studentRegister = new ArrayList<Student>();
-	private ArrayList<Course> courseRegister = new ArrayList<Course>();
-	private ArrayList<WrittenExam> examRegister = new ArrayList<>();
-	private Main main;
-	*/
-	
+public class StudentManagementController extends Controller implements Initializable{
+
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 	
-	
-
 	@FXML
 	Button btnAddStudent = new Button();
-
 	@FXML
 	Button btnFindStudent = new Button();
 	@FXML
@@ -77,6 +73,8 @@ public class StudentManagementController extends Controller{
 	Button btnScene2;
 	@FXML
 	Button btnGenerateStudentId = new Button();
+	@FXML
+	ComboBox examBox = new ComboBox();
 
 
 	//i have no idea what this does. 
@@ -87,6 +85,15 @@ public class StudentManagementController extends Controller{
 		Stage window = (Stage) btnScene2.getScene().getWindow();
 
 		window.setScene(new Scene(root, 800, 600));
+	}
+	
+	public void initialize(URL location, ResourceBundle resources){
+		System.out.println("Kör initialize");
+		ArrayList<String> tmpList = new ArrayList<>();
+		for(WrittenExam e : examRegister.getExamRegister()){
+			tmpList.add(e.getExamID() + ": " + e.getDate());
+		}
+		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
 
 		@FXML
@@ -146,7 +153,8 @@ public class StudentManagementController extends Controller{
 				ta.setText("Student " + tmpId + " does not exist in the register. ");
 			}			
 		}
-	}
+		
+}
 
 
 

@@ -17,9 +17,7 @@ import model.CourseRegister;
 import model.StudentRegister;
 
 public class CourseManagementController extends Controller {
-
-
-    private int courseCodeGen = 10000;
+	
     private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
     private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
 

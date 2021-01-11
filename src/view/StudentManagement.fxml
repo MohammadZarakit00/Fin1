@@ -54,10 +54,10 @@
                   <Font name="Old English Text MT" size="40.0" />
                </font>
             </Text>
-            <ComboBox fx:id="examBox" layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
-            <Text fx:id="idError" fill="RED" layoutX="337.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.13671875" />
+            <ComboBox fx:id="examBox" editable="true" layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
+            <Text fx:id="idError" fill="RED" layoutX="344.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
+            <Text fx:id="nameError" fill="RED" layoutX="360.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
             <Button fx:id="btnGenerateStudentId" layoutX="344.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" text="Generate" />
-            <Button fx:id="btnGetResult" layoutX="95.0" layoutY="260.0" mnemonicParsing="false" text="Get Result" />
          </children>
       </AnchorPane>
    </center>
