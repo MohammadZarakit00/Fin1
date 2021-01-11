@@ -102,21 +102,21 @@ public class CourseManagementController extends Controller {
     
     //Removes a course if it exists, as well as all its exams.
     @FXML
-    public void btnRemoveCourse (ActionEvent event){
+    public void btnRemoveCourse (ActionEvent event){    	
         String tmpId = tfId.getText();
+        Course course = courseRegister.findCourse(tmpId);
         if(tmpId.isEmpty()) {
         	taErrorText.setText("To remove a course you must enter its course code. ");
         } else {
-        		if (courseRegister.containsCourse(tmpId)) {
-        			for (Course c : courseRegister.getCourseRegister()) {
-        				c.getCourseExamList().remove(c);
-        			}         			
+        		if (courseRegister.containsCourse(tmpId)) {        		     				
+        				course.getCourseExamList().clear();        			
+        			}        		
         courseRegister.remove(tmpId);
         outPutArea.setText("The course " + tmpId + " was removed from the register along with its exams. ");
         }           
         taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
         }
-    }
+    
 
     //Finds a course with the given ID.
     @FXML
