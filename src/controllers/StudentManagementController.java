@@ -72,6 +72,8 @@ public class StudentManagementController extends Controller implements Initializ
 	@FXML
 	TextField tfTime = new TextField();
 	@FXML
+	TextField tfScore = new TextField();
+	@FXML
 	MenuButton menuButton = new MenuButton();
 	@FXML
 	Button btnScene2;
@@ -160,7 +162,16 @@ public class StudentManagementController extends Controller implements Initializ
 		
 		@FXML
 		public void btnRegisterResult(ActionEvent event) {
-			
+			WrittenExam exam = null;
+			String tmpStudentId = tfId.getText();
+			String tmpScore = tfScore.getText();
+			String tmpExamId= (String) examBox.getValue(); //cant cast, idkwtf to put here
+			if (tmpExamId == null || tmpScore == null || tmpStudentId == null) {
+				exam.addStudentAndResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
+				ta.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
+			} else {
+				ta.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
+			}
 		}
 		
 		/*@FXML
