@@ -17,7 +17,7 @@ import model.CourseRegister;
 import model.StudentRegister;
 import model.WrittenExam;
 
-public class CourseManagementController extends Controller {
+public class CourseManagementController {
 	
     private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
     private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
@@ -95,14 +95,14 @@ public class CourseManagementController extends Controller {
     		c.setName(tmpName);
     		c.setCredits(tmpCredits);
     	}
-    	}
+    }
     	outPutArea.setText("Updated course name " + tmpName + ", and credits " + tmpCredits + ". ");
     	} catch (NumberFormatException e) {
     	taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
     	}
     }
 }
-   
+      
     //Generates a random course code 
     @FXML
     public void btnGenerateCourseCode(ActionEvent event){

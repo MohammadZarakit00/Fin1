@@ -21,7 +21,7 @@ import model.WrittenExamRegister;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class ExamManagementController extends Controller implements Initializable {
+public class ExamManagementController implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
@@ -122,7 +122,6 @@ public class ExamManagementController extends Controller implements Initializabl
 			}
 			}
 		}
-
 	
 	//Same as above. Remove FROM a course.
 	@FXML
@@ -142,8 +141,7 @@ public class ExamManagementController extends Controller implements Initializabl
 			}
 		}
 	}
-	
-	
+		
 	@FXML
 	public void btnMeanResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
@@ -163,8 +161,7 @@ public class ExamManagementController extends Controller implements Initializabl
 			}
 		}
 	}
-	
-	
+		
 	@FXML
 	public void btnMedianResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
@@ -205,25 +202,6 @@ public class ExamManagementController extends Controller implements Initializabl
 			}
 		}
 	}
-
-	/*
-	@FXML
-	public void btnRegisterResult(ActionEvent event) {
-		String tmpExamId = tfId.getText();
-		WrittenExam exam = examRegister.findExam(tmpExamId);
-		String tmpScore = tfScore.getText();
-		String tmpStudentId = (String) studentChoiceBox.getValue();//cant cast, idkwtf to put here
-		String tmpOnlyId = tmpStudentId.substring(0, 6);
-		if (!tmpExamId.isEmpty() && !tmpScore.isEmpty() && !tmpStudentId.isEmpty()) {
-			exam.addStudentAndResult(tmpOnlyId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
-			outPutArea.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
-		} else {
-			outPutArea.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
-		}
-	}
-
-	 */
-
 
 	@FXML
 	public void btnGenerateExamId(ActionEvent event) {

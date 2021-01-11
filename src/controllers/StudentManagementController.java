@@ -32,7 +32,7 @@ import javafx.scene.control.TextArea;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class StudentManagementController extends Controller implements Initializable {
+public class StudentManagementController implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
@@ -204,7 +204,7 @@ public class StudentManagementController extends Controller implements Initializ
 				ta.setText("The student " + tmpStudent.getName() + " with the Student-ID: " + tmpId + "" +
 						" was removed from " + examId + ".");
 			}
-		}
+		} 
 	}
 
 	//Registers a result for a student on a given exam.
