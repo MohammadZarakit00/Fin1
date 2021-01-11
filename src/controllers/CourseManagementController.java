@@ -116,15 +116,14 @@ public class CourseManagementController extends Controller {
         }           
         taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
         }
-    
 
     //Finds a course with the given ID.
     @FXML
     public void btnFindCourse(ActionEvent event){
         String tmpId = tfId.getText();
-        for(Course c : courseRegister.getCourseRegister()){
-            if(c.getCourseCode().equals(tmpId)){
-                outPutArea.setText("The course " + c.getName() + " with course code " + c.getCourseCode() + " was found in the register. " );
+        Course tmpCourse = courseRegister.findCourse(tmpId);      
+            if(tmpCourse.getCourseCode().equals(tmpId)){
+                outPutArea.setText("The course " + tmpCourse.getName() + " with course code " + tmpCourse.getCourseCode() + " was found in the register. " );
             } else {
                 outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
             }
