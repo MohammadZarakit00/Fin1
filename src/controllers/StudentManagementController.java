@@ -92,9 +92,7 @@ public class StudentManagementController extends Controller implements Initializ
 		window.setScene(new Scene(root, 800, 600));
 	}
 		
-	public void initialize(URL location, ResourceBundle resources){		
-		
-		System.out.println("Kör initialize");
+	public void initialize(URL location, ResourceBundle resources){
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
 			tmpList.add(e.getExamID() + ": " + e.getDate());
