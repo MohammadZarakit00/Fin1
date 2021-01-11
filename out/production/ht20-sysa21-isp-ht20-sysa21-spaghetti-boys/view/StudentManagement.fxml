@@ -23,7 +23,7 @@
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
-                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Register Result" />
+                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Update Result" />
                   <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
                </items>
             </ToolBar>
@@ -35,7 +35,7 @@
             </Text>
             <ComboBox fx:id="examBox" layoutX="248.0" layoutY="324.0" prefHeight="26.0" prefWidth="165.0" promptText="Available exams" />
             <Button fx:id="btnGenerateStudentId" layoutX="137.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" prefHeight="26.0" prefWidth="83.0" text="Generate" />
-            <TextField fx:id="tfScore" layoutX="247.0" layoutY="280.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
+            <TextField fx:id="tfScore" layoutX="247.0" layoutY="280.0" promptText="Result" style="-fx-background-color: #FFFFFF;" />
             <TextArea fx:id="taErrorText" editable="false" layoutX="545.0" layoutY="191.0" prefHeight="131.0" prefWidth="195.0" style="-fx-background-color: #83878A;" wrapText="true" />
          </children>
       </AnchorPane>
