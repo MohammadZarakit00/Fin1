@@ -23,14 +23,18 @@
                   <TextArea fx:id="outPutArea" editable="false" layoutX="169.0" layoutY="370.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" style="-fx-background-color: #FFFFFF;" wrapText="true" />
                   <TextField fx:id="tfId" layoutX="240.0" layoutY="205.0" promptText="Coursecode" style="-fx-background-color: #FFFFFF;">
                      <tooltip>
-                        <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
+                        <Tooltip text="Course code must start with &quot;C&quot; and be followed by 5 numbers" />
                      </tooltip>
                   </TextField>
                   <TextField fx:id="tfName" layoutX="240.0" layoutY="241.0" promptText="Name" style="-fx-background-color: #FFFFFF;">
                      <tooltip>
-                        <Tooltip text="Enter the name of a student, course or exam." />
+                        <Tooltip text="Enter the name of the course" />
                      </tooltip>
                   </TextField>
+                  <TextField fx:id="tfCredits" layoutX="240.0" layoutY="276.0" promptText="Credits" style="-fx-background-color: #FFFFFF;">
+                     <tooltip>
+                        <Tooltip text="Enter the amount of credits the course is worth" />
+                     </tooltip></TextField>
                   <ToolBar layoutY="100.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
                      <items>
                         <Button fx:id="btnAddCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
@@ -58,8 +62,8 @@
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="tfCredits" layoutX="240.0" layoutY="276.0" promptText="Credits" style="-fx-background-color: #FFFFFF;" />
                   <Button fx:id="btnGenerateCourseCode" layoutX="169.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnGenerateCourseCode" text="Generate" />
+                  <TextArea fx:id="taErrorText" editable="false" layoutX="469.0" layoutY="179.0" prefHeight="155.0" prefWidth="232.0" style="-fx-background-color: #FFFFFF;" wrapText="true" />
                </children>
             </Pane>
          </children>
