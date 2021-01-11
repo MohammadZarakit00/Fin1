@@ -32,7 +32,7 @@ import javafx.scene.control.TextArea;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class StudentManagementController extends Controller implements Initializable {
+public class StudentManagementController implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
@@ -106,6 +106,18 @@ public class StudentManagementController extends Controller implements Initializ
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
 
+
+	@FXML
+	public void btnUpdateStudent(ActionEvent event){
+		String tmpId = tfId.getText();
+		String tmpName = tfName.getText();
+		if(tmpId.isEmpty() || tmpName.isEmpty()){
+			taErrorText.setText("Please fill out both the Student-ID and the updated name");
+		} else {
+			studentRegister.findStudent(tmpId).setName(tmpName);
+			ta.setText("Student with ID: " + tmpId + " has had their name updated and is now called " + tmpName + ".");
+		}
+	}
 
 	//Checks validity of entered data, then adds a student to the register if it doesn't exist already.
 	@FXML
