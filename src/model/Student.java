@@ -17,14 +17,14 @@ public class Student {
 
 	public HashMap<WrittenExam, Result> getExamResultMap() {
 		return examResultMap;
-	}
+	}	
 
 	public Boolean studentValidCheck(String studentId){
 		String subString = studentId.substring(1);
 		int studentIdNr = Integer.parseInt(subString);
 		return studentId.startsWith("S") && studentId.length() == 6 && (studentIdNr >= 10000 && studentIdNr <= 99999);
 	}
-
+	
 	public void setExamResultMap(HashMap<WrittenExam, Result> examResultMap) {
 		this.examResultMap = examResultMap;
 	}

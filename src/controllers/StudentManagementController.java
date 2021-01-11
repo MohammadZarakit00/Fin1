@@ -54,6 +54,10 @@ public class StudentManagementController extends Controller implements Initializ
 	Button btnAddExam = new Button();
 	@FXML
 	TextArea ta = new TextArea();
+	@FXML
+	Button btnRegisterResult = new Button();
+	@FXML
+	Button btnGetLetterGrade = new Button();
 
 	@FXML
 	TextField tfId = new TextField();
@@ -70,7 +74,9 @@ public class StudentManagementController extends Controller implements Initializ
 	@FXML
 	TextField tfTime = new TextField();
 	@FXML
-	MenuButton menuButton = new MenuButton();
+	TextField tfScore = new TextField();
+	@FXML
+	TextArea taErrorText = new TextArea();
 	@FXML
 	Button btnScene2;
 	@FXML
@@ -88,26 +94,39 @@ public class StudentManagementController extends Controller implements Initializ
 		window.setScene(new Scene(root, 800, 600));
 	}
 		
+	
+		//Fills out the combobox with students on page load. Also makes the error box look nice.
 	public void initialize(URL location, ResourceBundle resources){
+		taErrorText.setStyle("fx-text-fill: RED; ");
+		
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
 			tmpList.add(e.getExamID() + ": " + e.getDate());
 		}
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
-
-	@FXML
-	public void btnAddStudent(ActionEvent event) {
-	String tmpId = tfId.getText();
-	String tmpName = tfName.getText();
-	Student student = new Student(tmpId, tmpName);
-	if (!student.studentValidCheck(tmpId)) {
-		ta.setText("You must enter a valid Student ID and name to add a student.");
-	} else if (studentRegister.containsStudent(tmpId)) {
-		ta.setText("Student already exists.");
-	} else {
-		studentRegister.add(student);
-		ta.setText(tmpName + " was added to the register. ");
+		
+		
+		//Checks validity of entered data, then adds a student to the register if it doesn't exist already.
+		@FXML
+		public void btnAddStudent(ActionEvent event) {
+		String tmpId = tfId.getText();
+		String tmpName = tfName.getText();
+		if (tmpId.isEmpty() && tmpName.isEmpty()) {
+			taErrorText.setText("Please fill out both a name and a student ID. ");
+		}else {
+			Student student = new Student(tmpId, tmpName); 
+		
+			if (!student.studentValidCheck(tmpId)) {				
+			taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
+			}else if (tmpName.isEmpty()) {
+			taErrorText.setText("You must also enter the name of the student you would like to register. ");
+			}else if (studentRegister.findStudent(tmpId) != null) {
+			taErrorText.setText("A student with the ID: " + tmpId + " already exists.");
+			}else {
+			studentRegister.add(student);
+			ta.setText(tmpName + " was added to the register. ");
+			}
 		}
 	}
 	
@@ -129,6 +148,7 @@ public class StudentManagementController extends Controller implements Initializ
 		
 		}
 
+	//Finds a student
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
@@ -143,6 +163,7 @@ public class StudentManagementController extends Controller implements Initializ
 		return tmpId;
 	}
 
+	//Deletes a student from the system
 		@FXML
 		public void btnDeleteStudent (ActionEvent event){
 			String tmpId = tfId.getText();
@@ -154,13 +175,37 @@ public class StudentManagementController extends Controller implements Initializ
 			}			
 		}
 		
-		/*@FXML
+		
+		//Registers a result for a student on a given exam.
+		@FXML
+		public void btnRegisterResult(ActionEvent event) {
+			String tmpStudentId = tfId.getText();			
+			String tmpScore = tfScore.getText();
+			String tmpExamId = (String) examBox.getValue();
+			String tmpOnlyId = tmpExamId.substring(0, 6);
+			WrittenExam exam = examRegister.findExam(tmpExamId);
+			
+			if (!tmpExamId.isEmpty() && !tmpScore.isEmpty() && !tmpStudentId.isEmpty()) {
+				exam.addStudentAndResult(tmpOnlyId, Integer.parseInt(tmpScore)); 
+				ta.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
+			} else {
+				ta.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
+			}
+		}
+		
+		@FXML
 		public void btnGetLetterGrade (ActionEvent event) {
-			HashMap<WrittenExam, Result> examResults = examResults.getExamResultMap();
-			String tmpId = tfId.getText();
-			WrittenExam exam = (WrittenExam) examBox.getValue();
-			ta.setText(examResults.getPointsFromExam());
-		} */
+			String tmpId = tfId.getText();			
+			String tmpExamId = (String) examBox.getValue();
+			String tmpOnlyId = tmpExamId.substring(0, 6);
+			WrittenExam exam = examRegister.findExam(tmpOnlyId);
+			
+			String tmpLetterGrade = exam.findStudent(tmpId).getExamResultMap().get(exam).getLetterGrade();
+			
+			if (!tmpOnlyId.isEmpty() && !tmpId.isEmpty()) {
+				ta.setText("Student " + tmpId + " received an " + "'" + tmpLetterGrade + "' on this exam. ");
+			}
+		}
 		
 }
 
