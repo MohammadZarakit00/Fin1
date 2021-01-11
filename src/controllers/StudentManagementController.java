@@ -91,18 +91,16 @@ public class StudentManagementController extends Controller{
 
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
-		Student student;
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		if (tfId.getText().contains(student.studentValidCheck(tmpId, tmpName)) ^ tfName.getText().contains(tmpName)) {
-			ta.setText("You must enter a valid Student ID and name to add a student. ");
-		}
-		else if (studentRegister.getStudentRegister().contains(tmpId)) { 
-		ta.setText("Student already exists.");
-		}
-		else {
-		studentRegister.add(new Student(tmpId, tmpName));
-		ta.setText(tmpName + " was added to the register. ");
+		Student student = new Student(tmpId, tmpName);
+		if (!student.studentValidCheck(tmpId, tmpName)) {
+			ta.setText("You must enter a valid Student ID and name to add a student.");
+		} else if (studentRegister.containsStudent(tmpId)) {
+			ta.setText("Student already exists.");
+		} else {
+			studentRegister.add(student);
+			ta.setText(tmpName + " was added to the register. ");
 			} 
 		}
 	
