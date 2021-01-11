@@ -14,18 +14,18 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentManagementController">
    <center>
-      <AnchorPane prefHeight="602.0" prefWidth="724.0" style="-fx-background-color: #20445B;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="740.0" prefWidth="900.0" style="-fx-background-color: #83878A;" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="ta" editable="false" layoutX="78.0" layoutY="341.0" prefHeight="151.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
-            <TextField fx:id="tfId" layoutX="179.0" layoutY="187.0" promptText="ID" style="-fx-background-color: #FFFFFF;">
+            <TextArea fx:id="ta" editable="false" layoutX="175.0" layoutY="398.0" prefHeight="210.0" prefWidth="565.0" promptText="Choose an action above" style="-fx-background-color: #FFFFFF;" wrapText="true" />
+            <TextField fx:id="tfId" layoutX="247.0" layoutY="189.0" promptText="ID" style="-fx-background-color: #FFFFFF;">
                <tooltip>
                   <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
                </tooltip></TextField>
-            <TextField fx:id="tfName" layoutX="179.0" layoutY="223.0" promptText="Name" style="-fx-background-color: #FFFFFF;">
+            <TextField fx:id="tfName" layoutX="247.0" layoutY="232.0" promptText="Name" style="-fx-background-color: #FFFFFF;">
                <tooltip>
                   <Tooltip text="Enter the name of a student, course or exam." />
                </tooltip></TextField>
-            <ToolBar layoutY="105.0" prefHeight="35.0" prefWidth="724.0" style="-fx-background-color: #2184ff;">
+            <ToolBar layoutY="98.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
                <items>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
@@ -34,16 +34,16 @@
                   <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
                </items>
             </ToolBar>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2e38" height="107.0" layoutY="-2.0" stroke="#96818100" strokeType="INSIDE" width="724.0" />
-            <Text fill="WHITE" layoutX="185.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9dcdf1" height="100.0" layoutY="-2.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />
+            <Text fill="WHITE" layoutX="275.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
                <font>
                   <Font name="Old English Text MT" size="40.0" />
                </font>
             </Text>
-            <ComboBox fx:id="examBox" layoutX="179.0" layoutY="293.0" prefWidth="150.0" promptText="Available exams" />
-            <Button fx:id="btnGenerateStudentId" layoutX="78.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" text="Generate" />
-            <TextField fx:id="tfScore" layoutX="179.0" layoutY="261.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
-            <TextArea fx:id="taErrorText" editable="false" layoutX="360.0" layoutY="186.0" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: #20445B;" wrapText="true" />
+            <ComboBox fx:id="examBox" layoutX="248.0" layoutY="324.0" prefHeight="16.0" prefWidth="134.0" promptText="Available exams" />
+            <Button fx:id="btnGenerateStudentId" layoutX="168.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" prefHeight="17.0" prefWidth="52.0" text="Generate" />
+            <TextField fx:id="tfScore" layoutX="247.0" layoutY="280.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
+            <TextArea fx:id="taErrorText" editable="false" layoutX="401.0" layoutY="188.0" prefHeight="108.0" prefWidth="195.0" style="-fx-background-color: #83878A;" wrapText="true" />
          </children>
       </AnchorPane>
    </center>

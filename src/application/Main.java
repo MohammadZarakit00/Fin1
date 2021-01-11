@@ -103,7 +103,7 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource(pages.get("Homepage")));
 			Parent root = loader.load();
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, 1100, 800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.show();
 			primaryStage.setScene(scene);

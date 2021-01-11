@@ -10,12 +10,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
    <left>
-      <Pane prefHeight="536.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="740.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#465b6f" height="537.0" layoutX="-3.0" layoutY="2.0" stroke="WHITE" strokeType="INSIDE" width="197.0" />
-            <ToolBar layoutX="37.0" layoutY="168.0" nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" prefWidth="104.0">
+            <Rectangle fill="#465b6f" height="740.0" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <ToolBar layoutX="48.0" layoutY="260.0" nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" prefWidth="104.0">
                <items>
                   <Button mnemonicParsing="false" onAction="#studentManagementButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Student Management" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
                   <Button mnemonicParsing="false" onAction="#courseManagementButton" prefHeight="55.0" prefWidth="104.0" style="-fx-background-color: #2184ff; -fx-border-color: #FFFFFF;" text="Course Management" textAlignment="CENTER" textFill="WHITE" wrapText="true">
@@ -37,19 +37,24 @@
       </Pane>
    </left>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane style="-fx-background-color: #83878A;">
          <children>
-            <Text layoutX="50.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" />
-            <Text layoutX="50.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an option from the sidebar menu to begin." />
-            <Text layoutX="482.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fill="WHITE" layoutX="116.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
+               <font>
+                  <Font name="Georgia" size="50.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="116.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an option from the sidebar menu to begin." wrappingWidth="397.130859375">
+               <font>
+                  <Font name="Georgia" size="28.0" />
+               </font></Text>
          </children>
       </Pane>
    </center>
    <top>
-      <Pane prefHeight="60.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="60.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#76baf8" height="60.0" stroke="WHITE" strokeType="INSIDE" width="900.0" />
-            <Text fill="WHITE" layoutX="292.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contoso University">
+            <Rectangle fill="#76baf8" height="60.0" strokeType="INSIDE" width="1100.0" />
+            <Text fill="WHITE" layoutX="392.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contoso University">
                <font>
                   <Font name="Old English Text MT" size="40.0" />
                </font>

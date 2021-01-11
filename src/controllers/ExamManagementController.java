@@ -69,8 +69,6 @@ public class ExamManagementController extends Controller implements Initializabl
 	TextArea outPutArea = new TextArea();
 	@FXML
 	TextArea taErrorText = new TextArea();
-	@FXML
-	Text errorText = new Text();
 	
 	//Fills out drop down menus with courses and students respectively, to choose when adding exam to courses or registering results for students.
 	public void initialize(URL location, ResourceBundle resources){
