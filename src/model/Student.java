@@ -60,5 +60,4 @@ public class Student {
 	public int getPointsFromExam(WrittenExam exam){
 		return examResultMap.get(exam).getResult();
 	}
-
 }
