@@ -3,11 +3,11 @@ package model;
 public class StudentTest {
 
         public static void main(String[] args){
-            Student s1 = new Student("S12345","Filip");
-            Student s2 = new Student("S45667", "John");
-            Student s3 = new Student("S00001", "Anders");
-            Student s4 = new Student("S00002", "Berra");
-            Course c1 = new Course("SYSA21", "Informationssystem som ämne", 7.5);
+            Student s1 = new Student("S10001","Filip");
+            Student s2 = new Student("S10002", "John");
+            Student s3 = new Student("S10003", "Anders");
+            Student s4 = new Student("S10004", "Berra");
+            Course c1 = new Course("C10001", "Informationssystem som ämne", 7.5);
             WrittenExam e1 = new WrittenExam("E12345", "010120", "Room A123", "8:00", c1);
             WrittenExam e2 = new WrittenExam("S123456", "010120", "Room A123", "8:00", c1);
 
@@ -30,10 +30,10 @@ public class StudentTest {
             e1.addStudent(s3);
             //e1.addStudent(s4);
 
-            e1.setStudentResult("S12345", 0);
-            e1.setStudentResult("S45667", 75);
-            e1.setStudentResult("S00001", 100);
-            e1.setStudentResult("S00002", 49);
+            e1.setStudentResult("S10001", 0);
+            e1.setStudentResult("S10002", 75);
+            e1.setStudentResult("S10003", 100);
+            e1.setStudentResult("S10004", 49);
 
             System.out.println("Medianen är " + e1.getMedianResult());
             System.out.println("Medelvärdet är " + e1.getMeanResult());

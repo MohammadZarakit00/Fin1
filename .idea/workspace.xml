@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Further singleton stuff, coursemanagement-implementation started">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added test-data to main constructor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ExamManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/StudentManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StudentManagement.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +246,7 @@
       <workItem from="1610013135859" duration="12148000" />
       <workItem from="1610097711066" duration="20062000" />
       <workItem from="1610288093188" duration="3450000" />
+      <workItem from="1610357335453" duration="7293000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -366,7 +364,25 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1610117161048</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="Fixed addStudent">
+      <created>1610357523222</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1610357523222</updated>
+    </task>
+    <task id="LOCAL−00021" summary="comboBox-test">
+      <created>1610357722722</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1610357722722</updated>
+    </task>
+    <task id="LOCAL−00022" summary="Added test-data to main constructor">
+      <created>1610363108426</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1610363108426</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -440,7 +456,10 @@
     <MESSAGE value="Added extend to ExamController" />
     <MESSAGE value="Structure changes, added Singleton-registers. Needs cleanup" />
     <MESSAGE value="Further singleton stuff, coursemanagement-implementation started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Further singleton stuff, coursemanagement-implementation started" />
+    <MESSAGE value="Fixed addStudent" />
+    <MESSAGE value="comboBox-test" />
+    <MESSAGE value="Added test-data to main constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test-data to main constructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

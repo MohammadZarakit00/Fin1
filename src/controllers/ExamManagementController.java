@@ -1,10 +1,7 @@
 package controllers;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import application.Main;
 import javafx.collections.FXCollections;
@@ -22,12 +19,12 @@ import model.CourseRegister;
 import model.WrittenExam;
 import model.WrittenExamRegister;
 
+import static javafx.collections.FXCollections.observableArrayList;
+
 public class ExamManagementController extends Controller implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
-
-	private Main main;
 
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
@@ -47,7 +44,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	Button btnNbrPassedExam = new Button();
 	@FXML
 	Button btnAddStudentToExam = new Button();
-	
+
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -63,9 +60,15 @@ public class ExamManagementController extends Controller implements Initializabl
 	
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){
-		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
-
+		System.out.println("Kör initialize");
+		ArrayList<String> tmpList = new ArrayList<>();
+		for(Course c : courseRegister.getCourseRegister()){
+			tmpList.add(c.getCourseCode() + ": " + c.getName());
+		}
+		courseChoiceBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
+
+
 	//Im missing something here, can't figure out how to add the exam TO the course...
 	/*@FXML
 	public void btnAddExam(ActionEvent event) {

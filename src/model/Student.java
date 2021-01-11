@@ -9,7 +9,7 @@ public class Student {
 	private HashMap<WrittenExam, Result> examResultMap = new HashMap<>();
 
 	public Student(String studentId, String name){
-		if(studentValidCheck(studentId, name)){ //Kollar kraven för studentId
+		if(studentValidCheck(studentId)){ //Kollar kraven för studentId
 			this.studentId = studentId;
 			this.name = name;
 		} else {
@@ -20,9 +20,13 @@ public class Student {
 	public HashMap<WrittenExam, Result> getExamResultMap() {
 		return examResultMap;
 	}
-	public Boolean studentValidCheck(String studentId, String name){
-		return studentId.startsWith("S") && studentId.length() == 6 && !name.isEmpty();
+
+	public Boolean studentValidCheck(String studentId){
+		String subString = studentId.substring(1);
+		int studentIdNr = Integer.parseInt(subString);
+		return studentId.startsWith("S") && studentId.length() == 6 && (studentIdNr >= 10000 && studentIdNr <= 99999);
 	}
+
 	public void setExamResultMap(HashMap<WrittenExam, Result> examResultMap) {
 		this.examResultMap = examResultMap;
 	}
@@ -42,6 +46,7 @@ public class Student {
 	public void addExam(WrittenExam exam, Result result){
 		examResultMap.put(exam, result);
 	}
+
 	public void removeExam(WrittenExam exam){
 		if(examResultMap.containsKey(exam)) {
 			examResultMap.remove(exam);
