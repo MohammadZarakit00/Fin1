@@ -21,7 +21,7 @@ import model.CourseRegister;
 import model.WrittenExam;
 import model.WrittenExamRegister;
 
-public class ExamManagementController extends Controller {
+public class ExamManagementController extends Controller implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
@@ -29,13 +29,13 @@ public class ExamManagementController extends Controller {
 	private Main main;
 
 	@FXML
-	ComboBox courseChoiceBox = new ComboBox(FXCollections.observableArrayList(courseRegister.getCourseRegister()));
-	@FXML
-	Button btnExamId = new Button();
+	ComboBox courseChoiceBox = new ComboBox();
+	//@FXML
+	//Button btnGenerateExamId = new Button();
 	
 	
-	/*@FXML
-	Button btnAddExam = new Button();
+//	@FXML
+//	Button btnAddExam = new Button();
 	@FXML
 	Button btnRemoveExam = new Button();
 	@FXML
@@ -46,7 +46,7 @@ public class ExamManagementController extends Controller {
 	Button btnNbrPassedExam = new Button();
 	@FXML
 	Button btnAddStudentToExam = new Button();
-	*/
+	
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -58,12 +58,11 @@ public class ExamManagementController extends Controller {
 	@FXML
 	TextArea outPutArea = new TextArea();
 	
-	/*@FXML
+	@FXML
 	public void initialize(URL location, ResourceBundle resources){
 		courseChoiceBox.setItems((ObservableList) CourseRegister.getCourseRegInstance());
 
-	}*/
-
+	}
 	//Im missing something here, can't figure out how to add the exam TO the course...
 	/*@FXML
 	public void btnAddExam(ActionEvent event) {
@@ -130,10 +129,10 @@ public class ExamManagementController extends Controller {
 	}
 		
 
-	@FXML
+	/*@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
-	}
+	}*/
 }
