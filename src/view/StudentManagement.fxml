@@ -25,7 +25,7 @@
                <tooltip>
                   <Tooltip text="Enter the name of a student, course or exam." />
                </tooltip></TextField>
-            <ToolBar layoutY="98.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
+            <ToolBar layoutY="100.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
                <items>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
@@ -34,7 +34,7 @@
                   <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
                </items>
             </ToolBar>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9dcdf1" height="100.0" layoutY="-2.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />
+            <Rectangle fill="#9dcdf1" height="100.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />
             <Text fill="WHITE" layoutX="275.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
                <font>
                   <Font name="Old English Text MT" size="40.0" />
