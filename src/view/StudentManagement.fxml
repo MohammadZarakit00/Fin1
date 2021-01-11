@@ -32,6 +32,7 @@
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
+                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Register Result" />
                   <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Extra Actions">
                     <items>
                       <MenuItem mnemonicParsing="false" text="Action 1">

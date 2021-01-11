@@ -54,6 +54,8 @@ public class StudentManagementController extends Controller implements Initializ
 	Button btnAddExam = new Button();
 	@FXML
 	TextArea ta = new TextArea();
+	@FXML
+	Button btnRegisterResult = new Button();
 
 	@FXML
 	TextField tfId = new TextField();
@@ -154,6 +156,11 @@ public class StudentManagementController extends Controller implements Initializ
 			} else {
 				ta.setText("Student " + tmpId + " does not exist in the register. ");
 			}			
+		}
+		
+		@FXML
+		public void btnRegisterResult(ActionEvent event) {
+			
 		}
 		
 		/*@FXML
