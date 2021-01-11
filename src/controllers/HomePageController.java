@@ -73,25 +73,8 @@ public class HomePageController extends Controller implements Initializable {
 		this.bp = borderPane;
 	}
 
-	/*public Pane getPage(String fileName) {
-		try {
-			URL fileUrl = HomePageController.class.getResource("/view" + fileName +".fxml");
-			if (fileUrl == null) {
-				throw new java.io.FileNotFoundException("File not found.");
-			} else {
-				view = FXMLLoader.load(fileUrl);
-			}
-		}
-
-		catch (Exception e) {
-			System.out.print(e.getMessage());
-		}
-		return view;
-	} */
-
-	@FXML
 	public void initialize(URL url, ResourceBundle resourceBundle){
-
+		
 	}
 
 	@FXML

@@ -4,11 +4,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="900.0" style="-fx-background-color: #83878A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="68.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an option from the sidebar menu.">
+      <Text fill="WHITE" layoutX="116.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an option from the sidebar menu to begin." wrappingWidth="397.130859375">
          <font>
-            <Font name="Georgia" size="22.0" />
+            <Font name="Georgia" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="116.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
+         <font>
+            <Font name="Georgia" size="50.0" />
          </font>
       </Text>
    </children>

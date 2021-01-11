@@ -99,6 +99,7 @@ public class StudentManagementController extends Controller implements Initializ
 	public void initialize(URL location, ResourceBundle resources){
 		taErrorText.setStyle("fx-text-fill: RED; ");
 		
+		
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
 			tmpList.add(e.getExamID() + " på kursen " + e.getCurrentCourse().getName());
