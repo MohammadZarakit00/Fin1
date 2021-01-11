@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class Course {
 
+	public ArrayList<WrittenExam> getCourseExamList() {
+		return courseExamList;
+	}
+
+	public void setCourseExamList(ArrayList<WrittenExam> courseExamList) {
+		this.courseExamList = courseExamList;
+	}
+
 	private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
 
 	private String courseCode;
@@ -60,6 +68,10 @@ public class Course {
 		} else {
 			return null;
 		}
+	}
+
+	public Boolean containsExam(String examID){
+		return !(findExam(examID) == null);
 	}
 
 	public String getCourseCode() {

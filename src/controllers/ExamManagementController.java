@@ -101,12 +101,15 @@ public class ExamManagementController extends Controller implements Initializabl
 			if (tmpIdDate.isEmpty() || tmpIdDate.isEmpty() || tmpIdLocation.isEmpty() || tmpIdDate.isEmpty()) {
 				taErrorText.setText("Please fill in all of fields before adding an exam");
 			} else {
-				Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+				String tmpCourseId = courseChoiceBox.getValue().toString().substring(0, 6);
+				Course currentCourse = courseRegister.findCourse(tmpCourseId);
 				WrittenExam tmpExam = new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse);
 
 				if (!tmpExam.checkExamIdInput(tmpIdExam)) {
 					taErrorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers betwen 10000 and 99999," +
 							", example E12345, E10009");
+				} else if (currentCourse.containsExam(tmpIdExam)) {
+					taErrorText.setText("An Exam with that ID is already registered on course " + tmpCourseId);
 				} else if (!(tmpIdTime.charAt(2) == ':')) {
 					taErrorText.setText("Time is not a valid time, examples on valid times are: 08:00, 14:00, 13:37 etc.");
 				} else if (!acceptedLocations.contains(tmpIdLocation)) {
@@ -117,8 +120,9 @@ public class ExamManagementController extends Controller implements Initializabl
 					taErrorText.clear();
 				}
 			}
+			}
 		}
-	}
+
 	
 	//Same as above. Remove FROM a course.
 	@FXML
@@ -130,7 +134,7 @@ public class ExamManagementController extends Controller implements Initializabl
 			Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
 			WrittenExam tmpExam = currentCourse.findExam(tmpId);
 			if(tmpExam == null){
-				taErrorText.setText("Exam doesnt exist on course, please enter an existing course");
+				taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
 			} else {
 				taErrorText.clear();
 				currentCourse.removeExam(tmpId);
@@ -143,14 +147,19 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnMeanResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		if(tmpExamId.isEmpty()){
+		if (tmpExamId.isEmpty()) {
 			taErrorText.setText("Please enter an Exam-ID");
 		} else {
-			WrittenExam exam = examRegister.findExam(tmpExamId);
-			if (exam != null) {
-				outPutArea.setText("Mean result for this exam is " + exam.getMeanResult());
+			Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+			if (currentCourse.containsExam(tmpExamId)) {
+				WrittenExam exam = examRegister.findExam(tmpExamId);
+				if (exam != null) {
+					outPutArea.setText("Mean result for this exam is " + exam.getMeanResult());
+				} else {
+					taErrorText.setText("No exam exists with this ID. Please try another. ");
+				}
 			} else {
-				outPutArea.setText("No exam exists with this ID. Please try another. ");
+				taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
 			}
 		}
 	}
@@ -159,14 +168,19 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnMedianResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		if(tmpExamId.isEmpty()){
+		if (tmpExamId.isEmpty()) {
 			taErrorText.setText("Please enter an Exam-ID");
 		} else {
-		WrittenExam exam = examRegister.findExam(tmpExamId);
-			if (exam != null) {
-				outPutArea.setText("Median result for this exam is " + exam.getMedianResult());
+			Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+			if (currentCourse.containsExam(tmpExamId)) {
+				WrittenExam exam = examRegister.findExam(tmpExamId);
+				if (exam != null) {
+					outPutArea.setText("Median result for this exam is " + exam.getMedianResult());
+				} else {
+					taErrorText.setText("No exam exists with this ID. Please try another. ");
+				}
 			} else {
-				outPutArea.setText("No exam exists with this ID. Please try another. ");
+				taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
 			}
 		}
 	}
@@ -175,18 +189,24 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnNbrPassedExam(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		if(tmpExamId.isEmpty()){
+		if (tmpExamId.isEmpty()) {
 			taErrorText.setText("Please enter an Exam-ID");
 		} else {
-			WrittenExam exam = examRegister.findExam(tmpExamId);
-			if (exam != null) {
-				outPutArea.setText(exam.nbrPassedExam() + " student passed the exam.");
+			Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+			if (currentCourse.containsExam(tmpExamId)) {
+				WrittenExam exam = examRegister.findExam(tmpExamId);
+				if (exam != null) {
+					outPutArea.setText(exam.nbrPassedExam() + " student(s) passed this course.");
+				} else {
+					taErrorText.setText("No exam exists with this ID. Please try another. ");
+				}
 			} else {
-				outPutArea.setText("No exam exists with this ID. Please try another. ");
+				taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
 			}
 		}
 	}
 
+	/*
 	@FXML
 	public void btnRegisterResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
@@ -201,6 +221,8 @@ public class ExamManagementController extends Controller implements Initializabl
 			outPutArea.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
 		}
 	}
+
+	 */
 
 
 	@FXML
