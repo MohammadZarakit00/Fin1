@@ -63,6 +63,14 @@ public class StudentTest {
     		student2.addExam(LaTenta, new Result(40));
     		student3.addExam(GitForceGodkant, new Result(0));
     		student4.addExam(AgilUtveckling, new Result(100));
+    		
+    		student1.removeExam(JavaTenta);
+    		
+    		courseRegister.remove("Programmering");
+    		
+    		studentRegister.remove("John");
+    		
+    		writtenExamRegister.remove("LaTenta");
 
 
     	}
