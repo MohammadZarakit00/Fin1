@@ -86,12 +86,17 @@ public class ExamManagementController extends Controller implements Initializabl
 	
 	@FXML
 	public void btnAddExam(ActionEvent event) {
-			String tmpIdExam = tfId.getText();
-			String tmpIdDate = tfDate.getText();
-			String tmpIdLocation = tfLocation.getText();
-			String tmpIdTime = tfTime.getText();
-			Course currentCourse = (Course) courseChoiceBox.getValue();//almost..... but not quite. class cast exception, cant cast to Course
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse)); //this one is wonk supreme. needs to define exam FOR the given course
+		String tmpIdExam = tfId.getText();
+		String tmpIdDate = tfDate.getText();
+		String tmpIdLocation = tfLocation.getText();
+		String tmpIdTime = tfTime.getText();
+		Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0,6));
+		if(tmpIdExam.isEmpty() || examRegister.findExam(tmpIdExam).checkExamIdInput(tmpIdExam)){
+			errorText.setStyle("-fx-text-fill: red ;");
+			errorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers betwen 10000 and 99999," +
+					", example E12345, E10009");
+		}
+		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse));
 		outPutArea.setText("Exam " + tmpIdExam + " was added to the course " + currentCourse + ". ");
 	} 
 	
@@ -145,22 +150,23 @@ public class ExamManagementController extends Controller implements Initializabl
 				outPutArea.setText("No exam exists with this ID. Please try another. ");
 			}
 		}
-	
+
 	@FXML
 	public void btnRegisterResult(ActionEvent event) {
-		WrittenExam exam = null;
 		String tmpExamId = tfId.getText();
+		WrittenExam exam = examRegister.findExam(tmpExamId);
 		String tmpScore = tfScore.getText();
-		String tmpStudentId = (String) studentChoiceBox.getValue(); //cant cast, idkwtf to put here
-		if (tmpExamId == null || tmpScore == null || tmpStudentId == null) {
-			exam.addStudentAndResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
+		String tmpStudentId = (String) studentChoiceBox.getValue();//cant cast, idkwtf to put here
+		String tmpOnlyId = tmpStudentId.substring(0, 6);
+		if (!tmpExamId.isEmpty() && !tmpScore.isEmpty() && !tmpStudentId.isEmpty()) {
+			exam.addStudentAndResult(tmpOnlyId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
 			outPutArea.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
 		} else {
 			outPutArea.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
 		}
 	}
-	
-		
+
+
 	@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
