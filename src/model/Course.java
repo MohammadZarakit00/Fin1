@@ -38,6 +38,9 @@ public class Course {
 	public void addExam(WrittenExam writtenExam){
 		courseExamList.add(writtenExam);
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+		if(!WrittenExamRegister.getExamRegInstance().containsExam(writtenExam.getExamID())) {
+			WrittenExamRegister.getExamRegInstance().add(writtenExam); //Läggs till i externt register
+		}
 	}
 
 	public WrittenExam findExam(String examId){
