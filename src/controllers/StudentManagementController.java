@@ -101,7 +101,7 @@ public class StudentManagementController extends Controller implements Initializ
 
 		ArrayList<String> tmpList = new ArrayList<>();
 		for (WrittenExam e : examRegister.getExamRegister()) {
-			tmpList.add(e.getExamID() + " på kursen " + e.getCurrentCourse().getName());
+			tmpList.add(e.getExamID() + " on the course " + e.getCurrentCourse().getName());
 		}
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
