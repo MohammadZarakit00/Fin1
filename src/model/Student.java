@@ -50,6 +50,7 @@ public class Student {
 			StudentRegister.getStudentRegInstance().add(this);
 		}
 	}
+	
 
 	public void removeExam(WrittenExam exam){
 		if(examResultMap.containsKey(exam)) {

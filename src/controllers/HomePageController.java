@@ -31,7 +31,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class HomePageController extends Controller implements Initializable {
+public class HomePageController implements Initializable {
 
 
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();

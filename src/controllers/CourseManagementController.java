@@ -17,7 +17,7 @@ import model.CourseRegister;
 import model.StudentRegister;
 import model.WrittenExam;
 
-public class CourseManagementController extends Controller {
+public class CourseManagementController {
 	
     private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
     private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
@@ -78,17 +78,31 @@ public class CourseManagementController extends Controller {
     } 	
     
     @FXML
-    public void btnUpdateCourse(ActionEvent event) {
-    	String tmpId = tfId.getText();
+    public void btnUpdateCourse(ActionEvent event) {    	
     	String tmpName = tfName.getText();
-    	double tmpCredits = Double.parseDouble(tfCredits.getText());
+    	String tmpStringCredits = tfCredits.getText();
+    	
+    	if (tmpName.isEmpty() || tmpStringCredits.isEmpty()) {
+    		taErrorText.setText("You must enter the name and credits fields to update a student. ");
+    	} else {      		
+    	
+    	try {
+    	double tmpCredits = Double.parseDouble(tfCredits.getText());    	
+    	if (tmpCredits > 100.0 || tmpCredits < 0 ) {
+    		taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
+    	} else {
     	for (Course c : courseRegister.getCourseRegister()) {    		
     		c.setName(tmpName);
     		c.setCredits(tmpCredits);
     	}
-    	outPutArea.setText("Updated to course code " + tmpId + ", course name " + tmpName + ", and credits " + tmpCredits + ". ");
     }
-   
+    	outPutArea.setText("Updated course name " + tmpName + ", and credits " + tmpCredits + ". ");
+    	} catch (NumberFormatException e) {
+    	taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
+    	}
+    }
+}
+      
     //Generates a random course code 
     @FXML
     public void btnGenerateCourseCode(ActionEvent event){

@@ -109,7 +109,7 @@ public class WrittenExam {
 			tmpStudent.removeExam(this);
 			return tmpStudent;
 		} else {
-			System.out.println("Student finns ej på detta prov");
+			System.out.println("Student does not exist on this course. ");
 		}
 		return null;
 	}

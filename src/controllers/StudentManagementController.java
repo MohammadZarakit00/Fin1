@@ -217,7 +217,7 @@ public class StudentManagementController implements Initializable {
 				ta.setText("The student " + tmpStudent.getName() + " with the Student-ID: " + tmpId + "" +
 						" was removed from " + examId + ".");
 			}
-		}
+		} 
 	}
 
 	//Registers a result for a student on a given exam.

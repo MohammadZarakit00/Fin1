@@ -90,6 +90,7 @@ public class Main extends Application {
 
 		//Kopplar studenter till Exams samt ger dem ett result
 		student1.addExam(JavaTenta, new Result(90));
+		student2.addExam(JavaTenta, new Result(95));
 		student1.addExam(AgilUtveckling, new Result(40));
 		student1.addExam(LaTenta, new Result(75));
 		student2.addExam(LaTenta, new Result(40));
