@@ -124,7 +124,7 @@ public class WrittenExam {
 		Student tmp = findStudent(studentId);
 		if(tmp != null) {
 			tmp.addExam(this, new Result(points));
-			studentList.add(tmp);
+			this.addStudent(tmp);
 		} else {
 			System.out.println(studentId + "finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
 		}
