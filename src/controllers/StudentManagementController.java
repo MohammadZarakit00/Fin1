@@ -2,6 +2,7 @@ package controllers;
 
 import application.Main;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 import model.Student;
@@ -17,9 +18,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
@@ -46,17 +50,13 @@ public class StudentManagementController extends Controller{
 	Button btnFindStudent = new Button();
 	@FXML
 	Button btnDeleteStudent = new Button();
-	@FXML
-	Button btnAddCourse = new Button();
-	@FXML
-	Button btnFindCourse = new Button();
-	@FXML
-	Button btnRemoveCourse = new Button();
-	@FXML
-	Button btnAddExam = new Button();
+	//@FXML
+	//Button btnGetResult = new Button();
 	@FXML
 	TextArea ta = new TextArea();
-
+	@FXML
+	Text idError = new Text();
+	
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -95,7 +95,7 @@ public class StudentManagementController extends Controller{
 		String tmpName = tfName.getText();
 		Student student = new Student(tmpId, tmpName);
 		if (!student.studentValidCheck(tmpId, tmpName)) {
-			ta.setText("You must enter a valid Student ID and name to add a student.");
+			idError.setText("You must enter a valid Student ID and name to add a student.");
 		} else if (studentRegister.containsStudent(tmpId)) {
 			ta.setText("Student already exists.");
 		} else {
@@ -146,7 +146,58 @@ public class StudentManagementController extends Controller{
 				ta.setText("Student " + tmpId + " does not exist in the register. ");
 			}			
 		}
-	}
+			
+		@FXML
+		private ComboBox<WrittenExam> examBox = new ComboBox<WrittenExam>();
+		private ObservableList<WrittenExam> examBoxList = FXCollections.observableArrayList();
+		
+		@FXML
+		public void intialize() {
+			
+			examBox.setItems(FXCollections.observableArrayList(examRegister.getExamRegister())); }
+		//	examBoxList.add(WrittenExamRegister.getExamRegInstance());
+		
+		/*
+		examBoxList.setCellFactory((examBox) -> {
+			return new ListCell<WrittenExam>() {
+				@Override
+				protected void updateItem(WrittenExam tmpId) {
+					super.updateItem(tmpId);
+					
+					if (item == null ^ empty) {
+						setText(null);
+					} else {
+						setText(item.getExamID());
+					}					
+				}
+			};
+		});
+		} */
+		
+		@FXML
+		public void btnExamBox(ActionEvent event) {
+			ComboBox examBox = null;
+			examBox.getItems().addAll(examRegister.getExamRegInstance().toString());
+		}
+		
+		/* This here gets the result from the chosen exam in the exam combobox.
+		@FXML
+		public void btnGetResult(ActionEvent event) {
+			WrittenExam exam;
+			String tmpId = tfId.getText();
+			examBox tmpExam = examBox.getSelectedItem();
+			
+			if (tmpExam != null) {
+			String tmpExam = (exam).examBox.getSelectedItem();
+			}
+			else {
+				ta.setText("You must enter an exam to show results. ");
+			}
+			*/
+			
+			
+		}
+
 
 
 

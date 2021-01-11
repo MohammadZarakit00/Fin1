@@ -13,7 +13,7 @@ public class Student {
 			this.studentId = studentId;
 			this.name = name;
 		} else {
-			System.out.println("Student-id är i ett felaktigt format");
+			
 		}
 	}
 

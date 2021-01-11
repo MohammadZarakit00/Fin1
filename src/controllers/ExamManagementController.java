@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 import model.WrittenExam;
@@ -57,6 +58,8 @@ public class ExamManagementController extends Controller implements Initializabl
 	TextField tfTime = new TextField();
 	@FXML
 	TextArea outPutArea = new TextArea();
+	@FXML
+	Text errorText = new Text();
 	
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){
