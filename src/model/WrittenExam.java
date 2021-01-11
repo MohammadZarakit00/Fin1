@@ -93,8 +93,6 @@ public class WrittenExam {
 		for (Student tmpStudent : studentList) {
 			if (tmpStudent.getStudentId().equals(studentId)) {
 				return tmpStudent;
-			} else {
-				System.out.println("Student finns ej");
 			}
 		}
 		return null;

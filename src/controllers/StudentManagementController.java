@@ -102,7 +102,7 @@ public class StudentManagementController extends Controller implements Initializ
 		
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
-			tmpList.add(e.getExamID() + ": " + e.getDate());
+			tmpList.add(e.getExamID() + " på kursen " + e.getCurrentCourse().getName());
 		}
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
@@ -113,20 +113,25 @@ public class StudentManagementController extends Controller implements Initializ
 		public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		if (tmpId.isEmpty() && tmpName.isEmpty()) {
+		String tmpExamId = examBox.getValue().toString().substring(0, 6);
+		System.out.println("tmpExamID: " + tmpExamId);
+		if(tmpExamId == null){
+			taErrorText.setText("Please choose an exam from the list below");
+		} else if (tmpId.isEmpty() && tmpName.isEmpty()) {
 			taErrorText.setText("Please fill out both a name and a student ID. ");
 		}else {
-			Student student = new Student(tmpId, tmpName); 
-		
-			if (!student.studentValidCheck(tmpId)) {				
-			taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
-			}else if (tmpName.isEmpty()) {
-			taErrorText.setText("You must also enter the name of the student you would like to register. ");
-			}else if (studentRegister.findStudent(tmpId) != null) {
-			taErrorText.setText("A student with the ID: " + tmpId + " already exists.");
-			}else {
-			studentRegister.add(student);
-			ta.setText(tmpName + " was added to the register. ");
+			Student student = new Student(tmpId, tmpName);
+			WrittenExam tmpExam = examRegister.findExam(tmpExamId);
+
+			if (!student.studentValidCheck(tmpId)) {
+				taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
+			} else if (tmpName.isEmpty()) {
+				taErrorText.setText("You must also enter the name of the student you would like to register. ");
+			} else if (tmpExam.containsStudent(tmpId)) {
+				taErrorText.setText("A student with the ID: " + tmpId + " already exists.");
+			} else {
+				tmpExam.addStudent(student);
+				ta.setText(tmpName + " was added to the register. ");
 			}
 		}
 	}

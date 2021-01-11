@@ -63,11 +63,6 @@
                                     <Button fx:id="btnNbrPassedExam" mnemonicParsing="false" onAction="#btnNbrPassedExam" text="Number of passed students" />
                                  </graphic>
                               </MenuItem>
-                              <MenuItem mnemonicParsing="false">
-                                 <graphic>
-                                    <Button fx:id="btnRegisterResult" mnemonicParsing="false" onAction="#btnRegisterResult" text="Register result" />
-                                 </graphic>
-                              </MenuItem>
                            </items>
                         </MenuButton>
                      </items>
