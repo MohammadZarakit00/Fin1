@@ -30,12 +30,12 @@ public class ExamManagementController extends Controller implements Initializabl
 
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
-	@FXML
-	Button btnExamId = new Button();
+	//@FXML
+	//Button btnGenerateExamId = new Button();
 	
 	
-	/*@FXML
-	Button btnAddExam = new Button();
+//	@FXML
+//	Button btnAddExam = new Button();
 	@FXML
 	Button btnRemoveExam = new Button();
 	@FXML
@@ -46,7 +46,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	Button btnNbrPassedExam = new Button();
 	@FXML
 	Button btnAddStudentToExam = new Button();
-	*/
+	
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -129,10 +129,10 @@ public class ExamManagementController extends Controller implements Initializabl
 	}
 		
 
-	@FXML
+	/*@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
-	}
+	}*/
 }
