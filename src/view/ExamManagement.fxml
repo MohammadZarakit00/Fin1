@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -14,22 +12,22 @@
             <AnchorPane prefHeight="602.0" prefWidth="724.0" style="-fx-background-color: #83878A;" BorderPane.alignment="CENTER">
                <children>
                   <TextArea fx:id="outPutArea" editable="false" layoutX="80.0" layoutY="354.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" style="-fx-background-color: #ffffff;" wrapText="true" />
-                  <TextField fx:id="tfId" layoutX="177.0" layoutY="163.0" promptText="Exam-ID" style="-fx-background-color: #ffffff;">
+                  <TextField fx:id="tfId" layoutX="179.0" layoutY="187.0" promptText="ID" style="-fx-background-color: #ffffff;">
                      <tooltip>
                         <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
                      </tooltip>
                   </TextField>
-                  <TextField fx:id="tfTime" layoutX="177.0" layoutY="199.0" promptText="Time" style="-fx-background-color: #ffffff;">
-                     <tooltip>
-                        <Tooltip text="Exam-ID must start with E and follow with 5 numbers, starting from 10000" />
-                     </tooltip>
-                  </TextField>
-                  <TextField fx:id="tfDate" layoutX="177.0" layoutY="236.0" promptText="Date" style="-fx-background-color: #FFFFFF;">
+                  <TextField fx:id="tfTime" layoutX="179.0" layoutY="223.0" promptText="Time" style="-fx-background-color: #ffffff;">
                      <tooltip>
                         <Tooltip text="Enter the name of a student, course or exam." />
                      </tooltip>
                   </TextField>
-                  <TextField fx:id="tfLocation" layoutX="177.0" layoutY="269.0" promptText="Location" style="-fx-background-color: #ffffff;">
+                  <TextField fx:id="tfDate" layoutX="179.0" layoutY="260.0" promptText="Date" style="-fx-background-color: #FFFFFF;">
+                     <tooltip>
+                        <Tooltip text="Enter the name of a student, course or exam." />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tfLocation" layoutX="179.0" layoutY="293.0" promptText="Location" style="-fx-background-color: #ffffff;">
                      <tooltip>
                         <Tooltip text="Enter the name of a student, course or exam." />
                      </tooltip>
@@ -65,17 +63,9 @@
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
                   </Text>
-                  <ComboBox fx:id="courseChoiceBox" editable="true" layoutX="177.0" layoutY="304.0" prefHeight="26.0" prefWidth="149.0" promptText="Course" style="-fx-background-color: #ffffff;" />
-                  <Button layoutX="80.0" layoutY="163.0" mnemonicParsing="false" onAction="#btnGenerateExamId" text="Generate" />
+                  <ComboBox fx:id="courseChoiceBox" editable="true" layoutX="367.0" layoutY="187.0" prefHeight="17.0" prefWidth="134.0" promptText="Course" style="-fx-background-color: #ffffff;" />
+                  <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnGenerateExamId" text="Generate" />
                   <Text fx:id="errorText" fill="RED" layoutX="367.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="134.13671875" />
-                  <TextArea fx:id="taError" editable="false" layoutX="381.0" layoutY="159.0" prefHeight="105.0" prefWidth="198.0" style="-fx-background-color: #83878A;" text="To add an exam, please fill out all the fields." wrapText="true">
-                     <cursor>
-                        <Cursor fx:constant="NONE" />
-                     </cursor>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </TextArea>
                </children>
             </AnchorPane>
          </center>

@@ -50,7 +50,7 @@ public class Main extends Application {
 		//Skapar tomma register
 		StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
 		CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
-		WrittenExamRegister writtenExamRegister = WrittenExamRegister.getExamRegInstance();
+		WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 
 		//Skapar och lägger till Kurser i kursregister
 		Course Programmering = new Course("C10000", "Programmering", 7.5);
@@ -68,13 +68,15 @@ public class Main extends Application {
 		WrittenExam AgilUtveckling = new WrittenExam("E10002", "070721", "Room A167", "13:00", Projektledning);
 		WrittenExam LaTenta = new WrittenExam("E10003", "040521", "Room B198", "08:00", Spanska);
 		WrittenExam GitForceGodkant = new WrittenExam("E10004", "050830", "Room B067", "13:00", GITKunskap);
+		
+		examRegister.add(LaTenta);
+		examRegister.add(GitForceGodkant);
+		examRegister.add(JavaTenta);
 
 		Programmering.addExam(JavaTenta);
 		Projektledning.addExam(AgilUtveckling);
 		Spanska.addExam(LaTenta);
 		GITKunskap.addExam(GitForceGodkant);
-
-		
 
 		//Skapar och lägger till studenter i register
 		Student student1 = new Student("S10000", "Filip");
@@ -91,6 +93,9 @@ public class Main extends Application {
 
 		//Kopplar studenter till Exams samt ger dem ett result
 		student1.addExam(JavaTenta, new Result(90));
+		student2.addExam(JavaTenta, new Result(40));
+		student3.addExam(JavaTenta, new Result(30));
+		student4.addExam(JavaTenta, new Result(100));
 		student1.addExam(AgilUtveckling, new Result(75));
 		student2.addExam(LaTenta, new Result(40));
 		student3.addExam(GitForceGodkant, new Result(0));
