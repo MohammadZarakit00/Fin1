@@ -37,9 +37,10 @@
                      </tooltip></TextField>
                   <ToolBar layoutY="100.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
                      <items>
-                        <Button fx:id="btnAddCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add" />
-                        <Button fx:id="btnFindCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnFindCourse" text="Find" />
-                        <Button fx:id="btnRemoveCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Delete" />
+                        <Button fx:id="btnAddCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnAddCourse" text="Add Course" />
+                        <Button fx:id="btnFindCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnFindCourse" text="Find Course" />
+                        <Button fx:id="btnUpdateCourse" mnemonicParsing="false" onAction="#btnUpdateCourse" text="UpdateCourse" />
+                        <Button fx:id="btnRemoveCourse" alignment="CENTER" mnemonicParsing="false" onAction="#btnRemoveCourse" text="Delete Course" />
                         <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Exam Actions">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Action 1">
