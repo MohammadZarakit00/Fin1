@@ -160,6 +160,7 @@ public class StudentManagementController extends Controller implements Initializ
 	@FXML
 	public void btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
+		System.out.println("tmpid: "+tmpId);
 		StringBuilder sb = new StringBuilder();
 		Student tmpStudent = studentRegister.findStudent(tmpId);
 		if (tmpId.isEmpty()) {

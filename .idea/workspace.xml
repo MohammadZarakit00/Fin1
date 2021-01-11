@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="fixed bug with adding same exams to several courses">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="english is hard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
     </list>
@@ -454,7 +455,13 @@
       <option name="presentableId" value="LOCAL−00034" />
       <updated>1610403046077</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL−00035" summary="english is hard">
+      <created>1610403717746</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1610403717746</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -511,7 +518,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
     <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
     <MESSAGE value="Changed return-value of credits to int instead of String." />
     <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
@@ -536,7 +542,8 @@
     <MESSAGE value="StudentManagement-stuff" />
     <MESSAGE value="Finished StudentManagementController" />
     <MESSAGE value="fixed bug with adding same exams to several courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with adding same exams to several courses" />
+    <MESSAGE value="english is hard" />
+    <option name="LAST_COMMIT_MESSAGE" value="english is hard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
