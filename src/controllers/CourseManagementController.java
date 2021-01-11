@@ -75,7 +75,7 @@ public class CourseManagementController {
          	}
         }
         
-    } 	
+    } 	    
     
     @FXML
     public void btnUpdateCourse(ActionEvent event) {    	

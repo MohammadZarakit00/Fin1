@@ -28,7 +28,7 @@ public class CourseRegister {
             courseRegister.add(course);
         }
     }
-
+    //needs to remove connected exams as well.
     public void remove(String course) {
         courseRegister.remove(findCourse(course));
     }
