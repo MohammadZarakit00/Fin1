@@ -45,5 +45,15 @@ public class CourseRegister {
     public Boolean containsCourse(String course){
         return findCourse(course) != null;
     }
+
+    public Boolean checkExamUnique(String examId){
+        boolean unique = true;
+        for(Course c : courseRegister){
+            if(c.containsExam(examId)){
+                unique = false;
+            }
+        }
+        return unique;
+    }
 }
 

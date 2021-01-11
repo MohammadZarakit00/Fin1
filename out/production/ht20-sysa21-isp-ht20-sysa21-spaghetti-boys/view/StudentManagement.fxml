@@ -16,26 +16,30 @@
                </tooltip></TextField>
             <TextField fx:id="tfName" layoutX="247.0" layoutY="232.0" promptText="Name" style="-fx-background-color: #FFFFFF;">
                <tooltip>
-                  <Tooltip text="Enter the name of a student, course or exam." />
+                  <Tooltip text="Enter the name of the student" />
                </tooltip></TextField>
+            <TextField fx:id="tfScore" layoutX="247.0" layoutY="280.0" promptText="Score" style="-fx-background-color: #FFFFFF;">
+               <tooltip>
+                  <Tooltip text="Enter the student's score on the given exam" />
+               </tooltip>
+            </TextField>
             <ToolBar layoutY="100.0" prefHeight="35.0" prefWidth="900.0" style="-fx-background-color: #3FB4F7;">
                <items>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
-                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Register Result" />
+                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Update result" />
                   <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
                </items>
             </ToolBar>
             <Rectangle fill="#9dcdf1" height="100.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />
-            <Text fill="WHITE" layoutX="275.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+            <Text fill="WHITE" layoutX="275.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
                <font>
                   <Font name="Old English Text MT" size="40.0" />
                </font>
             </Text>
             <ComboBox fx:id="examBox" layoutX="248.0" layoutY="324.0" prefHeight="26.0" prefWidth="165.0" promptText="Available exams" />
             <Button fx:id="btnGenerateStudentId" layoutX="137.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" prefHeight="26.0" prefWidth="83.0" text="Generate" />
-            <TextField fx:id="tfScore" layoutX="247.0" layoutY="280.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
             <TextArea fx:id="taErrorText" editable="false" layoutX="545.0" layoutY="191.0" prefHeight="131.0" prefWidth="195.0" style="-fx-background-color: #83878A;" wrapText="true" />
          </children>
       </AnchorPane>

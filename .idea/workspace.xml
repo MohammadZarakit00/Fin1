@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="StudentManagement-stuff">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="fixed bug with adding same exams to several courses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/ExamManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/StudentManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/StudentManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/StudentManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StudentManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,7 +436,25 @@
       <option name="presentableId" value="LOCAL−00031" />
       <updated>1610393821223</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL−00032" summary="StudentManagement-stuff">
+      <created>1610398505225</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1610398505225</updated>
+    </task>
+    <task id="LOCAL−00033" summary="Finished StudentManagementController">
+      <created>1610402295194</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1610402295194</updated>
+    </task>
+    <task id="LOCAL−00034" summary="fixed bug with adding same exams to several courses">
+      <created>1610403046077</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1610403046077</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -497,8 +511,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="La till StudentTest" />
-    <MESSAGE value="Added constructor, removed wrongly placed methods in Student, added correct ones" />
     <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
     <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
     <MESSAGE value="Changed return-value of credits to int instead of String." />
@@ -522,7 +534,9 @@
     <MESSAGE value="Continued error-handling in ExamManagementController" />
     <MESSAGE value="Probably finished ExamManagementController." />
     <MESSAGE value="StudentManagement-stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="StudentManagement-stuff" />
+    <MESSAGE value="Finished StudentManagementController" />
+    <MESSAGE value="fixed bug with adding same exams to several courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with adding same exams to several courses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
