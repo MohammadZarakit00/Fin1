@@ -28,7 +28,8 @@ public class CourseManagementController extends Controller {
     TextField tfName = new TextField();
     @FXML
     TextField tfCredits = new TextField();
-
+    @FXML
+    TextArea taErrorText = new TextArea();
     @FXML
     TextArea outPutArea = new TextArea();
     @FXML
@@ -37,8 +38,7 @@ public class CourseManagementController extends Controller {
     Button btnFindCourse = new Button();
     @FXML
     Button btnRemoveCourse = new Button();
-    @FXML
-    Text courseError = new Text();
+   
 
     @FXML
     Button btnGenerateCourseCode = new Button();
@@ -49,22 +49,37 @@ public class CourseManagementController extends Controller {
     
     //Adds a course with the necessary information. Refuses if any field is incorrectly entered.
     @FXML
-    public void btnAddCourse (ActionEvent event){
-        String tmpId = tfId.getText();
-        String tmpName = tfName.getText();
+    public void btnAddCourse (ActionEvent event){     
+    	String tmpId = tfId.getText();    	
+        String tmpName = tfName.getText();       
+        String tmpCredit = tfCredits.getText();
+        
+        if (tmpId.isEmpty() || tmpName.isEmpty() || tmpCredit.isEmpty()) {
+        	taErrorText.setText("Please fill in all of the fields before adding a course. ");
+        } else {       
+        
         try {
-        	if (courseRegister.getCourseRegister().contains(tmpId)) {
-        		outPutArea.setText(tmpId + " already exists in the database. "); 
-        	}
-            int tmpCredits = Integer.parseInt(tfCredits.getText());
+        double tmpCredits = Double.parseDouble(tfCredits.getText());       
+        Course course = new Course(tmpId, tmpName, tmpCredits);
+         	if (!course.courseCodeCheck(tmpId)) {
+        	 taErrorText.setText("You must enter a valid course code. A course code starts with a capital 'C' and is followed by 5 numbers. E.g. C51236, C19923, et cetera. ");         	
+         	} else if (courseRegister.containsCourse(tmpId)) { //explosionsssssss
+        	 taErrorText.setText("A course with that ID is already registered. ");
+         	} else if (tmpCredit.isEmpty()) {
+        	taErrorText.setText("You must also enter the number of credits this course is worth, e.g. 10, 30, 7.5, et cetera. ");               	
+         	} else if (tmpCredits > 100.0 || tmpCredits < 0 ) {
+         	taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");	       	
+         	} else {         
             courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
             outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-        	
-        	} catch (NumberFormatException e) {
-            courseError.setText("Input is not accepted. Course credits input must be a number. ");
-            
+         	}
+         } catch (NumberFormatException e) {
+        	 taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
+         	}
         }
-    }
+        
+    } 	
+   
 
     //Generates a random course code 
     @FXML
@@ -92,7 +107,7 @@ public class CourseManagementController extends Controller {
             courseRegister.remove(tmpId);
             outPutArea.setText("The course " + tmpId + " was removed from the register. ");
         } else {
-            outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
+            taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
         }
     }
 
@@ -102,7 +117,7 @@ public class CourseManagementController extends Controller {
         String tmpId = tfId.getText();
         for(Course c : courseRegister.getCourseRegister()){
             if(c.getCourseCode().equals(tmpId)){
-                outPutArea.setText(c.getName());
+                outPutArea.setText("The course " + c.getName() + " with course code " + c.getCourseCode() + " was found in the register. " ");
             } else {
                 outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
             }

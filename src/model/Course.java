@@ -41,6 +41,16 @@ public class Course {
 		int courseNr = Integer.parseInt(subString);
 		return courseCode.startsWith("C") && courseCode.length() == 6 && (courseNr >= 10000 && courseNr <= 99999);
 	}
+	
+	public static boolean isDouble(String credits) {
+		try {
+			Double.parseDouble(credits);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		
+	}
 
 
 	public void addExam(WrittenExam writtenExam){

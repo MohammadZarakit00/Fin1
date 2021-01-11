@@ -124,7 +124,7 @@ public class StudentManagementController extends Controller implements Initializ
 			WrittenExam tmpExam = examRegister.findExam(tmpExamId);
 
 			if (!student.studentValidCheck(tmpId)) {
-				taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
+				taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 numbers. E.g: S41526, S19648, et cetera. ");
 			} else if (tmpName.isEmpty()) {
 				taErrorText.setText("You must also enter the name of the student you would like to register. ");
 			} else if (tmpExam.containsStudent(tmpId)) {

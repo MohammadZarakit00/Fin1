@@ -60,6 +60,7 @@
                   </Text>
                   <TextField fx:id="tfCredits" layoutX="240.0" layoutY="276.0" promptText="Credits" style="-fx-background-color: #FFFFFF;" />
                   <Button fx:id="btnGenerateCourseCode" layoutX="169.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnGenerateCourseCode" text="Generate" />
+                  <TextArea fx:id="taErrorText" editable="false" layoutX="458.0" layoutY="194.0" prefHeight="110.0" prefWidth="197.0" style="-fx-background-color: #83878A;" wrapText="true" />
                </children>
             </Pane>
          </children>
