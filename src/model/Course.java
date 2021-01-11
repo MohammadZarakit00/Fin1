@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class Course {
 
+	public ArrayList<WrittenExam> getCourseExamList() {
+		return courseExamList;
+	}
+
+	public void setCourseExamList(ArrayList<WrittenExam> courseExamList) {
+		this.courseExamList = courseExamList;
+	}
+
 	private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
 
 	private String courseCode;
@@ -29,13 +37,28 @@ public class Course {
 	Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
 	 */
 	public Boolean courseCodeCheck(String courseCode){
-		return courseCode.startsWith("C") && courseCode.length() == 6;
+		String subString = courseCode.substring(1);
+		int courseNr = Integer.parseInt(subString);
+		return courseCode.startsWith("C") && courseCode.length() == 6 && (courseNr >= 10000 && courseNr <= 99999);
+	}
+	
+	public static boolean isDouble(String credits) {
+		try {
+			Double.parseDouble(credits);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		
 	}
 
 
 	public void addExam(WrittenExam writtenExam){
 		courseExamList.add(writtenExam);
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+		if(!WrittenExamRegister.getExamRegInstance().containsExam(writtenExam.getExamID())) {
+			WrittenExamRegister.getExamRegInstance().add(writtenExam); //Läggs till i externt register
+		}
 	}
 
 	public WrittenExam findExam(String examId){
@@ -55,6 +78,10 @@ public class Course {
 		} else {
 			return null;
 		}
+	}
+
+	public Boolean containsExam(String examID){
+		return findExam(examID) != null;
 	}
 
 	public String getCourseCode() {
@@ -80,8 +107,8 @@ public class Course {
 	/*
 	Onödigt pga constructor?
 	 */
-	public void setCredits(int credits) {
-		if(credits > 0 && credits <= 100) {
+	public void setCredits(double credits) {
+		if(credits > 0 || credits <= 100) {
 			this.credits = credits;
 		} else {
 			System.out.println("Antal credits för course är för lågt eller högt");

@@ -44,4 +44,8 @@ public class Result {
 			return "A"; //Behöver inte kollas då det görs i konstruktorn.
 		}
 	}
+	
+	public String getLetterGradeFromResult(int result) {
+		return letterGrade;
+	}
 }

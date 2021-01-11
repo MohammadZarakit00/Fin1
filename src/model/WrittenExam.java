@@ -82,8 +82,11 @@ public class WrittenExam {
 	}
 	
 	public void addStudent(Student student) {
-		student.addExam(this, null); //Dubbelkopplar och sätter betyg till null
-		studentList.add(student);
+		if(!studentList.contains(student)){
+			studentList.add(student);
+		} else {
+			System.out.println("Studenten finns redan på Exam" + this.getExamID());
+		}
 	}
 	
 	public Student findStudent(String studentId) {
@@ -106,16 +109,21 @@ public class WrittenExam {
 			tmpStudent.removeExam(this);
 			return tmpStudent;
 		} else {
-			System.out.println("Student finns ej på detta prov");
+			System.out.println("Student does not exist on this course. ");
 		}
 		return null;
 	}
+	
+	public Boolean containsStudent(String student){
+        return findStudent(student) != null;
+    }
 
-	public void setStudentResult(String studentId, int points){
-		if(findStudent(studentId) != null) {
-			findStudent(studentId).getExamResultMap().put(this, new Result(points));
+	public void addStudentAndResult(String studentId, int points){
+		Student tmp = findStudent(studentId);
+		if(tmp != null) {
+			tmp.addExam(this, new Result(points));
 		} else {
-			System.out.println("Student finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
+			System.out.println(studentId + "finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
 		}
 	}
 
