@@ -3,9 +3,7 @@ package controllers;
 import java.net.URL;
 import java.util.*;
 
-import application.Main;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -104,8 +102,7 @@ public class ExamManagementController extends Controller implements Initializabl
 		if(examRegister.containsExam(tmpId)) {
 			examRegister.remove(tmpId);
 			outPutArea.setText("The exam " + tmpId + " was removed from the course. ");
-		}
-		else {
+		} else {
 			outPutArea.setText("The exam " + tmpId + " does not exist in the register. ");
 		}
 	}
@@ -156,7 +153,7 @@ public class ExamManagementController extends Controller implements Initializabl
 		String tmpScore = tfScore.getText();
 		String tmpStudentId = (String) studentChoiceBox.getValue(); //cant cast, idkwtf to put here
 		if (tmpExamId == null || tmpScore == null || tmpStudentId == null) {
-			exam.setStudentResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
+			exam.addStudentAndResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
 			outPutArea.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
 		} else {
 			outPutArea.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );

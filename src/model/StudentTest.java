@@ -25,15 +25,10 @@ public class StudentTest {
 
              */
 
-            e1.addStudent(s1);
-            e1.addStudent(s2);
-            e1.addStudent(s3);
-            //e1.addStudent(s4);
-
-            e1.setStudentResult("S10001", 0);
-            e1.setStudentResult("S10002", 75);
-            e1.setStudentResult("S10003", 100);
-            e1.setStudentResult("S10004", 49);
+            e1.addStudentAndResult("S10001", 0);
+            e1.addStudentAndResult("S10002", 75);
+            e1.addStudentAndResult("S10003", 100);
+            e1.addStudentAndResult("S10004", 49);
 
             System.out.println("Medianen är " + e1.getMedianResult());
             System.out.println("Medelvärdet är " + e1.getMeanResult());
