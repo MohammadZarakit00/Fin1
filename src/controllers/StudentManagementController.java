@@ -94,7 +94,7 @@ public class StudentManagementController extends Controller{
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
 		Student student = new Student(tmpId, tmpName);
-		if (!student.studentValidCheck(tmpId, tmpName)) {
+		if (!student.studentValidCheck(tmpId)) {
 			ta.setText("You must enter a valid Student ID and name to add a student.");
 		} else if (studentRegister.containsStudent(tmpId)) {
 			ta.setText("Student already exists.");

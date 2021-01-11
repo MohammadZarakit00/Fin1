@@ -90,6 +90,8 @@ public class WrittenExam {
 		for (Student tmpStudent : studentList) {
 			if (tmpStudent.getStudentId().equals(studentId)) {
 				return tmpStudent;
+			} else {
+				System.out.println("Student finns ej");
 			}
 		}
 		return null;
@@ -119,7 +121,7 @@ public class WrittenExam {
 		if(findStudent(studentId) != null) {
 			findStudent(studentId).getExamResultMap().put(this, new Result(points));
 		} else {
-			System.out.println("Student finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
+			System.out.println(studentId + "finns ej på "+ this.getExamID() + ", resultat kan ej sättas.");
 		}
 	}
 

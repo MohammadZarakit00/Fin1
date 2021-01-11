@@ -29,7 +29,9 @@ public class Course {
 	Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
 	 */
 	public Boolean courseCodeCheck(String courseCode){
-		return courseCode.startsWith("C") && courseCode.length() == 6;
+		String subString = courseCode.substring(1);
+		int courseNr = Integer.parseInt(subString);
+		return courseCode.startsWith("C") && courseCode.length() == 6 && (courseNr >= 10000 && courseNr <= 99999);
 	}
 
 
