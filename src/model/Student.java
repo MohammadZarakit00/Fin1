@@ -24,7 +24,7 @@ public class Student {
 		int studentIdNr = Integer.parseInt(subString);
 		return studentId.startsWith("S") && studentId.length() == 6 && (studentIdNr >= 10000 && studentIdNr <= 99999);
 	}
-
+	
 	public void setExamResultMap(HashMap<WrittenExam, Result> examResultMap) {
 		this.examResultMap = examResultMap;
 	}

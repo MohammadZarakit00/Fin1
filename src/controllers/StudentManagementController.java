@@ -76,6 +76,8 @@ public class StudentManagementController extends Controller implements Initializ
 	@FXML
 	TextField tfScore = new TextField();
 	@FXML
+	TextArea taErrorText = new TextArea();
+	@FXML
 	Button btnScene2;
 	@FXML
 	Button btnGenerateStudentId = new Button();
@@ -92,28 +94,41 @@ public class StudentManagementController extends Controller implements Initializ
 		window.setScene(new Scene(root, 800, 600));
 	}
 		
+	
+		//Fills out the combobox with students on page load. Also makes the error box look nice.
 	public void initialize(URL location, ResourceBundle resources){
+		taErrorText.setStyle("fx-text-fill: RED; ");
+		
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
 			tmpList.add(e.getExamID() + ": " + e.getDate());
 		}
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
-
+		
+		
+		//Checks validity of entered data, then adds a student to the register if it doesn't exist already.
 		@FXML
 		public void btnAddStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
 		String tmpName = tfName.getText();
-		Student student = new Student(tmpId, tmpName);
-		if (!student.studentValidCheck(tmpId)) {
-			ta.setText("You must enter a valid Student ID and name to add a student.");
-		} else if (studentRegister.containsStudent(tmpId)) {
-			ta.setText("Student already exists.");
-		} else {
+		if (tmpId.isEmpty() && tmpName.isEmpty()) {
+			taErrorText.setText("Please fill out both a name and a student ID. ");
+		}else {
+			Student student = new Student(tmpId, tmpName); 
+		
+			if (!student.studentValidCheck(tmpId)) {				
+			taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
+			}else if (tmpName.isEmpty()) {
+			taErrorText.setText("You must also enter the name of the student you would like to register. ");
+			}else if (studentRegister.findStudent(tmpId) != null) {
+			taErrorText.setText("A student with the ID: " + tmpId + " already exists.");
+			}else {
 			studentRegister.add(student);
 			ta.setText(tmpName + " was added to the register. ");
-			} 
+			}
 		}
+	}
 	
 	//Generates a student ID in accordance to the constructor rules, i.e. capital 's' and 5 numbers.
 	@FXML

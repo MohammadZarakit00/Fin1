@@ -16,12 +16,12 @@
    <center>
       <AnchorPane prefHeight="602.0" prefWidth="724.0" style="-fx-background-color: #20445B;" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="ta" editable="false" layoutX="78.0" layoutY="323.0" prefHeight="200.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
-            <TextField fx:id="tfId" layoutX="179.0" layoutY="187.0" promptText="ID">
+            <TextArea fx:id="ta" editable="false" layoutX="78.0" layoutY="341.0" prefHeight="151.0" prefWidth="565.0" promptText="Choose an action above" wrapText="true" />
+            <TextField fx:id="tfId" layoutX="179.0" layoutY="187.0" promptText="ID" style="-fx-background-color: #FFFFFF;">
                <tooltip>
                   <Tooltip text="Student ID must start with &quot;S&quot; and be followed by 5 numbers" />
                </tooltip></TextField>
-            <TextField fx:id="tfName" layoutX="179.0" layoutY="223.0" promptText="Name">
+            <TextField fx:id="tfName" layoutX="179.0" layoutY="223.0" promptText="Name" style="-fx-background-color: #FFFFFF;">
                <tooltip>
                   <Tooltip text="Enter the name of a student, course or exam." />
                </tooltip></TextField>
@@ -40,10 +40,10 @@
                   <Font name="Old English Text MT" size="40.0" />
                </font>
             </Text>
-            <ComboBox fx:id="examBox" layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
-            <Text fx:id="idError" fill="RED" layoutX="344.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
+            <ComboBox fx:id="examBox" layoutX="179.0" layoutY="293.0" prefWidth="150.0" promptText="Available exams" />
             <Button fx:id="btnGenerateStudentId" layoutX="78.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" text="Generate" />
-            <TextField fx:id="tfScore" layoutX="334.0" layoutY="183.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
+            <TextField fx:id="tfScore" layoutX="179.0" layoutY="261.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />
+            <TextArea fx:id="taErrorText" editable="false" layoutX="360.0" layoutY="186.0" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: #20445B;" wrapText="true" />
          </children>
       </AnchorPane>
    </center>
