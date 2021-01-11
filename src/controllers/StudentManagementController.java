@@ -96,20 +96,20 @@ public class StudentManagementController extends Controller implements Initializ
 		examBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
 
-		@FXML
-		public void btnAddStudent(ActionEvent event) {
-		String tmpId = tfId.getText();
-		String tmpName = tfName.getText();
-		Student student = new Student(tmpId, tmpName);
-		if (!student.studentValidCheck(tmpId)) {
-			ta.setText("You must enter a valid Student ID and name to add a student.");
-		} else if (studentRegister.containsStudent(tmpId)) {
-			ta.setText("Student already exists.");
-		} else {
-			studentRegister.add(student);
-			ta.setText(tmpName + " was added to the register. ");
-			} 
+	@FXML
+	public void btnAddStudent(ActionEvent event) {
+	String tmpId = tfId.getText();
+	String tmpName = tfName.getText();
+	Student student = new Student(tmpId, tmpName);
+	if (!student.studentValidCheck(tmpId)) {
+		ta.setText("You must enter a valid Student ID and name to add a student.");
+	} else if (studentRegister.containsStudent(tmpId)) {
+		ta.setText("Student already exists.");
+	} else {
+		studentRegister.add(student);
+		ta.setText(tmpName + " was added to the register. ");
 		}
+	}
 	
 	//Generates a student ID in accordance to the constructor rules, i.e. capital 's' and 5 numbers.
 	@FXML

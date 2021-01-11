@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Started on error-handling">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Continued error-handling in ExamManagementController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/application/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/application/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys/view/ExamManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ExamManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ExamManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -417,7 +412,13 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1610380572474</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="Continued error-handling in ExamManagementController">
+      <created>1610385541510</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1610385541511</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -498,7 +499,8 @@
     <MESSAGE value="Fixed adding of student in writtenexam" />
     <MESSAGE value="Connected student and exam" />
     <MESSAGE value="Started on error-handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started on error-handling" />
+    <MESSAGE value="Continued error-handling in ExamManagementController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continued error-handling in ExamManagementController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
