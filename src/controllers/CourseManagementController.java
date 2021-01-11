@@ -15,6 +15,7 @@ import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 import model.StudentRegister;
+import model.WrittenExam;
 
 public class CourseManagementController extends Controller {
 	
@@ -99,15 +100,21 @@ public class CourseManagementController extends Controller {
         }     	  
     }
     
-    //Removes a course if it exists.
+    //Removes a course if it exists, as well as all its exams.
     @FXML
     public void btnRemoveCourse (ActionEvent event){
         String tmpId = tfId.getText();
-        if(courseRegister.containsCourse(tmpId)){
-            courseRegister.remove(tmpId);
-            outPutArea.setText("The course " + tmpId + " was removed from the register. ");
+        if(tmpId.isEmpty()) {
+        	taErrorText.setText("To remove a course you must enter its course code. ");
         } else {
-            taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
+        		if (courseRegister.containsCourse(tmpId)) {
+        			for (Course c : courseRegister.getCourseRegister()) {
+        				c.getCourseExamList().remove(c);
+        			}         			
+        courseRegister.remove(tmpId);
+        outPutArea.setText("The course " + tmpId + " was removed from the register along with its exams. ");
+        }           
+        taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
         }
     }
 
@@ -117,10 +124,11 @@ public class CourseManagementController extends Controller {
         String tmpId = tfId.getText();
         for(Course c : courseRegister.getCourseRegister()){
             if(c.getCourseCode().equals(tmpId)){
-                outPutArea.setText("The course " + c.getName() + " with course code " + c.getCourseCode() + " was found in the register. " ");
+                outPutArea.setText("The course " + c.getName() + " with course code " + c.getCourseCode() + " was found in the register. " );
             } else {
                 outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
             }
         }
     }
 }
+
