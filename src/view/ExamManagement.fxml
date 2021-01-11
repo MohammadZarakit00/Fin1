@@ -63,7 +63,7 @@
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
                   </Text>
-                  <ComboBox fx:id="courseChoiceBox" layoutX="180.0" layoutY="260.0" onAction="#btnGenerateCourseList" prefHeight="17.0" prefWidth="134.0" promptText="Course" style="-fx-background-color: #ffffff;" />
+                  <ComboBox fx:id="courseChoiceBox" layoutX="180.0" layoutY="260.0" prefHeight="17.0" prefWidth="134.0" promptText="Course" style="-fx-background-color: #ffffff;" />
                   <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" text="Generate" />
                </children>
             </AnchorPane>

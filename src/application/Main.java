@@ -40,6 +40,7 @@ public class Main extends Application {
 
 
 	public Main(){
+		//Kopplar en String till en FXML-filadress
 		pages.put("Homepage", "/view/Homepage.fxml");
 		pages.put("CourseManagement", "/view/CourseManagement.fxml");
 		pages.put("ExamManagement", "/view/ExamManagement.fxml");
@@ -85,22 +86,12 @@ public class Main extends Application {
 		studentRegister.add(student4);
 		studentRegister.add(student5);
 
-		//Kopplar studenter till Exams
+		//Kopplar studenter till Exams samt ger dem ett result
 		student1.addExam(JavaTenta, new Result(90));
 		student1.addExam(AgilUtveckling, new Result(75));
 		student2.addExam(LaTenta, new Result(40));
 		student3.addExam(GitForceGodkant, new Result(0));
 		student4.addExam(AgilUtveckling, new Result(100));
-
-
-
-
-
-
-
-
-
-
 
 
 	}

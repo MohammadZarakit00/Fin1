@@ -24,7 +24,7 @@ public class CourseRegister {
     }
 
     public void add(Course course) {
-        if (course != null) {
+        if (course != null && !this.containsCourse(course.getCourseCode())) {
             courseRegister.add(course);
         }
     }

@@ -18,13 +18,15 @@ import model.CourseRegister;
 import model.WrittenExam;
 import model.WrittenExamRegister;
 
+import static javafx.collections.FXCollections.observableArrayList;
+
 public class ExamManagementController extends Controller implements Initializable {
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 
 	@FXML
-	ComboBox courseChoiceBox;
+	ComboBox courseChoiceBox = new ComboBox();
 	//@FXML
 	//Button btnGenerateExamId = new Button();
 	
@@ -41,9 +43,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	Button btnNbrPassedExam = new Button();
 	@FXML
 	Button btnAddStudentToExam = new Button();
-	@FXML
-	Button btnGenerateCourseList = new Button();
-	
+
 	@FXML
 	TextField tfId = new TextField();
 	@FXML
@@ -57,23 +57,14 @@ public class ExamManagementController extends Controller implements Initializabl
 	
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){
-
+		System.out.println("Kör initialize");
+		ArrayList<String> tmpList = new ArrayList<>();
+		for(Course c : courseRegister.getCourseRegister()){
+			tmpList.add(c.getCourseCode() + ": " + c.getName());
+		}
+		courseChoiceBox.setItems(FXCollections.observableArrayList(tmpList));
 	}
 
-	@FXML
-	public void btnGenerateCourseList(ActionEvent event){
-		if(courseRegister.getCourseRegister().isEmpty()) {
-			courseChoiceBox.getItems().add("No course exists");
-		}
-		ObservableList<String> tmpCourseList = FXCollections.observableArrayList();
-		for (Course c : courseRegister.getCourseRegister()) {
-			tmpCourseList.add(c.getCourseCode());
-		}
-
-		courseChoiceBox.getItems().addAll(tmpCourseList);
-
-
-	}
 
 	//Im missing something here, can't figure out how to add the exam TO the course...
 	/*@FXML
