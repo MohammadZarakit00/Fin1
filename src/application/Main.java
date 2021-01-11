@@ -50,6 +50,7 @@ public class Main extends Application {
 		//Skapar tomma register
 		StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
 		CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
+		WrittenExamRegister writtenExamRegister = WrittenExamRegister.getExamRegInstance();
 
 		//Skapar och lägger till Kurser i kursregister
 		Course Programmering = new Course("C10000", "Programmering", 7.5);
@@ -72,6 +73,8 @@ public class Main extends Application {
 		Projektledning.addExam(AgilUtveckling);
 		Spanska.addExam(LaTenta);
 		GITKunskap.addExam(GitForceGodkant);
+
+		
 
 		//Skapar och lägger till studenter i register
 		Student student1 = new Student("S10000", "Filip");

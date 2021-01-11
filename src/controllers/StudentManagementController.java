@@ -23,7 +23,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 
-public class StudentManagementController extends Controller{
+public class StudentManagementController extends Controller {
 
 	/*
 	
@@ -81,28 +81,25 @@ public class StudentManagementController extends Controller{
 
 	//i have no idea what this does. 
 	public void handleBtn1() throws Exception {
-
 		Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
-
 		Stage window = (Stage) btnScene2.getScene().getWindow();
-
 		window.setScene(new Scene(root, 800, 600));
 	}
 
-		@FXML
-		public void btnAddStudent(ActionEvent event) {
-		String tmpId = tfId.getText();
-		String tmpName = tfName.getText();
-		Student student = new Student(tmpId, tmpName);
-		if (!student.studentValidCheck(tmpId)) {
-			ta.setText("You must enter a valid Student ID and name to add a student.");
-		} else if (studentRegister.containsStudent(tmpId)) {
-			ta.setText("Student already exists.");
-		} else {
-			studentRegister.add(student);
-			ta.setText(tmpName + " was added to the register. ");
-			} 
+	@FXML
+	public void btnAddStudent(ActionEvent event) {
+	String tmpId = tfId.getText();
+	String tmpName = tfName.getText();
+	Student student = new Student(tmpId, tmpName);
+	if (!student.studentValidCheck(tmpId)) {
+		ta.setText("You must enter a valid Student ID and name to add a student.");
+	} else if (studentRegister.containsStudent(tmpId)) {
+		ta.setText("Student already exists.");
+	} else {
+		studentRegister.add(student);
+		ta.setText(tmpName + " was added to the register. ");
 		}
+	}
 	
 	//Generates a student ID in accordance to the constructor rules, i.e. capital 's' and 5 numbers.
 	@FXML
@@ -119,8 +116,7 @@ public class StudentManagementController extends Controller{
 				tfId.setText("S" + studentGen.nextInt(studentId));
 			}
 		}
-		
-		}
+	}
 
 	@FXML
 	public String btnFindStudent(ActionEvent event) {

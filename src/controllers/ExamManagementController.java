@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Border;
 import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
@@ -25,6 +26,7 @@ public class ExamManagementController extends Controller implements Initializabl
 
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
+
 
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
@@ -57,6 +59,8 @@ public class ExamManagementController extends Controller implements Initializabl
 	TextArea outPutArea = new TextArea();
 	@FXML
 	Text errorText = new Text();
+	@FXML
+	TextArea taError = new TextArea();
 	
 	@FXML
 	public void initialize(URL location, ResourceBundle resources){
@@ -70,16 +74,20 @@ public class ExamManagementController extends Controller implements Initializabl
 
 
 	//Im missing something here, can't figure out how to add the exam TO the course...
-	/*@FXML
+	@FXML
 	public void btnAddExam(ActionEvent event) {
-			String tmpIdExam = tfId.getText();
-			String tmpIdDate = tfDate.getText();
-			String tmpIdLocation = tfLocation.getText();
-			String tmpIdTime = tfTime.getText();
-			CourseRegister currentCourse = CourseRegister.getCourseRegInstance();
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, course)); //this one is wonk supreme. needs to define exam FOR the given course
-		outPutArea.setText("Exam " + tmpIdExam + " was added for the course " + currentCourse + ". ");
-	} */
+		String tmpIdExam = tfId.getText();
+		String tmpIdDate = tfDate.getText();
+		String tmpIdLocation = tfLocation.getText();
+		String tmpIdTime = tfTime.getText();
+		Course tmpCourse = (Course) courseChoiceBox.getValue();
+		WrittenExam newExam = new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse);
+		if(!newExam.checkExamIdInput(tmpIdExam)){
+
+		}
+		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, tmpCourse)); //this one is wonk supreme. needs to define exam FOR the given course
+		outPutArea.setText("Exam " + tmpIdExam + " was added for the course " + tmpCourse.getName() + ". ");
+	}
 	
 	//Same as above. Remove FROM a course.
 	@FXML
@@ -88,8 +96,7 @@ public class ExamManagementController extends Controller implements Initializabl
 		if(examRegister.containsExam(tmpId)) {
 			examRegister.remove(tmpId);
 			outPutArea.setText("The exam " + tmpId + " was removed from the course. ");
-		}
-		else {
+		} else {
 			outPutArea.setText("The exam " + tmpId + " does not exist in the register. ");
 		}
 	}
@@ -101,8 +108,7 @@ public class ExamManagementController extends Controller implements Initializabl
 		for (WrittenExam e : examRegister.getExamRegister()) {
 			if (e.getExamID().equals(tmpExamId)) {
 				outPutArea.setText("Mean result for this exam is " + e.getMeanResult());
-			}
-			else {
+			} else {
 				outPutArea.setText("No exam exists with this ID. Please try another. ");
 			}
 		}
@@ -135,10 +141,10 @@ public class ExamManagementController extends Controller implements Initializabl
 	}
 		
 
-	/*@FXML
+	@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
-	}*/
+	}
 }
