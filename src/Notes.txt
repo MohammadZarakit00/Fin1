@@ -1,6 +1,7 @@
 TODO
 
 * Ytterligare buggtester för GUI, få det att smälla rejält!!!! (dynamit-harry)
+* Fixa så att getMeanResult och getMedianResult returnerar rätt om det finns 0 eller 1 exams.
 * Testclass för samtliga funktioner
 * Behöver testdata att köra SAMTLIGA funktioner på utan att behöva skriva in själva.
 * Systemdokumentation

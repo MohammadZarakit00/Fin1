@@ -135,12 +135,18 @@ public class WrittenExam {
 				sortedResultList.add(tmpStudent.getPointsFromExam(this));
 			}
 		}
-		Collections.sort(sortedResultList); //Sorterar listan i växande ordning
-		middle = sortedResultList.size() / 2;
-		if(sortedResultList.size() % 2 == 1){
-			return sortedResultList.get(middle);
+		if(sortedResultList.size() == 1) {
+			return sortedResultList.get(0);
+		} else if(sortedResultList.isEmpty()){
+			return 0.0;
 		} else {
-			return (sortedResultList.get(middle - 1) + sortedResultList.get(middle)) / 2.0;
+			Collections.sort(sortedResultList); //Sorterar listan i växande ordning
+			middle = sortedResultList.size() / 2;
+			if (sortedResultList.size() % 2 == 1) {
+				return sortedResultList.get(middle);
+			} else {
+				return (sortedResultList.get(middle - 1) + sortedResultList.get(middle)) / 2.0;
+			}
 		}
 	}
 
