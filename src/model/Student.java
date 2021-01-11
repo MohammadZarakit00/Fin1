@@ -17,7 +17,7 @@ public class Student {
 
 	public HashMap<WrittenExam, Result> getExamResultMap() {
 		return examResultMap;
-	}
+	}	
 
 	public Boolean studentValidCheck(String studentId){
 		String subString = studentId.substring(1);

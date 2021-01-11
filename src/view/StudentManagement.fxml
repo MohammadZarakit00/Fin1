@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
@@ -33,20 +31,7 @@
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
                   <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Register Result" />
-                  <MenuButton fx:id="menuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Extra Actions">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1">
-                           <graphic>
-                              <Button mnemonicParsing="false" text="Median score on exam" />
-                           </graphic>
-                        </MenuItem> 
-                      <MenuItem mnemonicParsing="false" text="Action 2">
-                           <graphic>
-                              <Button mnemonicParsing="false" text="Average score" />
-                           </graphic>
-                        </MenuItem>
-                    </items>
-                  </MenuButton>
+                  <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
                </items>
             </ToolBar>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2e38" height="107.0" layoutY="-2.0" stroke="#96818100" strokeType="INSIDE" width="724.0" />
@@ -55,7 +40,7 @@
                   <Font name="Old English Text MT" size="40.0" />
                </font>
             </Text>
-            <ComboBox layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
+            <ComboBox fx:id="examBox" layoutX="179.0" layoutY="259.0" prefWidth="150.0" promptText="Available exams" />
             <Text fx:id="idError" fill="RED" layoutX="344.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.13671875" />
             <Button fx:id="btnGenerateStudentId" layoutX="78.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnGenerateStudentId" text="Generate" />
             <TextField fx:id="tfScore" layoutX="334.0" layoutY="183.0" promptText="Score" style="-fx-background-color: #FFFFFF;" />

@@ -56,6 +56,8 @@ public class StudentManagementController extends Controller implements Initializ
 	TextArea ta = new TextArea();
 	@FXML
 	Button btnRegisterResult = new Button();
+	@FXML
+	Button btnGetLetterGrade = new Button();
 
 	@FXML
 	TextField tfId = new TextField();
@@ -73,8 +75,6 @@ public class StudentManagementController extends Controller implements Initializ
 	TextField tfTime = new TextField();
 	@FXML
 	TextField tfScore = new TextField();
-	@FXML
-	MenuButton menuButton = new MenuButton();
 	@FXML
 	Button btnScene2;
 	@FXML
@@ -133,6 +133,7 @@ public class StudentManagementController extends Controller implements Initializ
 		
 		}
 
+	//Finds a student
 	@FXML
 	public String btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
@@ -147,6 +148,7 @@ public class StudentManagementController extends Controller implements Initializ
 		return tmpId;
 	}
 
+	//Deletes a student from the system
 		@FXML
 		public void btnDeleteStudent (ActionEvent event){
 			String tmpId = tfId.getText();
@@ -158,27 +160,37 @@ public class StudentManagementController extends Controller implements Initializ
 			}			
 		}
 		
+		
+		//Registers a result for a student on a given exam.
 		@FXML
 		public void btnRegisterResult(ActionEvent event) {
-			WrittenExam exam = null;
-			String tmpStudentId = tfId.getText();
+			String tmpStudentId = tfId.getText();			
 			String tmpScore = tfScore.getText();
-			String tmpExamId= (String) examBox.getValue(); //cant cast, idkwtf to put here
-			if (tmpExamId == null || tmpScore == null || tmpStudentId == null) {
-				exam.addStudentAndResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
+			String tmpExamId = (String) examBox.getValue();
+			String tmpOnlyId = tmpExamId.substring(0, 6);
+			WrittenExam exam = examRegister.findExam(tmpExamId);
+			
+			if (!tmpExamId.isEmpty() && !tmpScore.isEmpty() && !tmpStudentId.isEmpty()) {
+				exam.addStudentAndResult(tmpOnlyId, Integer.parseInt(tmpScore)); 
 				ta.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
 			} else {
 				ta.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );
 			}
 		}
 		
-		/*@FXML
+		@FXML
 		public void btnGetLetterGrade (ActionEvent event) {
-			HashMap<WrittenExam, Result> examResults = examResults.getExamResultMap();
-			String tmpId = tfId.getText();
-			WrittenExam exam = (WrittenExam) examBox.getValue();
-			ta.setText(examResults.getPointsFromExam());
-		} */
+			String tmpId = tfId.getText();			
+			String tmpExamId = (String) examBox.getValue();
+			String tmpOnlyId = tmpExamId.substring(0, 6);
+			WrittenExam exam = examRegister.findExam(tmpOnlyId);
+			
+			String tmpLetterGrade = exam.findStudent(tmpId).getExamResultMap().get(exam).getLetterGrade();
+			
+			if (!tmpOnlyId.isEmpty() && !tmpId.isEmpty()) {
+				ta.setText("Student " + tmpId + " received an " + "'" + tmpLetterGrade + "' on this exam. ");
+			}
+		}
 		
 }
 
