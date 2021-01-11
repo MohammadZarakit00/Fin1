@@ -38,6 +38,9 @@ public class Course {
 	public void addExam(WrittenExam writtenExam){
 		courseExamList.add(writtenExam);
 		writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+		if(!WrittenExamRegister.getExamRegInstance().containsExam(writtenExam.getExamID())) {
+			WrittenExamRegister.getExamRegInstance().add(writtenExam); //Lägger till i extern lista som används i comboBox
+		}
 	}
 
 	public WrittenExam findExam(String examId){

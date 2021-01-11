@@ -12,8 +12,6 @@ public class Student {
 		if(studentValidCheck(studentId)){ //Kollar kraven för studentId
 			this.studentId = studentId;
 			this.name = name;
-		} else {
-			
 		}
 	}
 
@@ -45,6 +43,9 @@ public class Student {
 
 	public void addExam(WrittenExam exam, Result result){
 		examResultMap.put(exam, result);
+		if(!WrittenExamRegister.getExamRegInstance().containsExam(exam.getExamID())) {
+			WrittenExamRegister.getExamRegInstance().add(exam);
+		}
 	}
 
 	public void removeExam(WrittenExam exam){
