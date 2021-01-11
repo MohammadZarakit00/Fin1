@@ -185,7 +185,7 @@ public class ExamManagementController extends Controller implements Initializabl
 		}
 	}
 		
-	
+	//Null pointer if no exam is chosen.
 	@FXML
 	public void btnNbrPassedExam(ActionEvent event) {
 		String tmpExamId = tfId.getText();
