@@ -26,6 +26,9 @@ public class ExamManagementController extends Controller implements Initializabl
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
+	private ArrayList<String> acceptedLocations = new ArrayList<>
+			(Arrays.asList("Room A123", "Room A167", "Room B198", "Room B067"));
+
 
 	
 	
@@ -65,11 +68,13 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	TextArea outPutArea = new TextArea();
 	@FXML
+	TextArea taErrorText = new TextArea();
+	@FXML
 	Text errorText = new Text();
 	
 	//Fills out drop down menus with courses and students respectively, to choose when adding exam to courses or registering results for students.
 	public void initialize(URL location, ResourceBundle resources){
-		System.out.println("Kör initialize");
+		taErrorText.setStyle("-fx-text-fill: red ;");
 		ArrayList<String> tmpCourseList = new ArrayList<>();
 		for(Course c : courseRegister.getCourseRegister()){
 			tmpCourseList.add(c.getCourseCode() + ": " + c.getName());
@@ -90,25 +95,53 @@ public class ExamManagementController extends Controller implements Initializabl
 		String tmpIdDate = tfDate.getText();
 		String tmpIdLocation = tfLocation.getText();
 		String tmpIdTime = tfTime.getText();
-		Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0,6));
-		if(tmpIdExam.isEmpty() || examRegister.findExam(tmpIdExam).checkExamIdInput(tmpIdExam)){
-			errorText.setStyle("-fx-text-fill: red ;");
-			errorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers betwen 10000 and 99999," +
-					", example E12345, E10009");
+		if (courseChoiceBox.getValue() == null) {
+			//taErrorText.setStyle("-fx-text-fill: red ;");
+			taErrorText.setText("Please choose a course in the drop-down menu.");
+		} else {
+			if (tmpIdDate.isEmpty() || tmpIdDate.isEmpty() || tmpIdLocation.isEmpty() || tmpIdDate.isEmpty()) {
+				taErrorText.setText("Please fill in all of fields before adding an exam");
+			} else {
+				Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+				WrittenExam tmpExam = new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse);
+
+				if (!tmpExam.checkExamIdInput(tmpIdExam)) {
+					//taErrorText.setStyle("-fx-text-fill: red ;");
+					taErrorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers betwen 10000 and 99999," +
+							", example E12345, E10009");
+				} else if (!(tmpIdTime.charAt(2) == ':')) {
+					//taErrorText.setStyle("-fx-text-fill: red ;");
+					taErrorText.setText("Time is not a valid time, examples on valid times are: 08:00, 14:00, 13:37 etc.");
+				} else if (!acceptedLocations.contains(tmpIdLocation)) {
+					//taErrorText.setStyle("-fx-text-fill: red ;");
+					taErrorText.setText("Location is not valid, valid locations are Room A123, Room A167, Room B198, Room B067.");
+				} else {
+					taErrorText.setStyle("-fx-text-fill: black;");
+					currentCourse.addExam(tmpExam);
+					outPutArea.setText("Exam " + tmpIdExam + " was added to the course " + currentCourse.getName() + ". ");
+					taErrorText.clear();
+				}
+			}
 		}
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse));
-		outPutArea.setText("Exam " + tmpIdExam + " was added to the course " + currentCourse + ". ");
-	} 
+	}
 	
 	//Same as above. Remove FROM a course.
 	@FXML
 	public void btnRemoveExam(ActionEvent event) {
 		String tmpId = tfId.getText();
-		if(examRegister.containsExam(tmpId)) {
-			examRegister.remove(tmpId);
-			outPutArea.setText("The exam " + tmpId + " was removed from the course. ");
+
+		if(tmpId.isEmpty() || courseChoiceBox.getValue() == null){
+			taErrorText.setText("Please enter an Exam-ID and select a course");
 		} else {
-			outPutArea.setText("The exam " + tmpId + " does not exist in the register. ");
+			Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+			WrittenExam tmpExam = currentCourse.findExam(tmpId);
+			if(tmpExam == null){
+				taErrorText.setText("Exam doesnt exist on course, please enter an existing course");
+			} else {
+				taErrorText.clear();
+				currentCourse.removeExam(tmpId);
+				outPutArea.setText("Exam " + tmpId + " was removed from course: " + currentCourse.getName());
+			}
 		}
 	}
 	

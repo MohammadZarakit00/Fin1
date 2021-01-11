@@ -74,9 +74,6 @@ public class Main extends Application {
 		Spanska.addExam(LaTenta);
 		GITKunskap.addExam(GitForceGodkant);
 
-		
-		
-
 		//Skapar och lägger till studenter i register
 		Student student1 = new Student("S10000", "Filip");
 		Student student2 = new Student("S10001", "John");
