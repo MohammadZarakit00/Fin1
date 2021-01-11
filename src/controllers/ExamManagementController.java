@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
+import model.Result;
 import model.Student;
 import model.StudentRegister;
 import model.WrittenExam;
@@ -93,7 +94,7 @@ public class ExamManagementController extends Controller implements Initializabl
 			String tmpIdLocation = tfLocation.getText();
 			String tmpIdTime = tfTime.getText();
 			Course currentCourse = (Course) courseChoiceBox.getValue();//almost..... but not quite. class cast exception, cant cast to Course
-		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse)); //this one is wonk supreme. needs to define exam FOR the given course
+		examRegister.add(new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse)); 
 		outPutArea.setText("Exam " + tmpIdExam + " was added to the course " + currentCourse + ". ");
 	} 
 	
@@ -151,12 +152,17 @@ public class ExamManagementController extends Controller implements Initializabl
 	
 	@FXML
 	public void btnRegisterResult(ActionEvent event) {
-		WrittenExam exam = null;
+				
 		String tmpExamId = tfId.getText();
 		String tmpScore = tfScore.getText();
 		String tmpStudentId = (String) studentChoiceBox.getValue(); //cant cast, idkwtf to put here
+		Student tmpStudent = studentRegister.findStudent(tmpStudentId);
+		
+		tmpStudent.addExam(examRegister.findExam(tmpExamId), new Result(Integer.parseInt(tmpScore)));
 		if (tmpExamId == null || tmpScore == null || tmpStudentId == null) {
-			exam.setStudentResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
+			
+		
+			setStudentResult(tmpStudentId, Integer.parseInt(tmpScore)); //gotta work in examId somehow.
 			outPutArea.setText("Score of " + tmpScore + " registered on the exam " + tmpExamId + " for student " + tmpStudentId);
 		} else {
 			outPutArea.setText("You must enter an exam ID, a score, and choose for which student you wish to register." );

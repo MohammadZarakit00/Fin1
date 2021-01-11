@@ -81,10 +81,10 @@ public class WrittenExam {
 		this.maxPoints = maxPoints;
 	}
 	
-	public void addStudent(Student student) {
+	/*public void addStudent(Student student) {
 		student.addExam(this, null); //Dubbelkopplar och sätter betyg till null
 		studentList.add(student);
-	}
+	}*/
 	
 	public Student findStudent(String studentId) {
 		for (Student tmpStudent : studentList) {
