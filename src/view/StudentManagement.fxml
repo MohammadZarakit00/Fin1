@@ -36,7 +36,7 @@
                     <items>
                       <MenuItem mnemonicParsing="false" text="Action 1">
                            <graphic>
-                              <Button mnemonicParsing="false" text="Median score on exam" />
+                              <Button fx:id="btnGetResult" mnemonicParsing="false" text="Get result" />
                            </graphic>
                         </MenuItem> 
                       <MenuItem mnemonicParsing="false" text="Action 2">

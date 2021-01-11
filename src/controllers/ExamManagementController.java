@@ -26,6 +26,8 @@ public class ExamManagementController extends Controller implements Initializabl
 	private CourseRegister courseRegister = CourseRegister.getCourseRegInstance();
 	private WrittenExamRegister examRegister = WrittenExamRegister.getExamRegInstance();
 
+	
+	
 	@FXML
 	ComboBox courseChoiceBox = new ComboBox();
 	@FXML
@@ -98,15 +100,15 @@ public class ExamManagementController extends Controller implements Initializabl
 	@FXML
 	public void btnMeanResult(ActionEvent event) {
 		String tmpExamId = tfId.getText();
-		for (WrittenExam e : examRegister.getExamRegister()) {
-			if (e.getExamID().equals(tmpExamId)) {
-				outPutArea.setText("Mean result for this exam is " + e.getMeanResult());
+		WrittenExam exam = examRegister.findExam(tmpExamId);
+			if (exam != null) {
+				outPutArea.setText("Mean result for this exam is " + exam.getMeanResult());
 			}
 			else {
 				outPutArea.setText("No exam exists with this ID. Please try another. ");
 			}
 		}
-	}
+	
 	
 	@FXML
 	public void btnMedianResult(ActionEvent event) {
@@ -134,11 +136,13 @@ public class ExamManagementController extends Controller implements Initializabl
 		}
 	}
 		
-
 	@FXML
 	public void btnGenerateExamId(ActionEvent event) {
 		Random examGen = new Random();
 		int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
 		tfId.setText("E" + examId);
 	}
+	
+	
+	
 }

@@ -4,6 +4,7 @@ import application.Main;
 import javafx.scene.control.TextField;
 import model.Course;
 import model.CourseRegister;
+import model.Result;
 import model.Student;
 import model.StudentRegister;
 import model.WrittenExam;
@@ -11,6 +12,7 @@ import model.WrittenExamRegister;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -76,7 +78,6 @@ public class StudentManagementController extends Controller implements Initializ
 	@FXML
 	ComboBox examBox = new ComboBox();
 
-
 	//i have no idea what this does. 
 	public void handleBtn1() throws Exception {
 
@@ -86,8 +87,9 @@ public class StudentManagementController extends Controller implements Initializ
 
 		window.setScene(new Scene(root, 800, 600));
 	}
-	
-	public void initialize(URL location, ResourceBundle resources){
+		
+	public void initialize(URL location, ResourceBundle resources){		
+		
 		System.out.println("Kör initialize");
 		ArrayList<String> tmpList = new ArrayList<>();
 		for(WrittenExam e : examRegister.getExamRegister()){
@@ -152,6 +154,14 @@ public class StudentManagementController extends Controller implements Initializ
 			} else {
 				ta.setText("Student " + tmpId + " does not exist in the register. ");
 			}			
+		}
+		
+		@FXML
+		public void btnGetLetterGrade (ActionEvent event) {
+			HashMap<WrittenExam, Result> examResults = examResults.getExamResultMap();
+			String tmpId = tfId.getText();
+			WrittenExam exam = (WrittenExam) examBox.getValue();
+			ta.setText(examResults.getPointsFromExam());
 		}
 		
 }

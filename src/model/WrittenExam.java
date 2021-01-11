@@ -166,5 +166,7 @@ public class WrittenExam {
 		return nbrPassed;
 	}
 	
+	public String letterGradeFromResult;
+	
 	
 }
