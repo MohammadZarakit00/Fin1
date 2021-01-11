@@ -43,6 +43,7 @@ public class Student {
 
 	public void addExam(WrittenExam exam, Result result){
 		examResultMap.put(exam, result);
+		exam.addStudent(this);
 		if(!WrittenExamRegister.getExamRegInstance().containsExam(exam.getExamID())) {
 			WrittenExamRegister.getExamRegInstance().add(exam); //Läggs till i externt register
 		}
