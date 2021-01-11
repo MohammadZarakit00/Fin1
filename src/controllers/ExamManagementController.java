@@ -52,8 +52,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	Button btnNbrPassedExam = new Button();
 	@FXML
 	Button btnAddStudentToExam = new Button();
-	@FXML
-	Button btnRegisterResult = new Button();
+
 
 	@FXML
 	TextField tfId = new TextField();

@@ -71,7 +71,7 @@ public class Course {
 	}
 
 	public Boolean containsExam(String examID){
-		return !(findExam(examID) == null);
+		return findExam(examID) != null;
 	}
 
 	public String getCourseCode() {
