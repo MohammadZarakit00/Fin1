@@ -48,6 +48,7 @@ public class Student {
 			WrittenExamRegister.getExamRegInstance().add(exam); //Läggs till i externt register
 		}
 	}
+	
 
 	public void removeExam(WrittenExam exam){
 		if(examResultMap.containsKey(exam)) {
