@@ -107,6 +107,18 @@ public class StudentManagementController implements Initializable {
 	}
 
 
+	@FXML
+	public void btnUpdateStudent(ActionEvent event){
+		String tmpId = tfId.getText();
+		String tmpName = tfName.getText();
+		if(tmpId.isEmpty() || tmpName.isEmpty()){
+			taErrorText.setText("Please fill out both the Student-ID and the updated name");
+		} else {
+			studentRegister.findStudent(tmpId).setName(tmpName);
+			ta.setText("Student with ID: " + tmpId + " has had their name updated and is now called " + tmpName + ".");
+		}
+	}
+
 	//Checks validity of entered data, then adds a student to the register if it doesn't exist already.
 	@FXML
 	public void btnAddStudent(ActionEvent event) {
@@ -160,6 +172,7 @@ public class StudentManagementController implements Initializable {
 	@FXML
 	public void btnFindStudent(ActionEvent event) {
 		String tmpId = tfId.getText();
+		System.out.println("tmpid: "+tmpId);
 		StringBuilder sb = new StringBuilder();
 		Student tmpStudent = studentRegister.findStudent(tmpId);
 		if (tmpId.isEmpty()) {

@@ -46,6 +46,8 @@ public class Student {
 		exam.addStudent(this);
 		if(!WrittenExamRegister.getExamRegInstance().containsExam(exam.getExamID())) {
 			WrittenExamRegister.getExamRegInstance().add(exam); //Läggs till i externt register
+		} else if(!StudentRegister.getStudentRegInstance().containsStudent(this.studentId)){
+			StudentRegister.getStudentRegInstance().add(this);
 		}
 	}
 	

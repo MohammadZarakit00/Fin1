@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="fixed bug with adding same exams to several courses">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added final notes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,7 +455,31 @@
       <option name="presentableId" value="LOCAL−00034" />
       <updated>1610403046077</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL−00035" summary="english is hard">
+      <created>1610403717746</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1610403717746</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Fixed FindStudent-button">
+      <created>1610404116785</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1610404116785</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Fixed obligatory (but pointless?) student-update">
+      <created>1610405631861</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1610405631861</updated>
+    </task>
+    <task id="LOCAL−00038" summary="Added final notes.">
+      <created>1610406072754</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1610406072754</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -511,10 +536,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
-    <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
-    <MESSAGE value="Changed return-value of credits to int instead of String." />
-    <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
     <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
     <MESSAGE value="Namechange" />
@@ -536,7 +557,11 @@
     <MESSAGE value="StudentManagement-stuff" />
     <MESSAGE value="Finished StudentManagementController" />
     <MESSAGE value="fixed bug with adding same exams to several courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with adding same exams to several courses" />
+    <MESSAGE value="english is hard" />
+    <MESSAGE value="Fixed FindStudent-button" />
+    <MESSAGE value="Fixed obligatory (but pointless?) student-update" />
+    <MESSAGE value="Added final notes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added final notes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
