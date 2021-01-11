@@ -156,13 +156,13 @@ public class StudentManagementController extends Controller implements Initializ
 			}			
 		}
 		
-		@FXML
+		/*@FXML
 		public void btnGetLetterGrade (ActionEvent event) {
 			HashMap<WrittenExam, Result> examResults = examResults.getExamResultMap();
 			String tmpId = tfId.getText();
 			WrittenExam exam = (WrittenExam) examBox.getValue();
 			ta.setText(examResults.getPointsFromExam());
-		}
+		} */
 		
 }
 
