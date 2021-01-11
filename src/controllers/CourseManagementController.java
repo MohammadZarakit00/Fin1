@@ -38,16 +38,12 @@ public class CourseManagementController extends Controller {
     @FXML
     Button btnFindCourse = new Button();
     @FXML
+    Button btnUpdateCourse = new Button();
+    @FXML
     Button btnRemoveCourse = new Button();
-   
-
     @FXML
     Button btnGenerateCourseCode = new Button();
-
-    
-
-   
-    
+  
     //Adds a course with the necessary information. Refuses if any field is incorrectly entered.
     @FXML
     public void btnAddCourse (ActionEvent event){     
@@ -80,8 +76,19 @@ public class CourseManagementController extends Controller {
         }
         
     } 	
+    
+    @FXML
+    public void btnUpdateCourse(ActionEvent event) {
+    	String tmpId = tfId.getText();
+    	String tmpName = tfName.getText();
+    	double tmpCredits = Double.parseDouble(tfCredits.getText());
+    	for (Course c : courseRegister.getCourseRegister()) {    		
+    		c.setName(tmpName);
+    		c.setCredits(tmpCredits);
+    	}
+    	outPutArea.setText("Updated to course code " + tmpId + ", course name " + tmpName + ", and credits " + tmpCredits + ". ");
+    }
    
-
     //Generates a random course code 
     @FXML
     public void btnGenerateCourseCode(ActionEvent event){
@@ -91,6 +98,7 @@ public class CourseManagementController extends Controller {
         tfId.setText("C" + courseCode);
     //Checks if the generated course code already exists and rolls again until a unique value is reached.
     //Might need a LinkedHashSet to check duplicates more elegantly.
+    //This doesn't do anything. 
         String tmpId = tfId.getText();
         for (Course c : courseRegister.getCourseRegister()) {
         	if (courseRegister.containsCourse(tmpId)) {
@@ -100,7 +108,7 @@ public class CourseManagementController extends Controller {
         }     	  
     }
     
-    //Removes a course if it exists, as well as all its exams.
+    //Removes a course if it exists, as well as all its exams. WIP
     @FXML
     public void btnRemoveCourse (ActionEvent event){    	
         String tmpId = tfId.getText();

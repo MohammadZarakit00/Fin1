@@ -107,8 +107,8 @@ public class Course {
 	/*
 	Onödigt pga constructor?
 	 */
-	public void setCredits(int credits) {
-		if(credits > 0 && credits <= 100) {
+	public void setCredits(double credits) {
+		if(credits > 0 || credits <= 100) {
 			this.credits = credits;
 		} else {
 			System.out.println("Antal credits för course är för lågt eller högt");
