@@ -103,7 +103,7 @@ public class ExamManagementController extends Controller implements Initializabl
 				WrittenExam tmpExam = new WrittenExam(tmpIdExam, tmpIdDate, tmpIdLocation, tmpIdTime, currentCourse);
 
 				if (!tmpExam.checkExamIdInput(tmpIdExam)) {
-					taErrorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers betwen 10000 and 99999," +
+					taErrorText.setText("Exam-ID is not valid, it should start with E and be followed by 5 numbers between 10000 and 99999," +
 							", example E12345, E10009");
 				} else if (currentCourse.containsExam(tmpIdExam)) {
 					taErrorText.setText("An Exam with that ID is already registered on course " + tmpCourseId);
