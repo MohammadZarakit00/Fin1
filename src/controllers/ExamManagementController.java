@@ -88,6 +88,7 @@ public class ExamManagementController extends Controller implements Initializabl
 	
 	@FXML
 	public void btnAddExam(ActionEvent event) {
+		outPutArea.clear();
 		String tmpIdExam = tfId.getText();
 		String tmpIdDate = tfDate.getText();
 		String tmpIdLocation = tfLocation.getText();
@@ -111,6 +112,8 @@ public class ExamManagementController extends Controller implements Initializabl
 					taErrorText.setText("Time is not a valid time, examples on valid times are: 08:00, 14:00, 13:37 etc.");
 				} else if (!acceptedLocations.contains(tmpIdLocation)) {
 					taErrorText.setText("Location is not valid, valid locations are Room A123, Room A167, Room B198, Room B067.");
+				} else if(!courseRegister.checkExamUnique(tmpIdExam)){
+					taErrorText.setText("An exam with the Exam-ID: " + tmpIdExam + " is already registered on a course.");
 				} else {
 					currentCourse.addExam(tmpExam);
 					outPutArea.setText("Exam " + tmpIdExam + " was added to the course " + currentCourse.getName() + ". ");

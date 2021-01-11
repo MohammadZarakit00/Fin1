@@ -68,7 +68,7 @@
                      </items>
                   </ToolBar>
                   <Rectangle fill="#9dcdf1" height="100.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />
-                  <Text fill="WHITE" layoutX="292.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Management">
+                  <Text fill="WHITE" layoutX="292.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Management">
                      <font>
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
