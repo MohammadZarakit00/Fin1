@@ -1,21 +1,15 @@
 package controllers;
 
-import java.util.LinkedHashSet;
 import java.util.Random;
-import java.util.Set;
 
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import model.Course;
 import model.CourseRegister;
 import model.StudentRegister;
-import model.WrittenExam;
 
 public class CourseManagementController {
 
@@ -69,6 +63,7 @@ public class CourseManagementController {
                 } else {
                     courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
                     outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
+                    taErrorText.setText("");
                 }
             } catch (NumberFormatException e) {
                 taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
@@ -97,6 +92,7 @@ public class CourseManagementController {
                     }
                 }
                 outPutArea.setText("Updated course name " + tmpName + ", and credits " + tmpCredits + ". ");
+                taErrorText.setText("");
             } catch (NumberFormatException e) {
                 taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
             }
@@ -133,8 +129,9 @@ public class CourseManagementController {
             if (courseRegister.containsCourse(tmpId)) {
                 course.getCourseExamList().clear();
             }
-            courseRegister.remove(tmpId);
+            courseRegister.deleteCourse(tmpId);
             outPutArea.setText("The course " + tmpId + " was removed from the register along with its exams. ");
+            taErrorText.setText("");
         }
         taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
     }
@@ -146,6 +143,7 @@ public class CourseManagementController {
         Course tmpCourse = courseRegister.findCourse(tmpId);
         if (tmpCourse.getCourseCode().equals(tmpId)) {
             outPutArea.setText("The course " + tmpCourse.getName() + " with course code " + tmpCourse.getCourseCode() + " was found in the register. ");
+            taErrorText.setText("");
         } else {
             outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
         }

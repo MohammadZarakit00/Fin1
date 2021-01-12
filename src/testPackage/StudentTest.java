@@ -82,6 +82,13 @@ public class StudentTest {
         System.out.println("Course Programmering contains exam JavaTenta: " + Programmering.containsExam(JavaTenta.getExamID()) + " ---- should be true \n");
         System.out.println("Course Programmering contains exam LaTenta: " + Programmering.containsExam(LaTenta.getExamID()) + " ---- should be false \n");
 
+        //Checks the deleteCourse
+        courseRegister.deleteCourse("C10000");
+        System.out.println(courseRegister.containsCourse("C10000") + " ------ should be false \n");
+        System.out.println(writtenExamRegister.containsExam("E10001") + " ------ should be false \n");
+        System.out.println(writtenExamRegister.containsExam("E10001") + " ------ should be false \n"); //fixa
+
+
 
 
 

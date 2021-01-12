@@ -99,6 +99,7 @@ public class StudentManagementController implements Initializable {
         taErrorText.setStyle("-fx-text-fill: red ;");
 
         ArrayList<String> tmpList = new ArrayList<>();
+        tmpList.add("No exam");
         for (WrittenExam e : examRegister.getExamRegister()) {
             tmpList.add(e.getExamID() + " on the course " + e.getCurrentCourse().getName());
         }
@@ -115,6 +116,7 @@ public class StudentManagementController implements Initializable {
         } else {
             studentRegister.findStudent(tmpId).setName(tmpName);
             ta.setText("Student with ID: " + tmpId + " has had their name updated and is now called " + tmpName + ".");
+            taErrorText.setText("");
         }
     }
 
@@ -138,8 +140,11 @@ public class StudentManagementController implements Initializable {
                     taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
                 } else if (tmpName.isEmpty()) {
                     taErrorText.setText("You must also enter the name of the student you would like to register. ");
+                } else if(examBox.getValue().equals("No exam")){
+                    ta.setText("Student " + tmpName + " with Student-ID: " + tmpId + " was added to to the register.");
+                    taErrorText.setText("");
                 } else if (tmpExam.containsStudent(tmpId)) {
-                    taErrorText.setText("A student with the ID: " + tmpId + " already exists.");
+                    taErrorText.setText("A student with the ID: " + tmpId + " already exists on the exam");
                 } else if (tmpResult.isEmpty()) {
                     taErrorText.setText("Please enter a valid result");
                 } else if (Integer.parseInt(tmpResult) < 0 || Integer.parseInt(tmpResult) > 100) {
@@ -147,6 +152,7 @@ public class StudentManagementController implements Initializable {
                 } else {
                     student.addExam(tmpExam, new Result(Integer.parseInt(tmpResult)));
                     ta.setText("Student " + tmpName + " with Student-ID: " + tmpId + " was added to exam " + tmpExamId);
+                    taErrorText.setText("");
                 }
             }
         }
@@ -190,6 +196,7 @@ public class StudentManagementController implements Initializable {
             }
             ta.setText("The student " + tmpStudent.getName() + " with the Student-ID:" + tmpId + " is registered " +
                     "on the following exams: " + sb.substring(0, sb.length() - 2) + ".");
+            taErrorText.setText("");
         }
     }
 
@@ -215,6 +222,7 @@ public class StudentManagementController implements Initializable {
                 examRegister.findExam(examId).deleteStudent(tmpId);
                 ta.setText("The student " + tmpStudent.getName() + " with the Student-ID: " + tmpId + "" +
                         " was removed from " + examId + ".");
+                taErrorText.setText("");
             }
         }
     }
@@ -243,6 +251,7 @@ public class StudentManagementController implements Initializable {
             } else {
                 studentRegister.findStudent(tmpStudentId).getExamResultMap().replace(exam, new Result(score));
                 ta.setText("The result " + score + " was registered for student: " + tmpStudentId + " on exam " + exam.getExamID());
+                taErrorText.setText("");
             }
         }
     }
@@ -263,6 +272,7 @@ public class StudentManagementController implements Initializable {
             } else {
                 String tmpLetterGrade = exam.findStudent(tmpId).getExamResultMap().get(exam).getLetterGrade();
                 ta.setText("Student " + tmpId + " received an " + "'" + tmpLetterGrade + "' on this exam. ");
+                taErrorText.setText("");
             }
         }
     }

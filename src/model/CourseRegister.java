@@ -29,8 +29,18 @@ public class CourseRegister {
         }
     }
 
-    public void remove(String course) {
-        courseRegister.remove(findCourse(course));
+    public void deleteCourse(String course) {
+        Course tmpCourse = findCourse(course);
+        for(WrittenExam exam : tmpCourse.getCourseExamList()){
+            exam.setCurrentCourse(null);
+            for(Student s : exam.getStudentList()){
+                s.removeExam(exam);
+            }
+            courseRegister.remove(tmpCourse);
+            exam.getStudentList().clear();
+            WrittenExamRegister.getExamRegInstance().remove(exam.getExamID());
+        }
+
     }
 
     public Course findCourse(String course) {
