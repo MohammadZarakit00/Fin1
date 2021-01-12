@@ -42,27 +42,6 @@ public class HomePageController implements Initializable {
 	@FXML
 	Pane view;
 
-	/*@FXML
-	private CourseManagementController courseController = new CourseManagementController();
-	@FXML
-	private ExamManagementController examController = new ExamManagementController();
-	@FXML
-	private StudentManagementController studentController = new StudentManagementController();
-
-	 */
-
-	//public HomePageController(CourseRegister courseRegister){
-	//	this.courseRegister = courseRegister;
-	//}
-
-	public HomePageController(){
-
-		courseRegister.add(new Course("C10000", "Programmering", 10));
-		courseRegister.add(new Course("C10001", "IS-Projekt", 5));
-		courseRegister.add(new Course("C10002", "Systemdesign", 7.5));
-
-
-	}
 
 
 	public BorderPane getBp(){
@@ -80,7 +59,6 @@ public class HomePageController implements Initializable {
 	@FXML
 	private void studentManagementButton(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/StudentManagement.fxml"));
-		StudentManagementController controller = new StudentManagementController();
 		Pane view = loader.load();
 		bp.setCenter(view);
 	}
@@ -88,7 +66,6 @@ public class HomePageController implements Initializable {
 	@FXML
 	private void courseManagementButton(ActionEvent event) throws IOException { //Course and exam management have for some reason disappeared in scenebuilder, but the code is still here in .fxml
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/CourseManagement.fxml"));
-		CourseManagementController controller = new CourseManagementController();
 		Pane view = loader.load();
 		bp.setCenter(view);
 	}
@@ -103,7 +80,6 @@ public class HomePageController implements Initializable {
 	@FXML
 	private void examManagementButton(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/ExamManagement.fxml"));
-		ExamManagementController controller = new ExamManagementController();
 		Pane view = loader.load();
 		bp.setCenter(view);
 	}

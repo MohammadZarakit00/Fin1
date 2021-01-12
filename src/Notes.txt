@@ -6,4 +6,10 @@ TODO
 * Systemdokumentation
 * Rensa bort onödig kod och ALLA println-s i modellen som inte behövs.
 * Skriva kommentarer för metoder. (Samtliga?)
-* Göra ett komplett UML-diagram för modellen.
+* Göra ett komplett UML-
+
+KNOWN BUGS:
+- Man kan uppdatera en students resultat på en kurs trots att den tas bort samtidigt som en Course.
+- DeleteCourse-knappen behöver debuggas potentiellt.
+- Resize på fönster funkar inte
+

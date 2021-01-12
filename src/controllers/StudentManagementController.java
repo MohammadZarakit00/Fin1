@@ -140,7 +140,8 @@ public class StudentManagementController implements Initializable {
                     taErrorText.setText("You must enter a valid Student ID. A student ID starts with a capital 'S' and is followed by 5 letters. E.g: S41526, S19648, et cetera. ");
                 } else if (tmpName.isEmpty()) {
                     taErrorText.setText("You must also enter the name of the student you would like to register. ");
-                } else if(examBox.getValue().equals("No exam")){
+                } else if (examBox.getValue().equals("No exam")) {
+                    studentRegister.add(student);
                     ta.setText("Student " + tmpName + " with Student-ID: " + tmpId + " was added to to the register.");
                     taErrorText.setText("");
                 } else if (tmpExam.containsStudent(tmpId)) {
@@ -237,6 +238,8 @@ public class StudentManagementController implements Initializable {
             taErrorText.setText("Please choose an exam to register the result on.");
         } else if (tmpScore.isEmpty() || tmpStudentId.isEmpty()) {
             taErrorText.setText("Please fill out both the Result and Student-ID");
+        } else if (!examRegister.containsExam(examBox.getValue().toString().substring(0, 6))) {
+            taErrorText.setText("Exam has been removed, Result cannot be updated.");
         } else {
             String tmpExamId = examBox.getValue().toString();
             String tmpOnlyId = tmpExamId.substring(0, 6);

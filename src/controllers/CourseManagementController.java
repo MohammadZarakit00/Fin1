@@ -41,6 +41,8 @@ public class CourseManagementController {
     //Adds a course with the necessary information. Refuses if any field is incorrectly entered.
     @FXML
     public void btnAddCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpId = tfId.getText();
         String tmpName = tfName.getText();
         String tmpCredit = tfCredits.getText();
@@ -63,7 +65,7 @@ public class CourseManagementController {
                 } else {
                     courseRegister.add(new Course(tmpId, tmpName, tmpCredits));
                     outPutArea.setText("Course " + tmpName + " with course code " + tmpId + " worth " + tmpCredits + " credits was added to the list.");
-                    taErrorText.setText("");
+                    taErrorText.clear();
                 }
             } catch (NumberFormatException e) {
                 taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
@@ -74,11 +76,13 @@ public class CourseManagementController {
 
     @FXML
     public void btnUpdateCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpName = tfName.getText();
         String tmpStringCredits = tfCredits.getText();
 
         if (tmpName.isEmpty() || tmpStringCredits.isEmpty()) {
-            taErrorText.setText("You must enter the name and credits fields to update a student. ");
+            taErrorText.setText("You must enter the name and credits fields to update a Course. ");
         } else {
 
             try {
@@ -92,7 +96,7 @@ public class CourseManagementController {
                     }
                 }
                 outPutArea.setText("Updated course name " + tmpName + ", and credits " + tmpCredits + ". ");
-                taErrorText.setText("");
+                taErrorText.clear();
             } catch (NumberFormatException e) {
                 taErrorText.setText("Input is not accepted. Course credits input must be a number between 0 and 100. ");
             }
@@ -121,31 +125,40 @@ public class CourseManagementController {
     //Removes a course if it exists, as well as all its exams. WIP
     @FXML
     public void btnRemoveCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpId = tfId.getText();
-        Course course = courseRegister.findCourse(tmpId);
-        if (tmpId.isEmpty()) {
-            taErrorText.setText("To remove a course you must enter its course code. ");
+        if (tmpId.trim().isEmpty()) {
+            taErrorText.setText("Please enter a Course-ID");
+        } else if (courseRegister.findCourse(tmpId) == null) {
+            taErrorText.setText("Course " + tmpId + " is not registered in the system.");
         } else {
-            if (courseRegister.containsCourse(tmpId)) {
-                course.getCourseExamList().clear();
-            }
             courseRegister.deleteCourse(tmpId);
             outPutArea.setText("The course " + tmpId + " was removed from the register along with its exams. ");
-            taErrorText.setText("");
+            taErrorText.clear();
         }
-        taErrorText.setText("The course " + tmpId + " does not exist in the register. ");
     }
 
     //Finds a course with the given ID.
     @FXML
     public void btnFindCourse(ActionEvent event) {
+        taErrorText.clear();
         String tmpId = tfId.getText();
-        Course tmpCourse = courseRegister.findCourse(tmpId);
-        if (tmpCourse.getCourseCode().equals(tmpId)) {
-            outPutArea.setText("The course " + tmpCourse.getName() + " with course code " + tmpCourse.getCourseCode() + " was found in the register. ");
-            taErrorText.setText("");
+        if (tmpId.isEmpty()) {
+            taErrorText.setText("Please enter a Course-ID");
+        } else if (courseRegister.findCourse(tmpId) == null) {
+            taErrorText.setText("Course " + tmpId + " is not registered in the system.");
         } else {
-            outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
+            Course tmpCourse = courseRegister.findCourse(tmpId);
+            if (!tmpCourse.courseCodeCheck(tmpId)) {
+                taErrorText.setText("Course-ID is not valid, it should start with a C and be followed by 5 numbers between 10000 and 99999," +
+                        ", for example C12345, C10009");
+            } else if (tmpCourse.getCourseCode().equals(tmpId)) {
+                outPutArea.setText("The course " + tmpCourse.getName() + " with course code " + tmpCourse.getCourseCode() + " was found in the register. ");
+                taErrorText.clear();
+            } else {
+                outPutArea.setText("The course " + tmpId + " does not exist in the register. ");
+            }
         }
     }
 }
