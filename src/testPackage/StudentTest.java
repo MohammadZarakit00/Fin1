@@ -84,9 +84,12 @@ public class StudentTest {
 
         //Checks the deleteCourse
         courseRegister.deleteCourse("C10000");
-        System.out.println(courseRegister.containsCourse("C10000") + " ------ should be false \n");
-        System.out.println(writtenExamRegister.containsExam("E10001") + " ------ should be false \n");
-        System.out.println(writtenExamRegister.containsExam("E10001") + " ------ should be false \n"); //fixa
+        System.out.println("C10000 exists in courseregister: "+courseRegister.containsCourse("C10000") + " ------ should be false \n");
+        System.out.println("E10001 exists in examregister: "+ writtenExamRegister.containsExam("E10001") + " ------ should be false \n");
+        System.out.println("E10001 exists in student HashMap: "+student1.getExamResultMap().containsKey(JavaTenta) + " ------ should be false \n");
+        System.out.println("S10001 exists on exam E10001: " + JavaTenta.containsStudent("S10001") + " ------ should be false \n");
+
+
 
 
 
