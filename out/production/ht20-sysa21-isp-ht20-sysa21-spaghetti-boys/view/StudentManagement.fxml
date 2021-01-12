@@ -27,9 +27,10 @@
                <items>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAddStudent" text="Add Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFindStudent" text="Find Student" />
+                  <Button mnemonicParsing="false" onAction="#btnUpdateStudent" text="Update Student" />
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnDeleteStudent" text="Delete Student" />
-                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Update result" />
-                  <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get letter grade" />
+                  <Button mnemonicParsing="false" onAction="#btnRegisterResult" text="Update Result" />
+                  <Button mnemonicParsing="false" onAction="#btnGetLetterGrade" text="Get result" />
                </items>
             </ToolBar>
             <Rectangle fill="#9dcdf1" height="100.0" stroke="#96818100" strokeType="INSIDE" width="900.0" />

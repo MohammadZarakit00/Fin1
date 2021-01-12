@@ -8,8 +8,8 @@ public class CourseRegister {
     private ArrayList<Course> courseRegister = new ArrayList<>();
 
 
-    public static CourseRegister getCourseRegInstance(){
-        if(courseRegisterInstance == null){
+    public static CourseRegister getCourseRegInstance() {
+        if (courseRegisterInstance == null) {
             courseRegisterInstance = new CourseRegister();
         }
         return courseRegisterInstance;
@@ -28,28 +28,38 @@ public class CourseRegister {
             courseRegister.add(course);
         }
     }
-    //needs to remove connected exams as well.
-    public void remove(String course) {
-        courseRegister.remove(findCourse(course));
+
+    public void deleteCourse(String course) {
+        Course tmpCourse = findCourse(course);
+        for(WrittenExam exam : tmpCourse.getCourseExamList()){
+            exam.setCurrentCourse(null);
+            for(Student s : exam.getStudentList()){
+                s.removeExam(exam);
+            }
+            courseRegister.remove(tmpCourse);
+            exam.getStudentList().clear();
+            WrittenExamRegister.getExamRegInstance().remove(exam.getExamID());
+        }
+
     }
 
-    public Course findCourse(String course){
-        for(Course c : courseRegister){
-            if(c.getCourseCode().equals(course)){
+    public Course findCourse(String course) {
+        for (Course c : courseRegister) {
+            if (c.getCourseCode().equals(course)) {
                 return c;
             }
         }
         return null;
     }
 
-    public Boolean containsCourse(String course){
+    public Boolean containsCourse(String course) {
         return findCourse(course) != null;
     }
 
-    public Boolean checkExamUnique(String examId){
+    public Boolean checkExamUnique(String examId) {
         boolean unique = true;
-        for(Course c : courseRegister){
-            if(c.containsExam(examId)){
+        for (Course c : courseRegister) {
+            if (c.containsExam(examId)) {
                 unique = false;
             }
         }

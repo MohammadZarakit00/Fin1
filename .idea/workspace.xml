@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="fixed bug with adding same exams to several courses">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Finished Test-class for model.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CourseRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CourseRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testPackage/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPackage/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fi3126ol-s" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -151,6 +155,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files (x86)/javafx-sdk-11.0.2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -189,6 +194,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testPackage.StudentTest" />
+      <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.StudentTest" />
       <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
@@ -205,9 +223,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.StudentTest" />
+      <item itemvalue="Application.StudentTest (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StudentTest (1)" />
+        <item itemvalue="Application.StudentTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StudentTest" />
       </list>
@@ -454,7 +476,37 @@
       <option name="presentableId" value="LOCAL−00034" />
       <updated>1610403046077</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL−00035" summary="english is hard">
+      <created>1610403717746</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1610403717746</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Fixed FindStudent-button">
+      <created>1610404116785</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1610404116785</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Fixed obligatory (but pointless?) student-update">
+      <created>1610405631861</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1610405631861</updated>
+    </task>
+    <task id="LOCAL−00038" summary="Added final notes.">
+      <created>1610406072754</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1610406072754</updated>
+    </task>
+    <task id="LOCAL−00039" summary="Finished Test-class for model.">
+      <created>1610448209100</created>
+      <option name="number" value="LOCAL−00039" />
+      <option name="presentableId" value="LOCAL−00039" />
+      <updated>1610448209100</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -511,11 +563,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
-    <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
-    <MESSAGE value="Changed return-value of credits to int instead of String." />
-    <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
-    <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
     <MESSAGE value="Namechange" />
     <MESSAGE value="cosmetic changes" />
@@ -536,7 +583,12 @@
     <MESSAGE value="StudentManagement-stuff" />
     <MESSAGE value="Finished StudentManagementController" />
     <MESSAGE value="fixed bug with adding same exams to several courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with adding same exams to several courses" />
+    <MESSAGE value="english is hard" />
+    <MESSAGE value="Fixed FindStudent-button" />
+    <MESSAGE value="Fixed obligatory (but pointless?) student-update" />
+    <MESSAGE value="Added final notes." />
+    <MESSAGE value="Finished Test-class for model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Test-class for model." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
