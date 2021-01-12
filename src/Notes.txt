@@ -10,4 +10,5 @@ TODO
 
 KNOWN BUGS:
 - Man kan uppdatera en students resultat på en kurs trots att den tas bort samtidigt som en Course.
+- DeleteCourse-knappen behöver debuggas potentiellt.
 

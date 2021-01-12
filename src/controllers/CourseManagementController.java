@@ -41,6 +41,8 @@ public class CourseManagementController {
     //Adds a course with the necessary information. Refuses if any field is incorrectly entered.
     @FXML
     public void btnAddCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpId = tfId.getText();
         String tmpName = tfName.getText();
         String tmpCredit = tfCredits.getText();
@@ -74,11 +76,13 @@ public class CourseManagementController {
 
     @FXML
     public void btnUpdateCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpName = tfName.getText();
         String tmpStringCredits = tfCredits.getText();
 
         if (tmpName.isEmpty() || tmpStringCredits.isEmpty()) {
-            taErrorText.setText("You must enter the name and credits fields to update a student. ");
+            taErrorText.setText("You must enter the name and credits fields to update a Course. ");
         } else {
 
             try {
@@ -121,16 +125,14 @@ public class CourseManagementController {
     //Removes a course if it exists, as well as all its exams. WIP
     @FXML
     public void btnRemoveCourse(ActionEvent event) {
+        taErrorText.clear();
+        outPutArea.clear();
         String tmpId = tfId.getText();
         if (tmpId.trim().isEmpty()) {
             taErrorText.setText("Please enter a Course-ID");
         } else if (courseRegister.findCourse(tmpId) == null) {
             taErrorText.setText("Course " + tmpId + " is not registered in the system.");
         } else {
-            Course course = courseRegister.findCourse(tmpId);
-            if (courseRegister.containsCourse(tmpId)) {
-                course.getCourseExamList().clear();
-            }
             courseRegister.deleteCourse(tmpId);
             outPutArea.setText("The course " + tmpId + " was removed from the register along with its exams. ");
             taErrorText.clear();
@@ -140,6 +142,7 @@ public class CourseManagementController {
     //Finds a course with the given ID.
     @FXML
     public void btnFindCourse(ActionEvent event) {
+        taErrorText.clear();
         String tmpId = tfId.getText();
         if (tmpId.isEmpty()) {
             taErrorText.setText("Please enter a Course-ID");
