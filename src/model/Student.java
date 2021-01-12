@@ -50,6 +50,10 @@ public class Student {
 			StudentRegister.getStudentRegInstance().add(this);
 		}
 	}
+
+	public Result getResult(WrittenExam exam){
+		return this.getExamResultMap().get(exam);
+	}
 	
 
 	public void removeExam(WrittenExam exam){

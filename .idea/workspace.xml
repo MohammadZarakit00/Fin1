@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added final notes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CourseRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CourseRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testPackage/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPackage/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fi3126ol-s" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,7 +170,7 @@
       <recent name="controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.StudentTest (1)">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -190,6 +195,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testPackage.StudentTest" />
+      <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.StudentTest" />
       <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
@@ -206,9 +224,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.StudentTest" />
+      <item itemvalue="Application.StudentTest (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StudentTest (1)" />
+        <item itemvalue="Application.StudentTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StudentTest" />
       </list>
