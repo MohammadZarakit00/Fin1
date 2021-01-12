@@ -36,9 +36,9 @@ public class CourseRegister {
             for(Student s : exam.getStudentList()){
                 s.removeExam(exam);
             }
-            courseRegister.remove(tmpCourse);
             exam.getStudentList().clear();
             WrittenExamRegister.getExamRegInstance().remove(exam.getExamID());
+            courseRegister.remove(tmpCourse);
         }
 
     }

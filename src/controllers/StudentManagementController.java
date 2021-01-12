@@ -237,6 +237,8 @@ public class StudentManagementController implements Initializable {
             taErrorText.setText("Please choose an exam to register the result on.");
         } else if (tmpScore.isEmpty() || tmpStudentId.isEmpty()) {
             taErrorText.setText("Please fill out both the Result and Student-ID");
+        } else if (!examRegister.containsExam(examBox.getValue().toString().substring(0, 6))){
+            taErrorText.setText("Exam has been removed, Result cannot be updated.");
         } else {
             String tmpExamId = examBox.getValue().toString();
             String tmpOnlyId = tmpExamId.substring(0, 6);
