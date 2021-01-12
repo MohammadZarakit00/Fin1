@@ -2,4 +2,6 @@
 
 text-field.error {
     "-fx-text-fill: red ;"
+    "-fx-background-color: background:"
 }
+

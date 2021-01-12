@@ -59,7 +59,6 @@ public class Student {
         if (!StudentRegister.getStudentRegInstance().containsStudent(this.studentId)) {
             StudentRegister.getStudentRegInstance().add(this);
         }
-
     }
 
     public Result getResult(WrittenExam exam) {
