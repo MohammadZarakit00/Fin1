@@ -40,7 +40,7 @@
                         <Font name="Old English Text MT" size="40.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnGenerateCourseCode" layoutX="169.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnGenerateCourseCode" text="Generate" />
+                  <Button fx:id="btnGenerateCourseCode" layoutX="155.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnGenerateCourseCode" text="Generate" />
                   <TextArea fx:id="taErrorText" editable="false" layoutX="469.0" layoutY="179.0" prefHeight="155.0" prefWidth="232.0" style="-fx-background-color: #FFFFFF;" wrapText="true" />
                </children>
             </Pane>
