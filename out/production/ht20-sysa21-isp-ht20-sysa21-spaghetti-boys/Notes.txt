@@ -1,8 +1,10 @@
-- När man i GUIt klickar på ett TextField så ska det komma upp en inforuta kring vad som är input-krav, ex
-6 tecken långt och måste börja på "E" eller "S".
+TODO
 
-Todo:
-Koppla exam till kurs
-Register results for student on written exam
-Split controller?
-Testclass för samtliga funktioner
+* Ytterligare buggtester för GUI, få det att smälla rejält!!!! (dynamit-harry)
+* Fixa så att getMeanResult och getMedianResult returnerar rätt om det finns 0 eller 1 exams.
+* Testclass för samtliga funktioner
+* Behöver testdata att köra SAMTLIGA funktioner på utan att behöva skriva in själva.
+* Systemdokumentation
+* Rensa bort onödig kod och ALLA println-s i modellen som inte behövs.
+* Skriva kommentarer för metoder. (Samtliga?)
+* Göra ett komplett UML-diagram för modellen.
