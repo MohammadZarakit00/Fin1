@@ -4,7 +4,16 @@ import java.util.ArrayList;
 
 public class CourseRegister {
 
+    private static CourseRegister courseRegisterInstance;
     private ArrayList<Course> courseRegister = new ArrayList<>();
+
+
+    public static CourseRegister getCourseRegInstance() {
+        if (courseRegisterInstance == null) {
+            courseRegisterInstance = new CourseRegister();
+        }
+        return courseRegisterInstance;
+    }
 
     public ArrayList<Course> getCourseRegister() {
         return courseRegister;
@@ -15,13 +24,36 @@ public class CourseRegister {
     }
 
     public void add(Course course) {
-        if (course != null) {
+        if (course != null && !this.containsCourse(course.getCourseCode())) {
             courseRegister.add(course);
         }
     }
 
-    public void remove(Course c) {
-        courseRegister.remove(c);
+    public void remove(String course) {
+        courseRegister.remove(findCourse(course));
+    }
+
+    public Course findCourse(String course) {
+        for (Course c : courseRegister) {
+            if (c.getCourseCode().equals(course)) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public Boolean containsCourse(String course) {
+        return findCourse(course) != null;
+    }
+
+    public Boolean checkExamUnique(String examId) {
+        boolean unique = true;
+        for (Course c : courseRegister) {
+            if (c.containsExam(examId)) {
+                unique = false;
+            }
+        }
+        return unique;
     }
 }
 

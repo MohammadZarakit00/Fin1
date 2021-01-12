@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added extend to ExamController">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added final notes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CourseRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CourseRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testPackage/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPackage/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fi3126ol-s" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,7 +170,7 @@
       <recent name="controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.StudentTest (1)">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -188,6 +195,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testPackage.StudentTest" />
+      <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.StudentTest" />
       <module name="ht20-sysa21-isp-ht20-sysa21-spaghetti-boys" />
@@ -204,9 +224,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.StudentTest" />
+      <item itemvalue="Application.StudentTest (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StudentTest (1)" />
+        <item itemvalue="Application.StudentTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StudentTest" />
       </list>
@@ -243,7 +267,9 @@
       <workItem from="1609926213806" duration="5661000" />
       <workItem from="1609938811035" duration="2233000" />
       <workItem from="1610013135859" duration="12148000" />
-      <workItem from="1610097711066" duration="331000" />
+      <workItem from="1610097711066" duration="20062000" />
+      <workItem from="1610288093188" duration="3450000" />
+      <workItem from="1610357335453" duration="7293000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty javafx project from John">
       <created>1607518459778</created>
@@ -343,7 +369,139 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1610029334498</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="Added extend to ExamController">
+      <created>1610098089429</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1610098089429</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Structure changes, added Singleton-registers. Needs cleanup">
+      <created>1610115561723</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1610115561723</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Further singleton stuff, coursemanagement-implementation started">
+      <created>1610117161048</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1610117161048</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Fixed addStudent">
+      <created>1610357523222</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1610357523222</updated>
+    </task>
+    <task id="LOCAL−00021" summary="comboBox-test">
+      <created>1610357722722</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1610357722722</updated>
+    </task>
+    <task id="LOCAL−00022" summary="Added test-data to main constructor">
+      <created>1610363108426</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1610363108426</updated>
+    </task>
+    <task id="LOCAL−00023" summary="Correct merge">
+      <created>1610370625148</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1610370625148</updated>
+    </task>
+    <task id="LOCAL−00024" summary="Fixed adding of student in writtenexam">
+      <created>1610378192244</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1610378192244</updated>
+    </task>
+    <task id="LOCAL−00025" summary="Fixed adding of student in writtenexam">
+      <created>1610378261301</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1610378261301</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Connected student and exam">
+      <created>1610378445777</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1610378445777</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Started on error-handling">
+      <created>1610380572474</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1610380572474</updated>
+    </task>
+    <task id="LOCAL−00028" summary="Continued error-handling in ExamManagementController">
+      <created>1610385541510</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1610385541511</updated>
+    </task>
+    <task id="LOCAL−00029" summary="Continued error-handling in ExamManagementController">
+      <created>1610386219205</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1610386219205</updated>
+    </task>
+    <task id="LOCAL−00030" summary="Probably finished ExamManagementController.">
+      <created>1610387014147</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1610387014147</updated>
+    </task>
+    <task id="LOCAL−00031" summary="StudentManagement-stuff">
+      <created>1610393821223</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1610393821223</updated>
+    </task>
+    <task id="LOCAL−00032" summary="StudentManagement-stuff">
+      <created>1610398505225</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1610398505225</updated>
+    </task>
+    <task id="LOCAL−00033" summary="Finished StudentManagementController">
+      <created>1610402295194</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1610402295194</updated>
+    </task>
+    <task id="LOCAL−00034" summary="fixed bug with adding same exams to several courses">
+      <created>1610403046077</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1610403046077</updated>
+    </task>
+    <task id="LOCAL−00035" summary="english is hard">
+      <created>1610403717746</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1610403717746</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Fixed FindStudent-button">
+      <created>1610404116785</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1610404116785</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Fixed obligatory (but pointless?) student-update">
+      <created>1610405631861</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1610405631861</updated>
+    </task>
+    <task id="LOCAL−00038" summary="Added final notes.">
+      <created>1610406072754</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1610406072754</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -400,14 +558,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added empty javafx project from John" />
-    <MESSAGE value="Added missing output file" />
-    <MESSAGE value="La till StudentTest" />
-    <MESSAGE value="Added constructor, removed wrongly placed methods in Student, added correct ones" />
-    <MESSAGE value="Added a pretty nice checkExamIdInput-method and an un-finished constructor" />
-    <MESSAGE value="Added addExam-method which adds an exam to a course while also setting the currentCourse of an exam to this." />
-    <MESSAGE value="Changed return-value of credits to int instead of String." />
-    <MESSAGE value="changed constructor in Course to minimize logic inside of constructor" />
     <MESSAGE value="Changed letterGrade from char to string since we have to return &quot;Fail&quot; and not only chars.&#10;Also implemented method which generates letterGrade from a result." />
     <MESSAGE value="Removed unnecessary code" />
     <MESSAGE value="Namechange" />
@@ -415,7 +565,35 @@
     <MESSAGE value="idk" />
     <MESSAGE value="Added Controller super class" />
     <MESSAGE value="Added extend to ExamController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added extend to ExamController" />
+    <MESSAGE value="Structure changes, added Singleton-registers. Needs cleanup" />
+    <MESSAGE value="Further singleton stuff, coursemanagement-implementation started" />
+    <MESSAGE value="Fixed addStudent" />
+    <MESSAGE value="comboBox-test" />
+    <MESSAGE value="Added test-data to main constructor" />
+    <MESSAGE value="Correct merge" />
+    <MESSAGE value="Fixed adding of student in writtenexam" />
+    <MESSAGE value="Connected student and exam" />
+    <MESSAGE value="Started on error-handling" />
+    <MESSAGE value="Continued error-handling in ExamManagementController" />
+    <MESSAGE value="Probably finished ExamManagementController." />
+    <MESSAGE value="StudentManagement-stuff" />
+    <MESSAGE value="Finished StudentManagementController" />
+    <MESSAGE value="fixed bug with adding same exams to several courses" />
+    <MESSAGE value="english is hard" />
+    <MESSAGE value="Fixed FindStudent-button" />
+    <MESSAGE value="Fixed obligatory (but pointless?) student-update" />
+    <MESSAGE value="Added final notes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added final notes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ht20-sysa21-isp-ht20-sysa21-spaghetti-boys.iml" />
