@@ -28,9 +28,16 @@ public class CourseRegister {
             courseRegister.add(course);
         }
     }
-    //needs to remove connected exams as well.
-    public void remove(String course) {
-        courseRegister.remove(findCourse(course));
+
+    public void deleteCourse(String course) {
+        Course tmpCourse = findCourse(course);
+        for(WrittenExam exam : tmpCourse.getCourseExamList()){
+            exam.setCurrentCourse(null);
+            WrittenExamRegister.getExamRegInstance().remove(exam.getExamID());
+        }
+        tmpCourse.getCourseExamList().clear();
+        courseRegister.remove(tmpCourse);
+
     }
 
     public Course findCourse(String course) {

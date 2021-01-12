@@ -4,14 +4,6 @@ import java.util.ArrayList;
 
 public class Course {
 
-    public ArrayList<WrittenExam> getCourseExamList() {
-        return courseExamList;
-    }
-
-    public void setCourseExamList(ArrayList<WrittenExam> courseExamList) {
-        this.courseExamList = courseExamList;
-    }
-
     private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
 
     private String courseCode;
@@ -25,6 +17,7 @@ public class Course {
     Borde kanske ha flera nästlade if-satser i constructorn så att vi kan se i vilket steg
     det går fel.
      */
+
     public Course(String courseCode, String name, double credits) {
         if (credits > 0 && credits <= 100 && courseCodeCheck(courseCode)) {
             this.courseCode = courseCode;
@@ -32,16 +25,15 @@ public class Course {
             this.credits = credits;
         }
     }
-
     /*
     Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
      */
+
     public Boolean courseCodeCheck(String courseCode) {
         String subString = courseCode.substring(1);
         int courseNr = Integer.parseInt(subString);
         return courseCode.startsWith("C") && courseCode.length() == 6 && (courseNr >= 10000 && courseNr <= 99999);
     }
-
     public static boolean isDouble(String credits) {
         try {
             Double.parseDouble(credits);
@@ -106,6 +98,14 @@ public class Course {
 
     public double getCredits() {
         return credits;
+    }
+
+    public ArrayList<WrittenExam> getCourseExamList() {
+        return courseExamList;
+    }
+
+    public void setCourseExamList(ArrayList<WrittenExam> courseExamList) {
+        this.courseExamList = courseExamList;
     }
 
     /*

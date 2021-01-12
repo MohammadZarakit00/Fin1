@@ -68,7 +68,9 @@ public class ExamManagementController implements Initializable {
 
     //Fills out drop down menus with courses and students respectively, to choose when adding exam to courses or registering results for students.
     public void initialize(URL location, ResourceBundle resources) {
+        taErrorText.setText("");
         taErrorText.setStyle("-fx-text-fill: red ;");
+
         ArrayList<String> tmpCourseList = new ArrayList<>();
         for (Course c : courseRegister.getCourseRegister()) {
             tmpCourseList.add(c.getCourseCode() + ": " + c.getName());
@@ -142,20 +144,24 @@ public class ExamManagementController implements Initializable {
     @FXML
     public void btnMeanResult(ActionEvent event) {
         String tmpExamId = tfId.getText();
-        if (tmpExamId.isEmpty()) {
-            taErrorText.setText("Please enter an Exam-ID");
-        } else {
-            Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
-            if (currentCourse.containsExam(tmpExamId)) {
-                WrittenExam exam = examRegister.findExam(tmpExamId);
-                if (exam != null) {
-                    outPutArea.setText("Mean result for this exam is " + exam.getMeanResult());
-                } else {
-                    taErrorText.setText("No exam exists with this ID. Please try another. ");
-                }
+        try {
+            if (tmpExamId.isEmpty()) {
+                taErrorText.setText("Please enter an Exam-ID");
             } else {
-                taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+                Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+                if (currentCourse.containsExam(tmpExamId)) {
+                    WrittenExam exam = examRegister.findExam(tmpExamId);
+                    if (exam != null) {
+                        outPutArea.setText("Mean result for this exam is " + exam.getMeanResult());
+                    } else {
+                        taErrorText.setText("No exam exists with this ID. Please try another. ");
+                    }
+                } else {
+                    taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+                }
             }
+        } catch (NullPointerException e){
+            taErrorText.setText("Please choose a course");
         }
     }
 
@@ -163,20 +169,25 @@ public class ExamManagementController implements Initializable {
     @FXML
     public void btnMedianResult(ActionEvent event) {
         String tmpExamId = tfId.getText();
-        if (tmpExamId.isEmpty()) {
-            taErrorText.setText("Please enter an Exam-ID");
-        } else {
-            Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
-            if (currentCourse.containsExam(tmpExamId)) {
-                WrittenExam exam = examRegister.findExam(tmpExamId);
-                if (exam != null) {
-                    outPutArea.setText("Median result for this exam is " + exam.getMedianResult());
-                } else {
-                    taErrorText.setText("No exam exists with this ID. Please try another. ");
-                }
+        try {
+            if (tmpExamId.isEmpty()) {
+                taErrorText.setText("Please enter an Exam-ID");
             } else {
-                taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+                Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+                if (currentCourse.containsExam(tmpExamId)) {
+                    WrittenExam exam = examRegister.findExam(tmpExamId);
+                    if (exam != null) {
+                        outPutArea.setText("Median result for this exam is " + exam.getMedianResult());
+                        taErrorText.setText("");
+                    } else {
+                        taErrorText.setText("No exam exists with this ID. Please try another. ");
+                    }
+                } else {
+                    taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+                }
             }
+        } catch(NullPointerException e ){
+            taErrorText.setText("Please choose a course");
         }
     }
 
@@ -184,20 +195,26 @@ public class ExamManagementController implements Initializable {
     @FXML
     public void btnNbrPassedExam(ActionEvent event) {
         String tmpExamId = tfId.getText();
-        if (tmpExamId.isEmpty()) {
-            taErrorText.setText("Please enter an Exam-ID");
-        } else {
-            Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
-            if (currentCourse.containsExam(tmpExamId)) {
-                WrittenExam exam = examRegister.findExam(tmpExamId);
-                if (exam != null) {
-                    outPutArea.setText(exam.nbrPassedExam() + " student(s) passed this course.");
-                } else {
-                    taErrorText.setText("No exam exists with this ID. Please try another. ");
-                }
+        try {
+            if (tmpExamId.isEmpty()) {
+                taErrorText.setText("Please enter an Exam-ID");
             } else {
-                taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+                Course currentCourse = courseRegister.findCourse(courseChoiceBox.getValue().toString().substring(0, 6));
+                if (currentCourse.containsExam(tmpExamId)) {
+                    WrittenExam exam = examRegister.findExam(tmpExamId);
+                    if (exam != null) {
+                        outPutArea.setText(exam.nbrPassedExam() + " student(s) passed this course.");
+                        taErrorText.setText("");
+                    } else {
+                        taErrorText.setText("No exam exists with this ID. Please try another. ");
+                    }
+                } else {
+                    taErrorText.setText("Exam doesnt exist on course, please enter an existing exam");
+
+                }
             }
+        } catch (NullPointerException e){
+            taErrorText.setText("Please choose a course");
         }
     }
 
