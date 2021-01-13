@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added a forgotten add in btnAddStudent if the student is not registered on an exam">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Removed unnecessary stuff in Exam-controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WrittenExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WrittenExam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -554,7 +564,13 @@
       <option name="presentableId" value="LOCAL−00048" />
       <updated>1610457663741</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL−00049" summary="Removed unnecessary stuff in Exam-controller">
+      <created>1610533246960</created>
+      <option name="number" value="LOCAL−00049" />
+      <option name="presentableId" value="LOCAL−00049" />
+      <updated>1610533246960</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -611,7 +627,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Further singleton stuff, coursemanagement-implementation started" />
     <MESSAGE value="Fixed addStudent" />
     <MESSAGE value="comboBox-test" />
     <MESSAGE value="Added test-data to main constructor" />
@@ -636,7 +651,8 @@
     <MESSAGE value="Fixed removeCourse-button in Controller and function in CourseRegister" />
     <MESSAGE value="Fixed addExam duplicate check in student that caused students not to be added to Course if exam already existed in the system" />
     <MESSAGE value="Added a forgotten add in btnAddStudent if the student is not registered on an exam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a forgotten add in btnAddStudent if the student is not registered on an exam" />
+    <MESSAGE value="Removed unnecessary stuff in Exam-controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary stuff in Exam-controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

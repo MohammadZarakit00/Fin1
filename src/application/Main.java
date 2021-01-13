@@ -74,12 +74,6 @@ public class Main extends Application {
         Student student4 = new Student("S10003", "Mohammad");
         Student student5 = new Student("S10004", "Eva");
 
-		/*studentRegister.add(student1);
-		studentRegister.add(student2);
-		studentRegister.add(student3);
-		studentRegister.add(student4);
-		studentRegister.add(student5);
-		*/
 
         //Kopplar studenter till Exams samt ger dem ett result
         student1.addExam(JavaTenta, new Result(90));

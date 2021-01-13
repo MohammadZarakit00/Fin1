@@ -116,10 +116,7 @@ public class WrittenExam {
         return null;
     }
 
-    /*
-    Fundera vidare kring deleteStudents returtyp, är det nödvändigt att returnera
-    en student? Bättre med boolean eller void?
-     */
+
     public Student deleteStudent(String studentId) {
         Student tmpStudent = findStudent(studentId);
         if (studentList.contains(tmpStudent)) {
@@ -134,15 +131,6 @@ public class WrittenExam {
 
     public Boolean containsStudent(String student) {
         return findStudent(student) != null;
-    }
-
-    public void addStudentAndResult(String studentId, int points) {
-        Student tmp = findStudent(studentId);
-        if (tmp != null) {
-            tmp.addExam(this, new Result(points));
-        } else {
-            System.out.println(studentId + "finns ej på " + this.getExamID() + ", resultat kan ej sättas.");
-        }
     }
 
     public double getMedianResult() {

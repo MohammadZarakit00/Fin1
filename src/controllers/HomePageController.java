@@ -1,37 +1,19 @@
 package controllers;
 
-import application.Loader;
-import application.Main;
-import javafx.scene.control.TextField;
 import model.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.stage.Window;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
-public class HomePageController implements Initializable {
+public class HomePageController {
 
 
 	private StudentRegister studentRegister = StudentRegister.getStudentRegInstance();
@@ -39,22 +21,7 @@ public class HomePageController implements Initializable {
 
 	@FXML
 	BorderPane bp = new BorderPane();
-	@FXML
-	Pane view;
 
-
-
-	public BorderPane getBp(){
-		return bp;
-	}
-
-	public void setBp(BorderPane borderPane){
-		this.bp = borderPane;
-	}
-
-	public void initialize(URL url, ResourceBundle resourceBundle){
-		
-	}
 
 	@FXML
 	private void studentManagementButton(ActionEvent event) throws IOException {

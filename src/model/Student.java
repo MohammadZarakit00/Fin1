@@ -1,6 +1,5 @@
 package model;
 
-import javax.xml.stream.events.Comment;
 import java.util.HashMap;
 
 public class Student {
@@ -48,7 +47,7 @@ public class Student {
 
 
     /*
-    addExam-method that checks for duplicate exam and student in master-register.
+    addExam-method that checks for duplicate exam and student in Singleton-register.
      */
     public void addExam(WrittenExam exam, Result result) {
         examResultMap.put(exam, result);

@@ -77,11 +77,6 @@ public class ExamManagementController implements Initializable {
         }
         courseChoiceBox.setItems(FXCollections.observableArrayList(tmpCourseList));
 
-        ArrayList<String> tmpStudentList = new ArrayList<>();
-        for (Student s : studentRegister.getStudentRegister()) {
-            tmpStudentList.add(s.getStudentId() + ": " + s.getName());
-        }
-        studentChoiceBox.setItems(FXCollections.observableArrayList(tmpStudentList));
     }
 
 
@@ -95,7 +90,7 @@ public class ExamManagementController implements Initializable {
         if (courseChoiceBox.getValue() == null) {
             taErrorText.setText("Please choose a course in the drop-down menu.");
         } else {
-            if (tmpIdDate.isEmpty() || tmpIdDate.isEmpty() || tmpIdLocation.isEmpty() || tmpIdDate.isEmpty()) {
+            if (tmpIdDate.isEmpty() || tmpIdLocation.isEmpty() || tmpIdDate.isEmpty()) {
                 taErrorText.setText("Please fill in all of fields before adding an exam");
             } else {
                 String tmpCourseId = courseChoiceBox.getValue().toString().substring(0, 6);
@@ -223,7 +218,6 @@ public class ExamManagementController implements Initializable {
         Random examGen = new Random();
         int examId = examGen.nextInt(99999 + 1 - 10000) + 10000;
         tfId.setText("E" + examId);
-
     }
 
 

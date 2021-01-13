@@ -1,8 +1,6 @@
 package controllers;
 
-import application.Main;
 import javafx.scene.control.TextField;
-import model.Course;
 import model.CourseRegister;
 import model.Result;
 import model.Student;
@@ -12,7 +10,6 @@ import model.WrittenExamRegister;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -25,9 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
-
 import javafx.scene.control.ComboBox;
-
 import javafx.scene.control.TextArea;
 
 
@@ -82,16 +77,6 @@ public class StudentManagementController implements Initializable {
     Button btnGenerateStudentId = new Button();
     @FXML
     ComboBox examBox = new ComboBox();
-
-    //i have no idea what this does.
-    public void handleBtn1() throws Exception {
-
-        Parent root = FXMLLoader.load(this.getClass().getResource("/Homepage.fxml"));
-
-        Stage window = (Stage) btnScene2.getScene().getWindow();
-
-        window.setScene(new Scene(root, 800, 600));
-    }
 
 
     //Fills out the combobox with students on page load. Also makes the error box look nice.

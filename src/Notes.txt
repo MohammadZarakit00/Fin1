@@ -1,15 +1,4 @@
-TODO
-
-* Ytterligare buggtester för GUI, få det att smälla rejält!!!! (dynamit-harry)
-* Fixa så att getMeanResult och getMedianResult returnerar rätt om det finns 0 eller 1 exams.
-
-* Systemdokumentation
-* Rensa bort onödig kod och ALLA println-s i modellen som inte behövs.
-* Skriva kommentarer för metoder. (Samtliga?)
-* Göra ett komplett UML-
-
 KNOWN BUGS:
-- Man kan uppdatera en students resultat på en kurs trots att den tas bort samtidigt som en Course.
-- DeleteCourse-knappen behöver debuggas potentiellt.
-- Resize på fönster funkar inte
+
+- Man kan uppdatera en students resultat på en kurs trots att den tas bort samtidigt som en Course, feature?
 

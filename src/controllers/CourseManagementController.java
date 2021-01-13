@@ -56,7 +56,7 @@ public class CourseManagementController {
                 Course course = new Course(tmpId, tmpName, tmpCredits);
                 if (!course.courseCodeCheck(tmpId)) {
                     taErrorText.setText("You must enter a valid course code. A course code starts with a capital 'C' and is followed by 5 numbers. E.g. C51236, C19923, et cetera. ");
-                } else if (courseRegister.containsCourse(tmpId)) { //explosionsssssss
+                } else if (courseRegister.containsCourse(tmpId)) {
                     taErrorText.setText("A course with that ID is already registered. ");
                 } else if (tmpCredit.isEmpty()) {
                     taErrorText.setText("You must also enter the number of credits this course is worth, e.g. 10, 30, 7.5, et cetera. ");
@@ -110,15 +110,11 @@ public class CourseManagementController {
         int courseCode = courseGen.nextInt(99999 + 1 - 10000) + 10000;
         tfId.clear();
         tfId.setText("C" + courseCode);
-        //Checks if the generated course code already exists and rolls again until a unique value is reached.
-        //Might need a LinkedHashSet to check duplicates more elegantly.
-        //This doesn't do anything.
         String tmpId = tfId.getText();
-        for (Course c : courseRegister.getCourseRegister()) {
-            if (courseRegister.containsCourse(tmpId)) {
-                tfId.clear();
-                tfId.setText("C" + courseGen.nextInt(courseCode));
-            }
+        if (courseRegister.containsCourse(tmpId)) {
+            tfId.clear();
+            tfId.setText("C" + courseGen.nextInt(courseCode));
+
         }
     }
 

@@ -5,18 +5,10 @@ import java.util.ArrayList;
 public class Course {
 
     private ArrayList<WrittenExam> courseExamList = new ArrayList<>();
-
     private String courseCode;
-
     private String name;
-
     private double credits;
 
-
-    /*
-    Borde kanske ha flera nästlade if-satser i constructorn så att vi kan se i vilket steg
-    det går fel.
-     */
 
     public Course(String courseCode, String name, double credits) {
         if (credits > 0 && credits <= 100 && courseCodeCheck(courseCode)) {
@@ -25,34 +17,21 @@ public class Course {
             this.credits = credits;
         }
     }
-    /*
-    Kan baka in credits-check i samma metod för att minska koden i konstruktorn.
-     */
 
     public Boolean courseCodeCheck(String courseCode) {
         String subString = courseCode.substring(1);
         int courseNr = Integer.parseInt(subString);
         return courseCode.startsWith("C") && courseCode.length() == 6 && (courseNr >= 10000 && courseNr <= 99999);
     }
-    public static boolean isDouble(String credits) {
-        try {
-            Double.parseDouble(credits);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-
-    }
-
 
     public void addExam(WrittenExam writtenExam) {
         CourseRegister cr = CourseRegister.getCourseRegInstance();
         if (cr.checkExamUnique(writtenExam.getExamID())) {
             courseExamList.add(writtenExam);
-            writtenExam.setCurrentCourse(this); //kopplar denna kursen till en Exam
+            writtenExam.setCurrentCourse(this);
         } else {
             if (!WrittenExamRegister.getExamRegInstance().containsExam(writtenExam.getExamID())) {
-                WrittenExamRegister.getExamRegInstance().add(writtenExam); //Läggs till i externt register
+                WrittenExamRegister.getExamRegInstance().add(writtenExam);
             }
         }
     }
@@ -108,9 +87,6 @@ public class Course {
         this.courseExamList = courseExamList;
     }
 
-    /*
-    Onödigt pga constructor?
-     */
     public void setCredits(double credits) {
         if (credits > 0 || credits <= 100) {
             this.credits = credits;
