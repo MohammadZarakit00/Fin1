@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Finished Test-class for model.">
+    <list default="true" id="5d9e5ca4-2c27-4413-a224-2288a528aecb" name="Default Changelist" comment="Added a forgotten add in btnAddStudent if the student is not registered on an exam">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CourseManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ExamManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StudentManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CourseRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CourseRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testPackage/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPackage/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="fi3126ol-s" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -506,7 +500,61 @@
       <option name="presentableId" value="LOCAL−00039" />
       <updated>1610448209100</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL−00040" summary="Fixed bugs with nullpointer related to ComboBox-default value">
+      <created>1610451681414</created>
+      <option name="number" value="LOCAL−00040" />
+      <option name="presentableId" value="LOCAL−00040" />
+      <updated>1610451681414</updated>
+    </task>
+    <task id="LOCAL−00041" summary="Fixed bugs with nullpointer related to ComboBox-default value">
+      <created>1610451722504</created>
+      <option name="number" value="LOCAL−00041" />
+      <option name="presentableId" value="LOCAL−00041" />
+      <updated>1610451722504</updated>
+    </task>
+    <task id="LOCAL−00042" summary="Fixed nullpointers in CourseManagementController">
+      <created>1610452607161</created>
+      <option name="number" value="LOCAL−00042" />
+      <option name="presentableId" value="LOCAL−00042" />
+      <updated>1610452607161</updated>
+    </task>
+    <task id="LOCAL−00043" summary="Updated studentTest with deleteCourse-tests">
+      <created>1610453197414</created>
+      <option name="number" value="LOCAL−00043" />
+      <option name="presentableId" value="LOCAL−00043" />
+      <updated>1610453197414</updated>
+    </task>
+    <task id="LOCAL−00044" summary="Updated studentTest with deleteCourse-tests">
+      <created>1610454120492</created>
+      <option name="number" value="LOCAL−00044" />
+      <option name="presentableId" value="LOCAL−00044" />
+      <updated>1610454120492</updated>
+    </task>
+    <task id="LOCAL−00045" summary="Added known bugs to notes">
+      <created>1610454824988</created>
+      <option name="number" value="LOCAL−00045" />
+      <option name="presentableId" value="LOCAL−00045" />
+      <updated>1610454824988</updated>
+    </task>
+    <task id="LOCAL−00046" summary="Fixed removeCourse-button in Controller and function in CourseRegister">
+      <created>1610455435321</created>
+      <option name="number" value="LOCAL−00046" />
+      <option name="presentableId" value="LOCAL−00046" />
+      <updated>1610455435321</updated>
+    </task>
+    <task id="LOCAL−00047" summary="Fixed addExam duplicate check in student that caused students not to be added to Course if exam already existed in the system">
+      <created>1610457106782</created>
+      <option name="number" value="LOCAL−00047" />
+      <option name="presentableId" value="LOCAL−00047" />
+      <updated>1610457106782</updated>
+    </task>
+    <task id="LOCAL−00048" summary="Added a forgotten add in btnAddStudent if the student is not registered on an exam">
+      <created>1610457663741</created>
+      <option name="number" value="LOCAL−00048" />
+      <option name="presentableId" value="LOCAL−00048" />
+      <updated>1610457663741</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -563,13 +611,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed unnecessary code" />
-    <MESSAGE value="Namechange" />
-    <MESSAGE value="cosmetic changes" />
-    <MESSAGE value="idk" />
-    <MESSAGE value="Added Controller super class" />
-    <MESSAGE value="Added extend to ExamController" />
-    <MESSAGE value="Structure changes, added Singleton-registers. Needs cleanup" />
     <MESSAGE value="Further singleton stuff, coursemanagement-implementation started" />
     <MESSAGE value="Fixed addStudent" />
     <MESSAGE value="comboBox-test" />
@@ -588,7 +629,14 @@
     <MESSAGE value="Fixed obligatory (but pointless?) student-update" />
     <MESSAGE value="Added final notes." />
     <MESSAGE value="Finished Test-class for model." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Test-class for model." />
+    <MESSAGE value="Fixed bugs with nullpointer related to ComboBox-default value" />
+    <MESSAGE value="Fixed nullpointers in CourseManagementController" />
+    <MESSAGE value="Updated studentTest with deleteCourse-tests" />
+    <MESSAGE value="Added known bugs to notes" />
+    <MESSAGE value="Fixed removeCourse-button in Controller and function in CourseRegister" />
+    <MESSAGE value="Fixed addExam duplicate check in student that caused students not to be added to Course if exam already existed in the system" />
+    <MESSAGE value="Added a forgotten add in btnAddStudent if the student is not registered on an exam" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a forgotten add in btnAddStudent if the student is not registered on an exam" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
